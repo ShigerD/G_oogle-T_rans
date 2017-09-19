@@ -40,7 +40,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String translate(final String text, final String target_lang) throws Exception {
+    public String translate(final String text, final String target_lang) throws Exception {
         return translate(text, AUTO, target_lang);
     }
 
@@ -53,7 +53,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String translate(final String text, final String src_lang, final String target_lang)
+    public String translate(final String text, final String src_lang, final String target_lang)
             throws Exception {
         InputStream is = null;
         Document doc = null;
@@ -88,7 +88,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String cn2tw(final String text) throws Exception {
+    public  String cn2tw(final String text) throws Exception {
         return translate(text, CHINA, TAIWAN);
     }
 
@@ -99,7 +99,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String tw2cn(final String text) throws Exception {
+    public  String tw2cn(final String text) throws Exception {
         return translate(text, TAIWAN, CHINA);
     }
 
@@ -110,7 +110,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String en2cn(final String text) throws Exception {
+    public String en2cn(final String text) throws Exception {
         return translate(text, ENGLISH, CHINA);
     }
     
@@ -121,7 +121,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String cn2en(final String text) throws Exception {
+    public  String cn2en(final String text) throws Exception {
         return translate(text, CHINA, ENGLISH);
     }
     
@@ -132,7 +132,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String en2tw(final String text) throws Exception {
+    public  String en2tw(final String text) throws Exception {
         return translate(text, ENGLISH, TAIWAN);
     }
 
@@ -143,7 +143,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String tw2en(final String text) throws Exception {
+    public  String tw2en(final String text) throws Exception {
         return translate(text, TAIWAN, ENGLISH);
     }
 
@@ -154,7 +154,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String jp2tw(final String text) throws Exception {
+    public  String jp2tw(final String text) throws Exception {
         return translate(text, JAPAN, TAIWAN);
     }
 
@@ -165,7 +165,7 @@ public class TranslateUtil {
      * @return
      * @throws Exception
      */
-    public static String tw2jp(final String text) throws Exception {
+    public  String tw2jp(final String text) throws Exception {
         return translate(text, TAIWAN, JAPAN);
     }
 }
