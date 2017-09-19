@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.io.Reader;
+import java.util.regex.Matcher;
 
 public class FileOperator {
 
@@ -101,7 +102,6 @@ public class FileOperator {
                         && (tempchars[tempchars.length - 1] != '\r')) {
 //                  System.out.print("tempchars.length--" + tempchars.length);//4000
                     System.out.print(tempchars);
-                    String  string2Tans = new  String(tempchars);
                     
                 } else {
                     for (int i = 0; i < charread; i++) {
@@ -126,6 +126,90 @@ public class FileOperator {
         }
     }
     
+    /**
+     * 以字符为单位读取文件，常用于读文本，数字等类型的文件
+     * 以字符为单位读取文件内容，一次读多个字节
+     */
+    public static void readFileByMultiCharsAndTranslate(String fileName ,String stringOutFileName) {
+        File file = new File(fileName);
+        Reader reader = null;
+        TranslateUtil translateUtil = new TranslateUtil();
+        RegexUtils regexUtils = new RegexUtils();
+//        System.out.println("以字符为单位读取文件内容，一次读多个字节：");
+        try {     
+            // 一次读多个字符
+            char[] tempchars = new char[4000];
+            int charread = 0;
+            reader = new InputStreamReader(new FileInputStream(fileName));
+            // 读入多个字符到字符数组中，charread为一次读取字符数
+            while ((charread = reader.read(tempchars)) != -1) {
+//            	System.out.println("\rcharread------" + charread);
+                // 同样屏蔽掉\r不显示
+                if ((charread == tempchars.length)
+                        && (tempchars[tempchars.length - 1] != '\r')) {
+//                  System.out.print("tempchars.length--" + tempchars.length);//4000
+//                    System.out.print(tempchars);
+                    String string2Translate = new String(tempchars);
+                    System.out.print(string2Translate);//log
+                    String stringOut= translateUtil.cn2en(string2Translate);
+                    stringOut = stringOut.replace("<resources", "\r"+"<resources");
+                    stringOut = stringOut.replaceAll("<string", "\r"+"<string");
+                    stringOut = stringOut.replaceAll("</ string>","</string>");
+                    stringOut = stringOut.replaceAll("</ xliff: g>","</xliff:g>");
+                    stringOut = stringOut.replaceAll("<xliff: g", "<xliff:g");
+                    stringOut = stringOut.replace("</ resources>", "\r"+"</resources>");//</resources>
+                    appendMethodB(stringOutFileName, stringOut);
+                    //regex
+//                    Matcher matcher = regexUtils.regexTranslateString(stringOut);
+//                    while (matcher.find()) {
+//                    	appendMethodB(stringOutFileName,"\r");	
+//                    	String lineString = matcher.group(0);
+//                    	lineString = lineString.replaceAll("</ string>","</string>");
+//                    	lineString = lineString.replaceAll("</ xliff: g>","</xliff:g>");
+//                    	lineString = lineString.replaceAll("<xliff: g", "<xliff:g");
+//                    	appendMethodB(stringOutFileName,lineString);					
+//					}
+
+                    tempchars = new char[4000];//clear
+                } else {
+                	String string2Translate = new String(tempchars);
+                	string2Translate = string2Translate.trim();
+                    System.out.print(string2Translate);//log
+                	String stringOut= translateUtil.cn2en(string2Translate);
+                    stringOut = stringOut.replace("<resources", "\r"+"<resources");
+                    stringOut = stringOut.replaceAll("<string", "\r"+"<string");
+                    stringOut = stringOut.replaceAll("</ string>","</string>");
+                    stringOut = stringOut.replaceAll("</ xliff: g>","</xliff:g>");
+                    stringOut = stringOut.replaceAll("<xliff: g", "<xliff:g");
+                    stringOut = stringOut.replace("</ resources>", "\r"+"</resources>");//</resources>
+                    appendMethodB(stringOutFileName, stringOut);
+                    //regex
+//                    Matcher matcher = regexUtils.regexTranslateString(stringOut);
+//                    while (matcher.find()) {
+//                    	appendMethodB(stringOutFileName,"\r");	
+//                    	String lineString = matcher.group(0);
+//                    	lineString = lineString.replaceAll("</ string>","</string>");
+//                    	lineString = lineString.replaceAll("</ xliff: g>","</xliff:g>");
+//                    	lineString = lineString.replaceAll("<xliff: g", "<xliff:g");
+//                    	appendMethodB(stringOutFileName,lineString);					
+//					}
+
+
+                    
+                }
+            }
+
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+    }
     /**
      * 以行为单位读取文件，常用于读面向行的格式化文件
      */
@@ -159,10 +243,10 @@ public class FileOperator {
     /**
      * 随机读取文件内容
      */
-    public static void readFileByRandomAccess(String fileName) {
+    public static void readFileByRandomAccess(String fileName ,String outFileNameString) {
         RandomAccessFile randomFile = null;
         try {
-            System.out.println("随机读取一段文件内容：");
+//            System.out.println("随机读取一段文件内容：");
             // 打开一个随机访问文件流，按只读方式
             randomFile = new RandomAccessFile(fileName, "r");
             // 文件长度，字节数
