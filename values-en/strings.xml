@@ -1,0 +1,126 @@
+<?xml version = "1.0" encoding = "UTF-8"?> <!-- / * * Copyright (C) 2008 The Android Open Source Project * * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * * http://www.apache.org/licenses/LICENSE-2.0 * It is required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the license for the specific language governing permissions and * limitations under the License * / --> 
+<resources 
+
+xmlns:android = "http://schemas.android.com/apk/res/android" 
+
+xmlns:xliff = "urn: oasis: names: tc: xliff: document: 1.2"> 
+<string name = "application_name" msgid = "5181331383435256801"> "Launcher3" </string> 
+<string name = "home" msgid = "7658288663002113681"> "main screen" </string> 
+<string name = "uid_name" msgid = "7820867637514617527"> "Android core application" </string> 
+<string name = "folder_name" msgid = "7371454440695724752"> </string> 
+<string name = "activity_not_found" msgid = "8071924732094499514"> "The application is not installed." </string> 
+<string name = "widgets_tab_label" msgid = "2921133187116603919"> "widget" </string> 
+<string name = "widget_adder" msgid = "3201040140710381657"> "widget" </string> 
+<string name = "toggle_weight_watcher" msgid = "5645299835184636119"> "Show memory space" </string> 
+<string name = "long_press_widget_to_add" msgid = "7699152356777458215"> "Touch and hold the widget to select." </string> 
+<string name = "market" msgid = "2619650989819296998"> "store" </string> 
+<string name = "widget_dims_format" msgid = "2370757736025621599"> "%1$d ×%2$d" </string> 
+<string name = "external_drop_widget_error" msgid = "3165821058322217155"> "The content can not be dragged and dropped onto this main screen." </string> 
+<string name = "external_drop_widget_pick_title" msgid = "3486317258037690630"> "Select widget to create" </string> 
+<string name = "rename_folder_label" msgid = "3727762225964550653"> "folder name" </string> 
+<string name = "rename_folder_title" msgid = "3771389277707820891"> "rename the folder" </string> 
+<string name = "rename_action" msgid = "5559600076028658757"> "OK" </string> 
+<string name = "cancel_action" msgid = "7009134900002915310"> "Cancel" </string> 
+<string name = "menu_item_add_item" msgid = "1264911265836810421"> "Add to main screen" </string> 
+<string name = "group_applications" msgid = "3797214114206693605"> "Apply" </string> 
+<string name = "group_shortcuts" msgid = "6012256992764410535"> "shortcuts" </string> 
+<string name = "group_widgets" msgid = "1569030723286851002"> "widget" </string> 
+<string name = "completely_out_of_space" msgid = "6106288382070760318"> "There is no space on your main screen." </string> 
+<string name = "out_of_space" msgid = "4691004494942118364"> "There is no space on this main screen." </string> 
+<string name = "hotseat_out_of_space" msgid = "7448809638125333693"> "Favorites are full" </string> 
+<string name = "invalid_hotseat_item" msgid = "5779907847267573691"> "The widget is too big to fit in the favorites" </string> 
+<string name = "shortcut_installed" msgid = "1701742129426969556"> "created" <xliff:g id = "NAME">%s </xliff:g> "shortcuts." </string> 
+<string name = "shortcut_uninstalled" msgid = "8176767991305701821"> "deleted" <xliff:g id = "NAME">%s </xliff:g> "shortcuts." </string> 
+<string name = "shortcut_duplicate" msgid = "9167217446062498127"> "<xliff:g id =" NAME ">%s </xliff:g>" Shortcut already exists. "</string> 
+<string name = "title_select_shortcut" msgid = "6680642571148153868"> "Select Shortcut" </string> 
+<string name = "title_select_application" msgid = "3280812711670683644"> "select application" </string> 
+<string name = "all_apps_button_label" msgid = "9110807029020582876"> "Apply" </string> 
+<string name = "all_apps_home_button_label" msgid = "252062713717058851"> "main screen" </string> 
+<string name = "delete_zone_label_workspace" msgid = "4009607676751398685"> "delete" </string> 
+<string name = "delete_zone_label_all_apps" msgid = "8083826390278958980"> "uninstall" </string> 
+<string name = "delete_target_label" msgid = "1822697352535677073"> "delete" </string> 
+<string name = "delete_target_uninstall_label" msgid = "5100785476250872595"> "uninstall" </string> 
+<string name = "info_target_label" msgid = "8053346143994679532"> "application information" </string><string name = "accessibility_search_button" msgid = "1628520399424565142"> "search" </string> 
+<string name = "accessibility_voice_search_button" msgid = "4637324840434406584"> "voice search" </string> 
+<string name = "accessibility_all_apps_button" msgid = "2603132375383800483"> "Apply" </string> 
+<string name = "accessibility_delete_button" msgid = "6466114477993744621"> "delete" </string> 
+<string name = "delete_zone_label_all_apps_system_app" msgid = "449755632749610895"> "Uninstall update" </string> 
+<string name = "cab_menu_delete_app" msgid = "7435191475867183689"> "Uninstall application" </string> 
+<string name = "cab_menu_app_info" msgid = "8593722221450362342"> "Application Details" </string> 
+<string name = "cab_app_selection_text" msgid = "374688303047985416"> "1 application selected" </string> 
+<string name = "cab_widget_selection_text" msgid = "1833458597831541241"> "1 widget selected" </string> 
+<string name = "cab_folder_selection_text" msgid = "7999992513806132118"> "1 folder selected" </string> 
+<string name = "cab_shortcut_selection_text" msgid = "2103811025667946450"> "1 shortcut selected" </string> 
+<string name = "permlab_install_shortcut" msgid = "5632423390354674437"> "Install shortcuts" </string> 
+<string name = "permdesc_install_shortcut" msgid = "923466509822011139"> "Allow applications to add shortcuts yourself." </string> 
+<string name = "permlab_uninstall_shortcut" msgid = "864595034498083837"> "Unload shortcuts" </string> 
+<string name = "permdesc_uninstall_shortcut" msgid = "5134129545001836849"> "Allow application to delete shortcuts yourself." </string> 
+<string name = "permlab_read_settings" msgid = "1941457408239617576"> "Read main screen settings and shortcuts" </string> 
+<string name = "permdesc_read_settings" msgid = "5833423719057558387"> "Allow applications to read settings and shortcuts in the main screen." </string> 
+<string name = "permlab_write_settings" msgid = "3574213698004620587"> "Write main screen settings and shortcuts" </string> 
+<string name = "permdesc_write_settings" msgid = "5440712911516509985"> "Allows the application to change settings and shortcuts in the main screen." </string> 
+<string name = "gadget_error_text" msgid = "6081085226050792095"> "Problems loading widget" </string> 
+<string name = "uninstall_system_app_text" msgid = "4172046090762920660"> "This is a system application that can not be uninstalled." </string> 
+<string name = "dream_name" msgid = "1530253749244328964"> "rocket launcher" </string> 
+<string name = "folder_hint_text" msgid = "6617836969016293992"> "unnamed folder" </string> 
+<string name = "workspace_description_format" msgid = "2950174241104043327"> "main screen%1$d" </string> 
+<string name = "default_scroll_format" msgid = "7475544710230993317"> "%1$d page,%2$d page" </string> 
+<string name = "workspace_scroll_format" msgid = "8458889198184077399"> "Home screen:%1$d screen,%2$d screen" </string> 
+<string name = "apps_customize_apps_scroll_format" msgid = "370005296147130238"> "Application:%1$d page,%2$d page" </string> 
+<string name = "apps_customize_widgets_scroll_format" msgid = "3106209519974971521"> "widget:%1$d page,%2$d page" </string> 
+<string name = "first_run_cling_title" msgid = "2459738000155917941"> "Welcome" </string> 
+<string name = "first_run_cling_description" msgid = "6447072552696253358"> "Your main screen you call the shots." </string> 
+<string name = "first_run_cling_custom_content_hint" msgid = "6090628589029352439"> </string> 
+<string name = "first_run_cling_search_bar_hint" msgid = "5909062802402452582"> </string> 
+<string name = "first_run_cling_create_screens_hint" msgid = "6950729526680114157"> "Add more screens to hold apps and folders" </string> 
+<string name = "migration_cling_title" msgid = "9181776667882933767"> "Copy application icon" </string> 
+<string name = "migration_cling_description" msgid = "2752413805582227644"> "Do you want to import icons and folders in the old home screen?" </string> 
+<string name = "migration_cling_copy_apps" msgid = "946331230090919440"> "copy icon" </string> 
+<string name = "migration_cling_use_default" msgid = "2626475813981258626"> "Use New Configuration" </string> 
+<string name = "workspace_cling_title" msgid = "5626202359865825661"> "organize your space" </string> 
+<string name = "workspace_cling_move_item" msgid = "528201129978005352"> "Touch and hold the background to manage wallpapers, widgets and settings." </string> 
+<string name = "folder_cling_title" msgid = "3894908818693254164"> "This is a folder" </string> 
+<string name = "folder_cling_create_folder" msgid = "6158215559475836131"> To create a similar folder, touch and hold an app and move it to another application. </string> 
+<string name = "cling_dismiss" msgid = "8962359497601507581"> "OK" </string> 
+<string name = "folder_opened" msgid = "94695026776264709"> "textFolder is open, size is <xliff:g id = "WIDTH">%1$d </xliff:g> x <xliff:g id = "HEIGHT">%2$d </xliff:g> / string> 
+<string name = "folder_tap_to_close" msgid = "1884479294466410023"> "Touch to close folder" </string> 
+<string name = "folder_tap_to_rename" msgid = "9191075570492871147"> "Touch to save new name" </string> 
+<string name = "folder_closed" msgid = "4100806530910930934"> "Folder closed" </string> 
+<string name = "folder_renamed" msgid = "1794088362165669656"> "The folder has been renamed to" <xliff:g id = "NAME">%1$s </xliff:g> "" </string> 
+<string name = "folder_name_format" msgid = "6629239338071103179"> "Folder: <xliff:g id =" NAME ">%1$s </xliff:g>" </string> 
+<string name = "widget_button_text" msgid = "2880537293434387943"> "widget" </string> 
+<string name = "wallpaper_button_text" msgid = "8404103075899945851"> "wallpaper" </string> 
+<string name = "settings_button_text" msgid = "8119458837558863227"> "Settings" </string> 
+<string name = "chooser_wallpaper"> "select wallpaper source" </string> 
+<string name = "msg_edit_mode"> edit mode </string> 
+<string name = "msg_unavailable_on_screen"> "This home screen is not suitable for putting the class icon." </string> 
+<string name = "recovery_button_text"> restore the desktop </string>  
+<string name = "cwWidgetOilUp"> instantaneous IFC </string> 
+<string name = "unknow_song"> unknown song </string> 
+<string name = "unknow_artist"> unknown artist </string> 
+<string name = "unknow_radio"> unknown radio </string> 
+<string name = "unknow_radio_anchor"> unknown host </string> 
+<string name = "no_music"> no song </string> 
+<string name = "since_time"> from <xliff:g id = "time">%1$s </xliff:g> after </string> 
+<string name = "total_mile"> total mileage (km) </string> 
+<string name = "no_obd"> no obd </string> was detected 
+<string name = "eco"> ECON </string> 
+<string name = "test_video_fm"> 106.20 </string> 
+<string name = "test_video_mhz"> MHZ </string> 
+<string name = "test_temp"> 16 ℃ </string> 
+<string name = "test_section_temp"> 15 ℃ ~ 30 ℃ </string> 
+<string name = "test_area"> Shenzhen </string> 
+<string name = "test_week"> Monday </string> 
+<string name = "test_date"> 2017/01/01 </string> 
+<string name = "test_weather_desc"> cloudy </string> 
+<string name = "morning"> morning </string> 
+<string name = "afternoon"> afternoon </string> 
+<string name = "sunday"> Sunday </string> 
+<string name = "monday"> Monday </string> 
+<string name = "tuesday"> Tuesday </string> 
+<string name = "wednesday"> Wednesday </string> 
+<string name = "thursday"> Thursday </string> 
+<string name = "friday"> Friday </string> 
+<string name = "saturday"> Saturday </string> 
+
+</resources>

@@ -30,6 +30,8 @@ public class TranslateUtil {
     protected static final String ENGLISH = "en"; // 英
     protected static final String JAPAN = "ja"; // 日
 
+    
+    
     /**
      * <pre>Google翻譯
      * PS: 交由google自動判斷來源語系

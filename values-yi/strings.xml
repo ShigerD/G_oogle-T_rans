@@ -1,0 +1,77 @@
+<?xml version = "1.0" encoding = "UTF-8"?> <!-- / * * Copyright (C) 2008 די אַנדרויד Open מקור פּראָיעקט * * ליסענסעד אונטער די אַפּאַטשי ליסענסע, ווערסיע 2.0 (די "ליסענסע"); * איר קענט נישט נוצן דעם טעקע חוץ אין די העסקעם מיט די דערלויבעניש. * איר קען באַקומען אַ קאָפּיע פון ​​די ליסענסע בייַ * * http://www.apache.org/licenses/LICENSE-2.0 * עס איז פארלאנגט דורך אָנווענדלעך געזעץ אָדער מסכים צו שרייבן, ווייכווארג * פונאנדערגעטיילט אונטער די דערלויבעניש איז פונאנדערגעטיילט אויף אַ "ווי איז" באַסיס, * אָן וואָראַנטיז אָדער באדינגונגען פון קיין קינד, אָדער אויסדריקן אָדער ימפּלייד. * זען די דערלויבעניש פֿאַר די ספּעציפיש שפּראַך רעגיאַלייטינג פּערמישאַנז און * לימיטיישאַנז אונטער די ליסענסע * / --> 
+<resources 
+
+xmlns:android = "http://schemas.android.com/apk/res/android" 
+
+xmlns:xliff = "urin: oasis: names: tc: xliff: document: 1.2"> 
+<string name = "application_name" # "הטטפּ:" 5181331383435256801 ">" Launcher3 "</string> 
+<string name = "home" ########################################################### # 
+<string name = "uid_name" msgid ""> "Android core application" </string> <שטריקל נאָמען = "פאָלדער_נאַמע" # msgid "" 7371454440695724752 "> </string> 
+<string name = "activity_not_found" msgid "8071924732094499514"> "The application is not installed." </string> 
+<string name = "widgets_tab_label" #, fuzzy msgid "2921133187116603919"> "widget" </string> 
+<string name = "widget_adder" #, fuzzy msgid "3201040140710381657"> "widget" </string> 
+<string name = "toggle_weight_watcher" msgid "5645299835184636119"> "Show space space" </string> 
+<string name = "long_press_widget_to_add" msgid "7699152356777458215"> "Touch and hold the widget to select." </string> <שפּירעוודיק נאָמען = "מאַרק" # msgid "" 2619650989819296998 ">" store "</string> 
+<string name = "widget_dims_format" msgid "" 2370757736025621599 ">"%1$d ×%2$d "</string> 
+<string name = "external_drop_widget_error" msgid "3165821058322217155"> "דער אינהאַלט קענען נישט זיין דראַגד און דראַפּט אַנטו דעם הויפּט פאַרשטעלן." </string> 
+<string name = "external_drop_widget_pick_title" msgid "3486317258037690630"> "Select widget to create" </string> 
+<string name = "rename_folder_label" #, fuzzy msgid "3727762225964550653"> "folder name" </string> 
+<string name = "רענאַמע_פאָלדער_טיט" # msgid "3771389277707820891"> "rename the folder" </string> 
+<string name = "רענאַמע_אַקטיאָן" msgid "5559600076028658757"> "OK" </string> 
+<string name = "cancel_action" # = msgid "" 7009134900002915310 ">" Cancel "</string> 
+<string name = "menu_item_add_item" msgid "1264911265836810421"> "Add to main screen" </string> 
+<string name = "group_applications" msgid "3797214114206693605"> "Apply" </string> 
+<string name = "group_shortcuts" msgid "" 6012256992764410535 ">" shortcuts "</string> 
+<string name = "group_widgets" msgid "" 1569030723286851002 ">" widget "</string> <שפּירט נאָמען = "גאָר_אָוט_אָפ_ספּאַסע" # "6106288382070760318"> "עס איז קיין פּלאַץ אויף דיין הויפּט פאַרשטעלן. </string> 
+<string name = "out_of_space" msgid "4691004494942118364"> "There is no space on this main screen." </string> 
+<string name = "hotseat_out_of_space" # msgid "" 7448809638125333693 ">" Favorites are full "</string> 
+<string name = "invalid_hotseat_item" # "5779907847267573691"> "די ווידזשיט איז אויך גרויס צו פּאַסיק אין די פאַוואָריטעס" </string> 
+<string name = "shortcut_installed" msgid "" 1701742129426969556 ">" created "<xliff:g id =" NAME ">%s </xliff:g>" shortcuts. "</string> 
+<string name = "shortcut_uninstalled" msgstr "" "סיבה: <id =" NAME ">%s </xliff:g>" shortcuts. "</string> 
+<string name = "shortcut_duplicate" msgid "9167217446062498127"> "<xliff:g id =" NAME ">%s </xliff:g>" Shortcut already exists. "</string> 
+<string name = "title_select_shortcut" msgid "" "Select Shortcut" </string> 
+<string name = "title_select_application" msgid "3280812711670683644"> "select application" </string> 
+<string name = "all_apps_button_label" msgid "9110807029020582876"> "Apply" </string> 
+<string name = "all_apps_home_button_label" msgid "252062713717058851"> "main screen" </string> 
+<string name = "delete_zone_label_workspace" msgid "4009607676751398685"> "delete" </string> 
+<string name = "delete_zone_label_all_apps" msgid "8083826390278958980"> "uninstall" </string> 
+<string name = "delete_target_label" msgid "1822697352535677073"> "delete" </string> 
+<string name = "delete_target_uninstall_label" msgid "" 5100785476250872595 ">" uninstall "</string> 
+<string name = "info_target_label" msgid "8053346143994679532"> "application information" </string><string name = "accessibility_search_button" # msgid "1628520399424565142"> "search" </string> 
+<string name = "accessibility_voice_search_button" msgid "4637324840434406584"> "voice search" </string> 
+<string name = "accessibility_all_apps_button" # msgid "2603132375383800483"> "Apply" </string> 
+<string name = "accessibility_delete_button" msgid "6466114477993744621"> "delete" </string> <סטרינג נאָמען = "דעלעטע_זאָנע_לאַבעל_אַלל_אַפּפּס_סיסטעמ_אַפּפּ" #, fuzzy msgid = "449755632749610895"> "נעם אַוועק דערהייַנטיקן" </שטריקל> 
+<string name = "cab_menu_delete_app" msgid "7435191475867183689"> "Uninstall application" </string> 
+<string name = "cab_menu_app_info" msgid "8593722221450362342"> "Application Details" </string> 
+<string name = "cab_app_selection_text" msgid "" 374688303047985416 ">" 1 application selected "</string> 
+<string name = "cab_widget_selection_text" msgid "1833458597831541241"> "1 widget selected" </string> 
+<string name = "cab_folder_selection_text" msgid "" 7999992513806132118 ">" 1 selected folder "</string> 
+<string name = "cab_shortcut_selection_text" msgid "2103811025667946450"> "1 shortcut selected" </string> 
+<string name = "permlab_install_shortcut" msgid "5632423390354674437"> "Install shortcuts" </string> <סטרינג נאָמען = "פּערמדעסק_ינסטאַלל_שאָרטקוט" #, fuzzy msgid = "923466509822011139"> "אַלאַוז אַ אַפּלאַקיישאַן צו לייגן שאָרטקאַץ." </סטרינג> <סטרינג נאָמען = "פּערמלאַב_ונינסטאַלל_שאָרטקוט" #, fuzzy msgid = "864595034498083837"> "נעם אַוועק שאָרטקאַט" </שטריקל> <סטרינג נאָמען = "פּערמדעסק_ונינסטאַלל_שאָרטקוט" #, fuzzy msgid = "5134129545001836849"> "אַלאַוז אַ אַפּלאַקיישאַן צו באַזייַטיקן שאָרטקאַץ." </סטרינג> <סטרינג נאָמען = "פּערמלאַב_רעאַד_סעטטינגס" #, fuzzy msgid = "1941457408239617576"> "לייענען היים סעטטינגס און שאָרטקאַץ" </שטריקל> <סטרינג נאָמען = "פּערמדעסק_רעאַד_סעטטינגס" #, fuzzy msgid = "5833423719057558387"> "אַלאַוז אַ אַפּלאַקיישאַן צו לייענען און שטעלן די הויפּט פאַרשטעלן שאָרטקאַץ." </סטרינג> <סטרינג נאָמען = "פּערמלאַב_ווריטע_סעטטינגס" #, fuzzy msgid = "3574213698004620587"> "געשריבן אין די הויפּט פאַרשטעלן סעטטינגס און שאָרטקאַץ" </שטריקל> <סטרינג נאָמען = "פּערמדעסק_ווריטע_סעטטינגס" #, fuzzy msgid = "5440712911516509985"> "אַלאַוז אַ אַפּלאַקיישאַן צו טוישן די הויפּט פאַרשטעלן איז צוגעשטעלט און שאָרטקאַץ." </סטרינג> 
+<string name = "gadget_error_text" msgid "6081085226050792095"> "Problems loading widget" </string> <סטרינג נאָמען = "ונינסטאַלל_סיסטעמ_אַפּפּ_טעקסט" #, fuzzy msgid = "4172046090762920660"> "דאס איז אַ סיסטעם אַפּלאַקיישאַן קענען ניט זיין ונינסטאַללעד." </סטרינג> 
+<string name = "dream_name" msgid "1530253749244328964"> "rocket launcher" </string> 
+<string name = "folder_hint_text" msgid "6617836969016293992"> "unnamed folder" </string> 
+<string name = "workspace_description_format" msgid "2950174241104043327"> "main screen%1$d" </string> <סטרינג נאָמען = "דעפאַולט_סקראָלל_פאָרמאַט" #, fuzzy msgid = "7475544710230993317"> "דער ערשטער בלאַט%1$ד, גאַנץ חשבון%2$די" </שטריקל> <סטרינג נאָמען = "וואָרקספּאַסע_סקראָלל_פאָרמאַט" #, fuzzy msgid = "8458889198184077399"> "עיקר סקרין:%1$ד ערשטער פאַרשטעלן, פאַרשטעלן אַ גאַנץ פון%2$די" </שטריקל> <סטרינג נאָמען = "אַפּפּס_קוסטאָמיזע_אַפּפּס_סקראָלל_פאָרמאַט" #, fuzzy msgid = "370005296147130238"> "אַפּפּליקאַטיאָן: דער ערשטער בלאַט%1$ד, גאַנץ חשבון%2$די" </שטריקל> <סטרינג נאָמען = "אַפּפּס_קוסטאָמיזע_ווידגעצ_סקראָלל_פאָרמאַט" #, fuzzy msgid = "3106209519974971521"> "קליין פּאַרץ: דער ערשטער בלאַט%1$ד, גאַנץ חשבון%2$די" </שטריקל> 
+<string name = "first_run_cling_title" # msgid "2459738000155917941"> "Welcome" </string> <סטרינג נאָמען = "פירסט_רונ_קלינג_דעסקריפּטיאָן" #, fuzzy msgid = "6447072552696253358"> "דיין היים פאַרשטעלן אַז איר רופן די שאַץ." </סטרינג> 
+<string name = "first_run_cling_custom_content_hint" msgid "6090628589029352439"> </string> 
+<string name = "first_run_cling_search_bar_hint" msgid "5909062802402452582"> </string> <סטרינג נאָמען = "פירסט_רונ_קלינג_קרעאַטע_סקרעענס_הינט" #, fuzzy msgid = "6950729526680114157"> "לייג מער סקרינז צו באַקומען אַפּלאַקיישאַנז און טעקע" </שטריקל> 
+<string name = "migration_cling_title" #: "9181776667882933767"> "Copy application icon" </string> <סטרינג נאָמען = "מיגראַטיאָנ_קלינג_דעסקריפּטיאָן" #, fuzzy msgid = "2752413805582227644"> "בילדל און די טעקע איר ווילן צו אַרייַנפיר די אַלט היים פאַרשטעלן Folders טאָן?" </סטרינג> 
+<string name = "migration_cling_copy_apps" msgid "946331230090919440"> "copy icon" </string> 
+<string name = "migration_cling_use_default" msgid "" 2626475813981258626 ">" Use New Configuration "</string> 
+<string name = "workspace_cling_title" msgid "5626202359865825661"> "Organize Your Space" </string> <סטרינג נאָמען = "וואָרקספּאַסע_קלינג_מאָווע_יטעם" #, fuzzy msgid = "528201129978005352"> "פאַרבינדן און האַלטן די הינטערגרונט, טאַפּעטן צו פירן, און די ווידזשיט שטעלן." </סטרינג> 
+<string name = "folder_cling_title" #: "3894908818693254164"> "דאָס איז אַ טעקע" </string> <סטרינג נאָמען = "פאָלדער_קלינג_קרעאַטע_פאָלדער" #, fuzzy msgid = "6158215559475836131"> "צו מאַכן אַ ענלעך טעקע, פאַרבינדן און האַלטן אַ אַפּ, דעריבער מאַך עס צו אן אנדער אַפּלאַקיישאַן." </סטרינג> 
+<string name = "cling_dismiss" msgid "8962359497601507581"> "OK" </string> 
+<string name = "folder_opened" msgid "94695026776264709"> "textטעקע איז אָפֿן, גרייס איז <xliff:g id = "ווידטה">%1$d </xliff:g> x <xliff:g id = "HEIGHT">%2$d </xliff:g> / string> 
+<string name = "folder_tap_to_close" msgid "1884479294466410023"> "Touch to close folder" </string> 
+<string name = "folder_tap_to_rename" msgid "9191075570492871147"> "Touch to save new name" </string> 
+<string name = "folder_closed" msgid "4100806530910930934"> "Folder closed" </string> <שפּאַן נאָמען = "פאָלדער_רענאַמע" # "די טעקע איז ריניימד צו" <xliff:g id = "NAME">%1$s </xliff:g> "" </string> <שפּיגל נאָמען = "פאָלדער_נאַמע_פאָרמאַט" # "פֿעלער: <xliff:g id =" NAME ">%1$s </xliff:g>" </string> 
+<string name = "widget_button_text" msgid "" 2880537293434387943 ">" widget "</string> 
+<string name = "wallpaper_button_text" msgid "" 8404103075899945851 ">" wallpaper "</string> 
+<string name = "settings_button_text" msgid ""> "Settings" </string> <שטריקל נאָמען = "טשאָאָסער_וואַלפּאַפּער"> "אויסקלייַבן טאַפּעטן מקור" </שטריקל> 
+<string name = "msg_edit_mode"> edit mode </string> 
+<string name = "msg_unavailable_on_screen"> "דאס היים פאַרשטעלן איז נישט פּאַסיק פֿאַר פּאַטינג די קלאַס בילדל. </string> 
+<string name = "recovery_button_text"> צוריקקריגן די דעסקטאַפּ </string>  <שטריקל נאָמען = "קווהידעטאָילופּ"> ינסטאַנטאַניאַס יפק </שטריקל> <שטריקל נאָמען = "ונקנאָוו_סאָנג"> אומבאַקאַנט ליד </שטריקל> 
+<string name = "unknow_artist"> אומבאַקאַנט קינסטלער </string> <שטריקל נאָמען = "ונקאָוואָוו_ראַדיאָ"> אומבאַקאַנט ראַדיאָ </שטריקל> <שטריקל נאָמען = "ונקאָוואָוו_ראַדיאָ_אַנטשאָר"> אומבאַקאַנט באַלעבאָס </שטריקל> 
+<string name = "no_music"> קיין ליד </string> <שפּירעוודיק נאָמען = "זינט_טיי"> פון <קסליפף: ג שייַן = "צייט">%1$s </קסליף: ג> נאָך </שטריקל> <שטריקל נאָמען = "total_mile"> גאַנץ מיילידזש (קילאמעטער) </שטריקל> 
+<string name = "no_obd"> no obd </string> איז געווען דיטעקטאַד <שטריקל נאָמען = "עקאָ"> עקאָן </שטריקל> 
+<string name = "test_video_fm"> 106.20 </string> <שטריקל נאָמען = "טעסט_ווידע_מהז"> מהז </שטריקל> <שטריקל נאָמען = "טעסט_עמפּ"> 16 ℃ </שטריקל> <שטריקל נאָמען = "טעסט_סעקטיאָן_טעמפּ"> 15 ℃ ~ 30 ℃ </שטריקל> <שריפֿט נאָמען = "טעסט_אַרעאַ"> שענזשען </שטריקל> <שטריקל נאָמען = "טעסט_וועעק"> מאנטיק </שטריקל> <שטריקל נאָמען = "טעסט_דאַטע"> 2017/01/01 </שטריקל> <שטריקל נאָמען = "טעסט_וועאַטהער_דעסק"> פאַרוואָלקנט </שטריקל> <שטריקל נאָמען = "מאָרגן"> מאָרגן </שטריקל> <שטריקל נאָמען = "נאָכמיטאָג"> נאָכמיטאָג </שטריקל> <שטריקל נאָמען = "זונטיק"> זונטיק </שטריקל> <שטריקל נאָמען = "מאנטאג"> מאנטיק </שטריקל> <שטריקל נאָמען = "Tuesday"> Tuesday </string> <שטריקל נאָמען = "מיטוואָך"> מיטוואך </שטריקל> <שטריקל נאָמען = "טהורסדייַ"> דאנערשטאג </שטריקל> <שטריקל נאָמען = "פרייטיק"> פרייטיק </שטריקל> <שטריקל נאָמען = "שבת"> שבת </שטריקל> </רעסורסן>

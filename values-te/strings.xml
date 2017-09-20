@@ -1,0 +1,96 @@
+<? Xml వెర్షన్ = "1.0" ఎన్కోడింగ్ = "UTF-8"?> <-! / * * కాపీరైట్ (C) 2008 ది Android ఓపెన్ సోర్స్ ప్రాజెక్ట్ * * అపాచీ లైసెన్స్ కింద లైసెన్స్, వెర్షన్ 2.0 (the "License") * లైసెన్సుకు అనుగుణంగా మినహా మీరు ఈ ఫైల్ను ఉపయోగించలేరు. * లైసెన్సు యొక్క కాపీని మీరు * * http://www.apache.org/licenses/LICENSE-2.0 * * లో పొందవచ్చు * వర్తించే చట్టం లేదా లిఖితపూర్వకంగా అంగీకరిస్తే, సాఫ్ట్వేర్ * లైసెన్సు కింద పంపిణీ అండర్ పరిమితులు యధాతథంగా, * హామీలతో లేదా ఏ రకమైన క్లయిమ్ ఎక్స్ప్రెస్ లేదా ఊహాజనిత గాని లేకుండా "యధాతథం". నిర్దిష్ట భాషా నిర్వహణ అనుమతులు కోసం చూడండి లైసెన్సు * మరియు * పంపిణీ లైసెన్స్ <వనరుల 
+
+xmlns:android = "http://schemas.android.com/apk/res/android" 
+
+xmlns:xliff = "urn: ఒయాసిస్: పేర్లు: tc: xliff: document: 1.2"> 
+<string name = "application_name" msgid = "5181331383435256801"> "Launcher3" </string> 
+<string name = "home" msgid = "7658288663002113681"> "ప్రధాన స్క్రీన్" </string> 
+<string name = "uid_name" msgid = "7820867637514617527"> "Android కోర్ అప్లికేషన్" </string> 
+<string name = "folder_name" msgid = "7371454440695724752"> </string> 
+<string name = "activity_not_found" msgid = "8071924732094499514"> "అనువర్తనం ఇన్స్టాల్ చేయబడలేదు." </string> 
+<string name = "widgets_tab_label" msgid = "2921133187116603919"> "విడ్జెట్" </string> 
+<string name = "widget_adder" msgid = "3201040140710381657"> "విడ్జెట్" </string> 
+<string name = "toggle_weight_watcher" msgid = "5645299835184636119"> "మెమొరీ ఖాళీని చూపు" </string> 
+<string name = "long_press_widget_to_add" msgid = "7699152356777458215"> "ఎంచుకోవడానికి విడ్జెట్ను నొక్కి పట్టుకోండి." </string> 
+<string name = "market" msgid = "2619650989819296998"> "స్టోర్" </string> 
+<string name = "widget_dims_format" msgid = "2370757736025621599"> "%1$d ×%2$d" </string> <స్ట్రింగ్ పేరు = "external_drop_widget_error" msgid = "3165821058322217155"> "మీరు డ్రాగ్ మరియు ప్రధాన తెరపై ఈ కంటెంట్ డ్రాప్ కాదు." </స్ట్రింగ్> 
+<string name = "external_drop_widget_pick_title" msgid = "3486317258037690630"> "సృష్టించడానికి విడ్జెట్ను ఎంచుకోండి" </string> 
+<string name = "rename_folder_label" msgid = "3727762225964550653"> "ఫోల్డర్ పేరు" </string> 
+<string name = "rename_folder_title" msgid = "3771389277707820891"> "ఫోల్డర్ పేరు మార్చండి" </string> 
+<string name = "rename_action" msgid = "5559600076028658757"> "సరే" </string> 
+<string name = "cancel_action" msgid = "7009134900002915310"> "రద్దు చేయి" </string> 
+<string name = "menu_item_add_item" msgid = "1264911265836810421"> "ప్రధాన స్క్రీన్కి జోడించు" </string> 
+<string name = "group_applications" msgid = "3797214114206693605"> "వర్తించు" </string> 
+<string name = "group_shortcuts" msgid = "6012256992764410535"> "సత్వరమార్గాలు" </string> 
+<string name = "group_widgets" msgid = "1569030723286851002"> "విడ్జెట్" </string> 
+<string name = "completely_out_of_space" msgid = "6106288382070760318"> "మీ ప్రధాన స్క్రీన్లో ఖాళీ లేదు." </string> 
+<string name = "out_of_space" msgid = "4691004494942118364"> "ఈ ప్రధాన స్క్రీన్లో ఖాళీ లేదు." </string> 
+<string name = "hotseat_out_of_space" msgid = "7448809638125333693"> "ఇష్టమైనవి పూర్తి" </string> 
+<string name = "invalid_hotseat_item" msgid = "5779907847267573691"> "విడ్జెట్ ఇష్టానుసారంగా సరిపోయేది కాదు" </string> <స్ట్రింగ్ పేరు = "shortcut_installed" msgid = "1701742129426969556"> "రూపొందించినవారు" <xliff:g id = "NAME">%s </xliff:g> ". సత్వరమార్గం" </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "shortcut_uninstalled" msgid = "8176767991305701821"> "తొలగించిన" <xliff:g id = "NAME">%s </xliff:g> ". సత్వరమార్గం" </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "shortcut_duplicate" msgid = "9167217446062498127"> "" <xliff:g id = "NAME">%s </xliff:g> "సత్వరమార్గం ఇప్పటికే ఉంది" </స్ట్రింగ్>. 
+<string name = "title_select_shortcut" msgid = "6680642571148153868"> "సత్వరమార్గాన్ని ఎంచుకోండి" </string> 
+<string name = "title_select_application" msgid = "3280812711670683644"> "ఎంపికను ఎంచుకోండి" </string> 
+<string name = "all_apps_button_label" msgstr = "9110807029020582876"> "వర్తించు" </string> 
+<string name = "all_apps_home_button_label" msgid = "252062713717058851"> "ప్రధాన స్క్రీన్" </string> 
+<string name = "delete_zone_label_workspace" msgid = "4009607676751398685"> "తొలగించు" </string> 
+<string name = "delete_zone_label_all_apps" msgid = "8083826390278958980"> "అన్ఇన్స్టాల్" </string> 
+<string name = "delete_target_label" msgid = "1822697352535677073"> "తొలగించు" </string> 
+<string name = "delete_target_uninstall_label" msgid = "5100785476250872595"> "అన్ఇన్స్టాల్" </string> 
+<string name = "info_target_label" msgid = "8053346143994679532"> "దరఖాస్తు సమాచారం" </string> <స్ట్రింగ్పేరు = "accessibility_search_button" msgid = "1628520399424565142"> "అన్వేషణ" </string> 
+<string name = "accessibility_voice_search_button" msgid = "4637324840434406584"> "వాయిస్ శోధన" </string> 
+<string name = "accessibility_all_apps_button" msgid = "2603132375383800483"> "వర్తించు" </string> 
+<string name = "accessibility_delete_button" msgid = "6466114477993744621"> "తొలగించు" </string> 
+<string name = "delete_zone_label_all_apps_system_app" msgid = "449755632749610895"> "అన్ఇన్స్టాల్ అప్డేట్" </string> 
+<string name = "cab_menu_delete_app" msgstr = "7435191475867183689"> "అన్ఇన్స్టాల్ అప్లికేషన్" </string> 
+<string name = "cab_menu_app_info" msgid = "8593722221450362342"> "దరఖాస్తు వివరాలు" </string> 
+<string name = "cab_app_selection_text" msgid = "374688303047985416"> "1 అనువర్తనం ఎంపిక చేయబడింది" </string> 
+<string name = "cab_widget_selection_text" msgid = "1833458597831541241"> "1 విడ్జెట్ ఎంపిక" </string> 
+<string name = "cab_folder_selection_text" msgid = "7999992513806132118"> "1 ఫోల్డర్ ఎంచుకున్నది" </string> 
+<string name = "cab_shortcut_selection_text" msgid = "2103811025667946450"> "1 సత్వరమార్గం ఎంచుకోబడింది" </string> 
+<string name = "permlab_install_shortcut" msgid = "5632423390354674437"> "సత్వరమార్గాలను ఇన్స్టాల్ చేయి" </string> 
+<string name = "permdesc_install_shortcut" msgid = "923466509822011139"> "సత్వరమార్గాలను జోడించడానికి అనువర్తనాలను అనుమతించండి." </string> 
+<string name = "permlab_uninstall_shortcut" msgid = "864595034498083837"> "సత్వరమార్గాలను అన్లోడ్ చేయి" </string> 
+<string name = "permdesc_uninstall_shortcut" msgid = "5134129545001836849"> "సత్వరమార్గాలను తొలగించడానికి అనువర్తనాన్ని అనుమతించండి." </string> 
+<string name = "permlab_read_settings" msgid = "1941457408239617576"> "ప్రధాన స్క్రీన్ అమర్పులను మరియు సత్వర మార్గాలను చదవండి" </string> 
+<string name = "permdesc_read_settings" msgid = "5833423719057558387"> "ప్రధాన స్క్రీన్లో సెట్టింగ్లు మరియు సత్వర మార్గాలను చదవడానికి అనువర్తనాలను అనుమతించండి." </string> 
+<string name = "permlab_write_settings" msgid = "3574213698004620587"> "ప్రధాన స్క్రీన్ అమర్పులను మరియు సత్వర మార్గాలను వ్రాయండి" </string> 
+<string name = "permdesc_write_settings" msgid = "5440712911516509985"> "ప్రధాన స్క్రీన్లో సెట్టింగ్లు మరియు సత్వర మార్గాలను మార్చడానికి అనువర్తనాన్ని అనుమతిస్తుంది." </string> 
+<string name = "gadget_error_text" msgid = "6081085226050792095"> "విడ్జెట్లను లోడ్ చేయడంలో సమస్యలు" </string> 
+<string name = "uninstall_system_app_text" msgid = "4172046090762920660"> "ఇది అన్ఇన్స్టాల్ చెయ్యలేని వ్యవస్థ అనువర్తనం." </string> 
+<string name = "dream_name" msgid = "1530253749244328964"> "రాకెట్ లాంచర్" </string> 
+<string name = "folder_hint_text" msgid = "6617836969016293992"> "పేరులేని ఫోల్డర్" </string> 
+<string name = "workspace_description_format" msgid = "2950174241104043327"> "ప్రధాన స్క్రీన్%1$d" </string> 
+<string name = "default_scroll_format" msgid = "7475544710230993317"> "%1$d పేజీ,%2$d పేజీ" </string> "హోమ్ స్క్రీన్:%1$d స్క్రీన్,%2$d స్క్రీన్ను" </string> <a href="http://directory.blogger.com/"> 
+<string name = "apps_customize_apps_scroll_format" msgid = "370005296147130238"> "అనువర్తనం:%1$d పేజీ,%2$d పేజీ" </string> 
+<string name = "apps_customize_widgets_scroll_format" msgid = "3106209519974971521"> "విడ్జెట్:%1$d పేజీ,%2$d పేజీ" </string> 
+<string name = "first_run_cling_title" msgid = "2459738000155917941"> "స్వాగతం" </string> 
+<string name = "first_run_cling_description" msgid = "6447072552696253358"> "మీ ప్రధాన స్క్రీన్ మీరు షాట్లు అని పిలుస్తారు." </string> 
+<string name = "first_run_cling_custom_content_hint" msgid = "6090628589029352439"> </string> 
+<string name = "first_run_cling_search_bar_hint" msgid = "5909062802402452582"> </string> 
+<string name = "first_run_cling_create_screens_hint" msgid = "6950729526680114157"> "అనువర్తనాలు మరియు ఫోల్డర్లను కలిగి ఉండటానికి మరిన్ని స్క్రీన్లను జోడించు" </string> 
+<string name = "migration_cling_title" msgid = "9181776667882933767"> "అనువర్తన చిహ్నాన్ని కాపీ చేయి" </string> <స్ట్రింగ్ పేరు = "migration_cling_description" msgid = "2752413805582227644"> "ఐకాన్ మరియు మీరు పాత ఇంటి తెర ఫోల్డర్లను చేయండి దిగుమతి కావలసిన ఫైల్?" </స్ట్రింగ్> 
+<string name = "migration_cling_copy_apps" msgid = "946331230090919440"> "కాపీ ఐకాన్" </string> 
+<string name = "migration_cling_use_default" msgid = "2626475813981258626"> "కొత్త ఆకృతీకరణను ఉపయోగించు" </string> 
+<string name = "workspace_cling_title" msgid = "5626202359865825661"> "మీ ఖాళీని నిర్వహించు" </string> 
+<string name = "workspace_cling_move_item" msgid = "528201129978005352"> "వాల్పేపర్లను, విడ్జెట్లను మరియు సెట్టింగ్లను నిర్వహించడానికి నేపథ్యాన్ని నొక్కి పట్టుకోండి." </string> 
+<string name = "folder_cling_title" msgid = "3894908818693254164"> "ఇది ఫోల్డర్" </string> 
+<string name = "folder_cling_create_folder" msgid = "6158215559475836131"> సారూప్య ఫోల్డర్ను సృష్టించడానికి, అనువర్తనాన్ని నొక్కి ఉంచి దాన్ని మరొక అనువర్తనానికి తరలించండి. </string> 
+<string name = "cling_dismiss" msgid = "8962359497601507581"> "సరే" </string> 
+<string name = "folder_opened" msgid = "94695026776264709"> "ఫోల్డర్ తెరిచి ఉంది, పరిమాణం<Xliff: g id = "వెడల్పు">%1$d </xliff:g> × <xliff:g id = "ఎత్తు">%2$d </xliff:g> "</స్ట్రింగ్> "ఫోల్డర్ను మూసివేయడానికి టచ్" <స్ట్రింగ్ పేరు = "folder_tap_to_close" msgid = "1884479294466410023"> </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "folder_tap_to_rename" msgid = "9191075570492871147"> "కొత్త పేరు సేవ్ టచ్" </స్ట్రింగ్> 
+<string name = "folder_closed" msgid = "4100806530910930934"> "ఫోల్డర్ మూసివేయబడింది" </string> %1$s </xliff:g>: <గ్రా id = "NAME" xliff> <స్ట్రింగ్ పేరు = "folder_renamed" msgid = "1794088362165669656"> "ఫోల్డర్ పేరు మార్చబడింది" "" </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "folder_name_format" msgid = "6629239338071103179"> "ఫోల్డర్: <xliff:g id =" NAME ">%1$s </xliff:g>" </స్ట్రింగ్> 
+<string name = "widget_button_text" msgid = "2880537293434387943"> "విడ్జెట్" </string> <స్ట్రింగ్ పేరు = "wallpaper_button_text" msgid = "8404103075899945851"> "వాల్" </స్ట్రింగ్> 
+<string name = "settings_button_text" msgid = "8119458837558863227"> "సెట్టింగులు" </string> <స్ట్రింగ్ పేరు = "chooser_wallpaper"> "వాల్పేపర్ మూలాన్ని ఎంచుకోండి" </string> <స్ట్రింగ్ పేరు = "msg_edit_mode"> మార్చు మోడ్ </string> 
+<string name = "msg_unavailable_on_screen"> "ఈ హోమ్ స్క్రీన్ తరగతి ఐకాన్ ని పెట్టడానికి సరిపోదు." </string> <స్ట్రింగ్ పేరు = "recovery_button_text"> డెస్క్టాప్ను పునరుద్ధరించండి </string> 
+<string name = "cwWidgetOilUp"> తక్షణ IFC </string> 
+<string name = "unknow_song"> తెలియని పాట </string> 
+<string name = "unknow_artist"> తెలియని కళాకారుడు </string> 
+<string name = "unknow_radio"> తెలియని రేడియో </string> 
+<string name = "unknow_radio_anchor"> తెలియని హోస్ట్ </string> 
+<string name = "no_music"> ఏ పాట </స్ట్రింగ్> <xliff:g id = "సమయం">%1$s </xliff:g> తర్వాత </string> 
+<string name = "to_time"> < <స్ట్రింగ్ పేరు = "total_mile"> మొత్తం మైలేజ్ (km) </string> 
+<string name = "no_obd"> obd </string> కనుగొనబడలేదు 
+<string name = "eco"> ECON </string> 
+<string name = "test_video_fm"> 106.20 </string> 
+<string name = "test_video_mhz"> MHZ </string> <స్ట్రింగ్ పేరు = "test_temp"> 16 ℃ </string> 
+<string name = "test_section_temp"> 15 ℃ ~ 30 ℃ </string> <స్ట్రింగ్ పేరు = "test_area"> షెన్జెన్ </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "test_week"> సోమవారం </string> 
+<string name = "test_date"> 2017/01/01 </string> <స్ట్రింగ్ పేరు = "test_weather_desc"> మేఘావృతం </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "ఉదయం"> ఉదయం </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "మధ్యాహ్నం"> మధ్యాహ్నం </స్ట్రింగ్> <స్ట్రింగ్ పేరు = "ఆదివారం"> ఆదివారం </string> <స్ట్రింగ్ పేరు = "సోమవారం"> సోమవారం </string> <స్ట్రింగ్ పేరు = "మంగళవారం"> మంగళవారం </string> <స్ట్రింగ్ పేరు = "wednesday"> బుధవారం </string> 
+<string name = "thursday"> గురువారం </string> <స్ట్రింగ్ పేరు = "శుక్రవారం"> శుక్రవారం </string> <స్ట్రింగ్ పేరు = "శనివారం"> శనివారం </string> </వనరులు>

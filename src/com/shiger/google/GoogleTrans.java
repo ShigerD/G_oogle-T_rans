@@ -1,8 +1,10 @@
 package com.shiger.google;
 
 import java.io.File;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 
 
 
@@ -29,14 +31,8 @@ public class GoogleTrans {
 	 */
 	public static void main(String[] args) {
 		
-//		System.out.println("Welcome!");
-//		
-        String pathString = System.getProperty("user.dir"); 
-        
-//        System.out.println("pathString="+pathString);
-//        System.err.println("\r");
-//        System.err.println("\r");
-//        System.err.println("\r");
+		System.out.println("-----Welcome!--------");
+
 		
 //		GoogleTrans googleTrans =new GoogleTrans();
 //		googleTrans.tanslateTest();
@@ -47,17 +43,54 @@ public class GoogleTrans {
 //        FileOperator.readFileByLines(fileName);
 //        FileOperator.readFileByRandomAccess(fileName);     
 //        FileOperator.readFileByMultiChars(fileName);
-        
-        String stringInFileName = pathString + "/values-zh-rCN/strings.xml";
+	    
+	    String pathString = System.getProperty("user.dir");   
+	    System.out.println("pathString="+pathString);
+	    System.out.println("\r");
+	    System.out.println("\r");
+	    System.out.println("\r");
+        String stringInFileName = pathString + "/strings.xml";
         String stringOutFileName = pathString + "/values/strings.xml";
-        File file =new java.io.File(stringOutFileName);
-        if(file.exists()){
-        	file.delete();
-        }
-        FileOperator.readFileByMultiCharsAndTranslate(stringInFileName , stringOutFileName);
+        FileOperator fileOperator =new FileOperator();
+        String languageFileNameString = pathString + "/language.txt";
+        System.out.println("languageFileNameString="+languageFileNameString);
+	    System.out.println("\r");
+	    System.out.println("\r");
+	    System.out.println("\r");
+        List<String> list = fileOperator.readFileByLine2List(languageFileNameString);
+	    List<String> lauguageList = new ArrayList<String>();
+	    for (String string : list) {
+	    	String[] stringsline= string.split(" ");
+	    	lauguageList.add(stringsline[1].trim());
+	    	System.out.println(stringsline[1].trim());
+		}
+	    //
+//	    System.out.print("请输入源文件的语言种类：");
+//	    Scanner scan = new Scanner(System.in);
+//	    String sourceString = scan.nextLine();
+//	    if(lauguageList.contains(sourceString)){
+//	    	System.out.println("源文件的语言种类："+sourceString); 	
+//	    }else {
+//	    	System.out.println("不支持语言种类："+sourceString); 
+//		}
+//	    //    
+	    System.out.print("请输入目标文件的语言种类：");
+	    Scanner scan = new Scanner(System.in);
+	    String targetString =  scan.nextLine();
+	    if(lauguageList.contains(targetString)){
+	    	System.out.println("目标文件的语言种类："+targetString); 	
+	    }else {
+	    	System.out.println("不支持语言种类："+targetString); 
+		}
 
-//        RegexUtils regexUtils = new RegexUtils();
-//        System.out.println(regexUtils.regexString("", ""));
+	    
+	    //readFileByMultiCharsAndTranslate
+ 
+//        fileOperator.readFileByMultiCharsAndTranslate( stringOutFileName ,"zh-CN","en");
+        
+        fileOperator.readFileAndTranslate(targetString);
+
+
         
 
 	}
