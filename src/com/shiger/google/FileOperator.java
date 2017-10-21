@@ -16,15 +16,16 @@ import java.util.regex.Matcher;
 
 public class FileOperator {
 
+	String sourceFileString = System.getProperty("user.dir") + "/source.txt";
 	/**
-     * 以字节为单位读取文件，常用于读二进制文件，如图片、声音、影像等文件。
+     * 
      */
     public static void readFileByBytes(String fileName) {
         File file = new File(fileName);
         InputStream in = null;
         try {
-            System.out.println("以字节为单位读取文件内容，一次读一个字节：");
-            // 一次读一个字节
+            System.out.println("--readFileByBytes--begin--");
+            //
             in = new FileInputStream(file);
             int tempbyte;
             while ((tempbyte = in.read()) != -1) {
@@ -35,14 +36,15 @@ public class FileOperator {
             e.printStackTrace();
             return;
         }
+        
         try {
-            System.out.println("以字节为单位读取文件内容，一次读多个字节：");
-            // 一次读多个字节
+            System.out.println("浠ュ瓧鑺備负鍗曚綅璇诲彇鏂囦欢鍐呭锛屼竴娆¤澶氫釜瀛楄妭锛�");
+            // 
             byte[] tempbytes = new byte[100];
             int byteread = 0;
             in = new FileInputStream(fileName);
             FileOperator.showAvailableBytes(in);
-            // 读入多个字节到字节数组中，byteread为一次读入的字节数
+            // 
             while ((byteread = in.read(tempbytes)) != -1) {
                 System.out.write(tempbytes, 0, byteread);
             }
@@ -59,20 +61,16 @@ public class FileOperator {
     }
 
     /**
-     * 以字符为单位读取文件，常用于读文本，数字等类型的文件
      */
     public static void readFileByChars(String fileName) {
         File file = new File(fileName);
         Reader reader = null;
         try {
-            System.out.println("以字符为单位读取文件内容，一次读一个字节：");
-            // 一次读一个字符
+            System.out.println("--readFileByChars---begin--");
+            // 
             reader = new InputStreamReader(new FileInputStream(file));
             int tempchar;
             while ((tempchar = reader.read()) != -1) {
-                // 对于windows下，\r\n这两个字符在一起时，表示一个换行。
-                // 但如果这两个字符分开显示时，会换两次行。
-                // 因此，屏蔽掉\r，或者屏蔽\n。否则，将会多出很多空行。
                 if (((char) tempchar) != '\r') {
                     System.out.print((char) tempchar);
                 }
@@ -84,22 +82,19 @@ public class FileOperator {
     
     }
     /**
-     * 以字符为单位读取文件，常用于读文本，数字等类型的文件
-     * 以字符为单位读取文件内容，一次读多个字节
      */
     public  void readFileByMultiChars(String fileName) {
         File file = new File(fileName);
         Reader reader = null;
-//        System.out.println("以字符为单位读取文件内容，一次读多个字节：");
         try {     
-            // 一次读多个字符
+       
             char[] tempchars = new char[4000];
             int charread = 0;
             reader = new InputStreamReader(new FileInputStream(fileName));
-            // 读入多个字符到字符数组中，charread为一次读取字符数
+            //
             while ((charread = reader.read(tempchars)) != -1) {
             	System.out.println("\rcharread------" + charread);
-                // 同样屏蔽掉\r不显示
+                // 
                 if ((charread == tempchars.length)
                         && (tempchars[tempchars.length - 1] != '\r')) {
 //                  System.out.print("tempchars.length--" + tempchars.length);//4000
@@ -177,8 +172,7 @@ public class FileOperator {
         return stringOut;
 	}
     /**
-     * 以字符为单位读取文件，常用于读文本，数字等类型的文件
-     * 以字符为单位读取文件内容，一次读多个字节
+     * 
      */
     public  void readFileByMultiCharsAndTranslate(String fileName ,String stringOutFileName) {
         File outfile =new java.io.File(stringOutFileName);
@@ -189,17 +183,15 @@ public class FileOperator {
         Reader reader = null;
         TranslateUtil translateUtil = new TranslateUtil();
         RegexUtils regexUtils = new RegexUtils();
-//        System.out.println("以字符为单位读取文件内容，一次读多个字节：");
    
         try {     
-            // 一次读多个字符
+          
             char[] tempchars = new char[4000];
             int charread = 0;
             reader = new InputStreamReader(new FileInputStream(fileName));
-            // 读入多个字符到字符数组中，charread为一次读取字符数
             while ((charread = reader.read(tempchars)) != -1) {
 //            	System.out.println("\rcharread------" + charread);
-                // 同样屏蔽掉\r不显示
+
                 if ((charread == tempchars.length)
                         && (tempchars[tempchars.length - 1] != '\r')) {
 //                  System.out.print("tempchars.length--" + tempchars.length);//4000
@@ -209,16 +201,7 @@ public class FileOperator {
                     String stringOut= translateUtil.cn2tw(string2Translate);
                     stringOut = stringFilter( stringOut);
                     appendMethodB(stringOutFileName, stringOut);
-                    //regex
-//                    Matcher matcher = regexUtils.regexTranslateString(stringOut);
-//                    while (matcher.find()) {
-//                    	appendMethodB(stringOutFileName,"\r");	
-//                    	String lineString = matcher.group(0);
-//                    	lineString = lineString.replaceAll("</ string>","</string>");
-//                    	lineString = lineString.replaceAll("</ xliff: g>","</xliff:g>");
-//                    	lineString = lineString.replaceAll("<xliff: g", "<xliff:g");
-//                    	appendMethodB(stringOutFileName,lineString);					
-//					}
+
                     tempchars = new char[4000];//clear
                 } else {
                 	String string2Translate = new String(tempchars);
@@ -227,16 +210,8 @@ public class FileOperator {
                 	String stringOut= translateUtil.cn2tw(string2Translate);
                 	stringOut = stringFilter( stringOut);
                     appendMethodB(stringOutFileName, stringOut);
-                    //regex
-//                    Matcher matcher = regexUtils.regexTranslateString(stringOut);
-//                    while (matcher.find()) {
-//                    	appendMethodB(stringOutFileName,"\r");	
-//                    	String lineString = matcher.group(0);
-//                    	lineString = lineString.replaceAll("</ string>","</string>");
-//                    	lineString = lineString.replaceAll("</ xliff: g>","</xliff:g>");
-//                    	lineString = lineString.replaceAll("<xliff: g", "<xliff:g");
-//                    	appendMethodB(stringOutFileName,lineString);					
-//					}                 
+
+               
                 }
             }
 
@@ -255,14 +230,15 @@ public class FileOperator {
      * 
      */
     public  void readFileAndTranslate(String targetString) {
-        String sourceFileString = System.getProperty("user.dir") + "/strings.xml";
+        
     	File sourcefile = new File(sourceFileString);
     	if(!sourcefile.exists()){
-    		System.out.println("请把文件放在以下目录：" + sourceFileString);
+    		System.out.println("sourcefile do not exist ! file path:" + sourceFileString);
+    		System.out.println("\rplease put your sourcefile the path above!" );
     		return;
     	}     	
     	String OutFileDir = System.getProperty("user.dir") + "/values-" + targetString + "/strings.xml";
- 
+
 //        String strPath = "E:\\a\\aa\\aaa.txt";  
         File file = new File(OutFileDir);  
         if(!file.getParentFile().exists()){  
@@ -277,36 +253,37 @@ public class FileOperator {
         Reader reader = null;
         TranslateUtil translateUtil = new TranslateUtil();
         RegexUtils regexUtils = new RegexUtils();
-//        System.out.println("以字符为单位读取文件内容，一次读多个字节：");
+//        System.out.println("浠ュ瓧绗︿负鍗曚綅璇诲彇鏂囦欢鍐呭锛屼竴娆¤澶氫釜瀛楄妭锛�");
         try {     
-            // 一次读多个字符
+            // 
             char[] tempchars = new char[4000];
             int charread = 0;
             reader = new InputStreamReader(new FileInputStream(sourceFileString));
-            // 读入多个字符到字符数组中，charread为一次读取字符数
+            // 
             while ((charread = reader.read(tempchars)) != -1) {
 //            	System.out.println("\rcharread------" + charread);
-                // 同样屏蔽掉\r不显示
+                // 
                 if ((charread == tempchars.length)
                         && (tempchars[tempchars.length - 1] != '\r')) {
 //                  System.out.print("tempchars.length--" + tempchars.length);//4000
 //                    System.out.print(tempchars);
                     String string2Translate = new String(tempchars);
                     System.out.print(string2Translate);//log
-                    String stringOut= translateUtil.translate(string2Translate, "zh-TW", targetString);
-                    stringOut = stringFilter( stringOut);
+                    String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);
+//                    stringOut = stringFilter( stringOut);
                     appendMethodB(OutFileDir, stringOut);
                     tempchars = new char[4000];//clear
                 } else {
                 	String string2Translate = new String(tempchars);
                 	string2Translate = string2Translate.trim();
                     System.out.print(string2Translate);//log
-                	String stringOut= translateUtil.translate(string2Translate, "zh-TW", targetString);
-                	stringOut = stringFilter( stringOut);
+                	String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);
+//                	stringOut = stringFilter( stringOut);
                     appendMethodB(OutFileDir, stringOut);                  
                 }
             }
-
+            System.out.print(" \rTranslate success!\r");//log
+            
         } catch (Exception e1) {
             e1.printStackTrace();
         } finally {
@@ -319,20 +296,19 @@ public class FileOperator {
         }
     }
     /**
-     * 以行为单位读取文件，常用于读面向行的格式化文件
+     * readFileByLines
      */
     public  void readFileByLines(String fileName) {
         File file = new File(fileName);
         BufferedReader reader = null;
         try {
-            System.out.println("以行为单位读取文件内容，一次读一整行：");
+//            System.out.println("readFileByLines");
             reader = new BufferedReader(new FileReader(file));
             String tempString = null;
             int line = 1;
-            // 一次读入一行，直到读入null为文件结束
-            while ((tempString = reader.readLine()) != null) {
-                // 显示行号
-                System.out.println("line " + line + ": " + tempString);
+            // 
+            while ((tempString = reader.readLine()) != null) {             
+//                System.out.println("line " + line + ": " + tempString);
                 line++;
             }
             reader.close();
@@ -348,21 +324,21 @@ public class FileOperator {
         }
     }
     /**
-     * 以行为单位读取文件，常用于读面向行的格式化文件
+     * read by line
      */
     public  List<String> readFileByLine2List(String fileName) {
         File file = new File(fileName);
         BufferedReader reader = null;
         List<String> list =new ArrayList<String>() ;
         try {
-            System.out.println("以行为单位读取文件内容，一次读一整行：");
+            System.out.println("readFileByLine---List:");
             reader = new BufferedReader(new FileReader(file));
             String tempString = null;
             int line = 1;
-            // 一次读入一行，直到读入null为文件结束
+            //
             while ((tempString = reader.readLine()) != null) {
-                // 显示行号
-                System.out.println("line " + line + ": " + tempString);
+                // 
+//                System.out.println("line " + line + ": " + tempString);
                 list.add(tempString);
                 line++;
             }       
@@ -382,24 +358,23 @@ public class FileOperator {
     }
 
     /**
-     * 随机读取文件内容
      */
     public static void readFileByRandomAccess(String fileName ,String outFileNameString) {
         RandomAccessFile randomFile = null;
         try {
-//            System.out.println("随机读取一段文件内容：");
-            // 打开一个随机访问文件流，按只读方式
+//            System.out.println("闅忔満璇诲彇涓�娈垫枃浠跺唴瀹癸細");
+            // 鎵撳紑涓�涓殢鏈鸿闂枃浠舵祦锛屾寜鍙鏂瑰紡
             randomFile = new RandomAccessFile(fileName, "r");
-            // 文件长度，字节数
+            // 鏂囦欢闀垮害锛屽瓧鑺傛暟
             long fileLength = randomFile.length();
-            // 读文件的起始位置
+            // 璇绘枃浠剁殑璧峰浣嶇疆
             int beginIndex = (fileLength > 4) ? 4 : 0;
-            // 将读文件的开始位置移到beginIndex位置。
+            // 灏嗚鏂囦欢鐨勫紑濮嬩綅缃Щ鍒癰eginIndex浣嶇疆銆�
             randomFile.seek(beginIndex);
             byte[] bytes = new byte[10];
             int byteread = 0;
-            // 一次读10个字节，如果文件内容不足10个字节，则读剩下的字节。
-            // 将一次读取的字节数赋给byteread
+            // 涓�娆¤10涓瓧鑺傦紝濡傛灉鏂囦欢鍐呭涓嶈冻10涓瓧鑺傦紝鍒欒鍓╀笅鐨勫瓧鑺傘��
+            // 灏嗕竴娆¤鍙栫殑瀛楄妭鏁拌祴缁檅yteread
             while ((byteread = randomFile.read(bytes)) != -1) {
                 System.out.write(bytes, 0, byteread);
             }
@@ -416,26 +391,26 @@ public class FileOperator {
     }
 
     /**
-     * 显示输入流中还剩的字节数
+     * 鏄剧ず杈撳叆娴佷腑杩樺墿鐨勫瓧鑺傛暟
      */
     private static void showAvailableBytes(InputStream in) {
         try {
-            System.out.println("当前字节输入流中的字节数为:" + in.available());
+            System.out.println("褰撳墠瀛楄妭杈撳叆娴佷腑鐨勫瓧鑺傛暟涓�:" + in.available());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * A方法追加文件：使用RandomAccessFile
+     * A鏂规硶杩藉姞鏂囦欢锛氫娇鐢≧andomAccessFile
      */
     public static void appendMethodA(String fileName, String content) {
         try {
-            // 打开一个随机访问文件流，按读写方式
+            // 鎵撳紑涓�涓殢鏈鸿闂枃浠舵祦锛屾寜璇诲啓鏂瑰紡
             RandomAccessFile randomFile = new RandomAccessFile(fileName, "rw");
-            // 文件长度，字节数
+            // 鏂囦欢闀垮害锛屽瓧鑺傛暟
             long fileLength = randomFile.length();
-            //将写文件指针移到文件尾。
+            //灏嗗啓鏂囦欢鎸囬拡绉诲埌鏂囦欢灏俱��
             randomFile.seek(fileLength);
             randomFile.writeBytes(content);
             randomFile.close();
@@ -445,11 +420,11 @@ public class FileOperator {
     }
 
     /**
-     * B方法追加文件：使用FileWriter
+     * B鏂规硶杩藉姞鏂囦欢锛氫娇鐢‵ileWriter
      */
     public static void appendMethodB(String fileName, String content) {
         try {
-            //打开一个写文件器，构造函数中的第二个参数true表示以追加形式写文件
+            //鎵撳紑涓�涓啓鏂囦欢鍣紝鏋勯�犲嚱鏁颁腑鐨勭浜屼釜鍙傛暟true琛ㄧず浠ヨ拷鍔犲舰寮忓啓鏂囦欢
             FileWriter writer = new FileWriter(fileName, true);
             writer.write(content);
             writer.close();
