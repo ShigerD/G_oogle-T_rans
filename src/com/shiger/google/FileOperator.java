@@ -239,6 +239,7 @@ public class FileOperator {
 //					}                 
                 }
             }
+            System.out.print("\r---end---\r");//log
 
         } catch (Exception e1) {
             e1.printStackTrace();
@@ -306,6 +307,7 @@ public class FileOperator {
                     appendMethodB(OutFileDir, stringOut);                  
                 }
             }
+            System.out.print("\r--finished!--\r");
 
         } catch (Exception e1) {
             e1.printStackTrace();
