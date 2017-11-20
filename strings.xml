@@ -1,123 +1,1934 @@
-<?xml version="1.0" encoding="UTF-8"?> <!-- /* * Copyright (C) 2008 The Android Open Source Project * * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */ -->
-<resources
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="application_name" msgid="5181331383435256801">"Launcher3"</string>
-    <string name="home" msgid="7658288663002113681">"主屏"</string>
-    <string name="uid_name" msgid="7820867637514617527">"Android 核心應用"</string>
-    <string name="folder_name" msgid="7371454440695724752"></string>
-    <string name="activity_not_found" msgid="8071924732094499514">"未安裝該應用。"</string>
-    <string name="widgets_tab_label" msgid="2921133187116603919">"小部件"</string>
-    <string name="widget_adder" msgid="3201040140710381657">"小部件"</string>
-    <string name="toggle_weight_watcher" msgid="5645299835184636119">"顯示內存空間"</string>
-    <string name="long_press_widget_to_add" msgid="7699152356777458215">"觸摸並按住小部件即可選擇。"</string>
-    <string name="market" msgid="2619650989819296998">"商店"</string>
-    <string name="widget_dims_format" msgid="2370757736025621599">"%1$d × %2$d"</string>
-    <string name="external_drop_widget_error" msgid="3165821058322217155">"無法將相關內容拖放到此主屏幕上。"</string>
-    <string name="external_drop_widget_pick_title" msgid="3486317258037690630">"選擇要創建的小部件"</string>
-    <string name="rename_folder_label" msgid="3727762225964550653">"文件夾名稱"</string>
-    <string name="rename_folder_title" msgid="3771389277707820891">"重命名文件夾"</string>
-    <string name="rename_action" msgid="5559600076028658757">"確定"</string>
-    <string name="cancel_action" msgid="7009134900002915310">"取消"</string>
-    <string name="menu_item_add_item" msgid="1264911265836810421">"添加到主屏幕"</string>
-    <string name="group_applications" msgid="3797214114206693605">"應用"</string>
-    <string name="group_shortcuts" msgid="6012256992764410535">"快捷方式"</string>
-    <string name="group_widgets" msgid="1569030723286851002">"小部件"</string>
-    <string name="completely_out_of_space" msgid="6106288382070760318">"您的主屏幕上沒有空間了。"</string>
-    <string name="out_of_space" msgid="4691004494942118364">"此主屏幕上已沒有空間。"</string>
-    <string name="hotseat_out_of_space" msgid="7448809638125333693">"收藏欄已滿"</string>
-    <string name="invalid_hotseat_item" msgid="5779907847267573691">"該小部件太大，收藏欄中放不下"</string>
-    <string name="shortcut_installed" msgid="1701742129426969556">"已創建“<xliff:g id="NAME">%s</xliff:g>”快捷方式。"</string>
-    <string name="shortcut_uninstalled" msgid="8176767991305701821">"已刪除“<xliff:g id="NAME">%s</xliff:g>”快捷方式。"</string>
-    <string name="shortcut_duplicate" msgid="9167217446062498127">"“<xliff:g id="NAME">%s</xliff:g>”快捷方式已存在。"</string>
-    <string name="title_select_shortcut" msgid="6680642571148153868">"選擇快捷方式"</string>
-    <string name="title_select_application" msgid="3280812711670683644">"選擇應用"</string>
-    <string name="all_apps_button_label" msgid="9110807029020582876">"應用"</string>
-    <string name="all_apps_home_button_label" msgid="252062713717058851">"主屏幕"</string>
-    <string name="delete_zone_label_workspace" msgid="4009607676751398685">"刪除"</string>
-    <string name="delete_zone_label_all_apps" msgid="8083826390278958980">"卸載"</string>
-    <string name="delete_target_label" msgid="1822697352535677073">"刪除"</string>
-    <string name="delete_target_uninstall_label" msgid="5100785476250872595">"卸載"</string>
-    <string name="info_target_label" msgid="8053346143994679532">"應用信息"</string><string name="accessibility_search_button" msgid="1628520399424565142">"搜索"</string>
-    <string name="accessibility_voice_search_button" msgid="4637324840434406584">"語音搜索"</string>
-    <string name="accessibility_all_apps_button" msgid="2603132375383800483">"應用"</string>
-    <string name="accessibility_delete_button" msgid="6466114477993744621">"刪除"</string>
-    <string name="delete_zone_label_all_apps_system_app" msgid="449755632749610895">"卸載更新內容"</string>
-    <string name="cab_menu_delete_app" msgid="7435191475867183689">"卸載應用"</string>
-    <string name="cab_menu_app_info" msgid="8593722221450362342">"應用詳情"</string>
-    <string name="cab_app_selection_text" msgid="374688303047985416">"已選擇1個應用"</string>
-    <string name="cab_widget_selection_text" msgid="1833458597831541241">"已選擇1個小部件"</string>
-    <string name="cab_folder_selection_text" msgid="7999992513806132118">"已選擇1個文件夾"</string>
-    <string name="cab_shortcut_selection_text" msgid="2103811025667946450">"已選擇1個快捷方式"</string>
-    <string name="permlab_install_shortcut" msgid="5632423390354674437">"安裝快捷方式"</string>
-    <string name="permdesc_install_shortcut" msgid="923466509822011139">"允許應用自行添加快捷方式。"</string>
-    <string name="permlab_uninstall_shortcut" msgid="864595034498083837">"卸載快捷方式"</string>
-    <string name="permdesc_uninstall_shortcut" msgid="5134129545001836849">"允許應用自行刪除快捷方式。"</string>
-    <string name="permlab_read_settings" msgid="1941457408239617576">"讀取主屏幕設置和快捷方式"</string>
-    <string name="permdesc_read_settings" msgid="5833423719057558387">"允許應用讀取主屏幕中的設置和快捷方式。"</string>
-    <string name="permlab_write_settings" msgid="3574213698004620587">"寫入主屏幕設置和快捷方式"</string>
-    <string name="permdesc_write_settings" msgid="5440712911516509985">"允許應用更改主屏幕中的設置和快捷方式。"</string>
-    <string name="gadget_error_text" msgid="6081085226050792095">"加載小部件時出現問題"</string>
-    <string name="uninstall_system_app_text" msgid="4172046090762920660">"這是系統應用，無法卸載。"</string>
-    <string name="dream_name" msgid="1530253749244328964">"火箭發射器"</string>
-    <string name="folder_hint_text" msgid="6617836969016293992">"未命名文件夾"</string>
-    <string name="workspace_description_format" msgid="2950174241104043327">"主屏幕%1$d"</string>
-    <string name="default_scroll_format" msgid="7475544710230993317">"第%1$d頁，共%2$d頁"</string>
-    <string name="workspace_scroll_format" msgid="8458889198184077399">"主屏幕：第%1$d屏，共%2$d屏"</string>
-    <string name="apps_customize_apps_scroll_format" msgid="370005296147130238">"應用：第%1$d頁，共%2$d頁"</string>
-    <string name="apps_customize_widgets_scroll_format" msgid="3106209519974971521">"小部件：第%1$d頁，共%2$d頁"</string>
-    <string name="first_run_cling_title" msgid="2459738000155917941">"歡迎使用"</string>
-    <string name="first_run_cling_description" msgid="6447072552696253358">"您的主屏幕您做主。"</string>
-    <string name="first_run_cling_custom_content_hint" msgid="6090628589029352439"></string>
-    <string name="first_run_cling_search_bar_hint" msgid="5909062802402452582"></string>
-    <string name="first_run_cling_create_screens_hint" msgid="6950729526680114157">"添加更多屏幕來容納應用和文件夾"</string>
-    <string name="migration_cling_title" msgid="9181776667882933767">"複製應用圖標"</string>
-    <string name="migration_cling_description" msgid="2752413805582227644">"要導入舊的主屏幕中的圖標和文件夾嗎？"</string>
-    <string name="migration_cling_copy_apps" msgid="946331230090919440">"複製圖標"</string>
-    <string name="migration_cling_use_default" msgid="2626475813981258626">"使用全新配置"</string>
-    <string name="workspace_cling_title" msgid="5626202359865825661">"整理您的空間"</string>
-    <string name="workspace_cling_move_item" msgid="528201129978005352">"觸摸並按住背景，即可管理壁紙、小部件和設置。"</string>
-    <string name="folder_cling_title" msgid="3894908818693254164">"這是一個文件夾"</string>
-    <string name="folder_cling_create_folder" msgid="6158215559475836131">"要創建一個類似的文件夾，請觸摸並按住某個應用，然後將其移至另一個應用上。"</string>
-    <string name="cling_dismiss" msgid="8962359497601507581">"確定"</string>
-    <string name="folder_opened" msgid="94695026776264709">"文件夾已打開，大小為<xliff:g id="WIDTH">%1$d</xliff:g>×<xliff:g id="HEIGHT">%2$d</xliff:g>"</string>
-    <string name="folder_tap_to_close" msgid="1884479294466410023">"觸摸可關閉文件夾"</string>
-    <string name="folder_tap_to_rename" msgid="9191075570492871147">"觸摸可保存新名稱"</string>
-    <string name="folder_closed" msgid="4100806530910930934">"文件夾已關閉"</string>
-    <string name="folder_renamed" msgid="1794088362165669656">"已將文件夾重命名為“<xliff:g id="NAME">%1$s</xliff:g>”"</string>
-    <string name="folder_name_format" msgid="6629239338071103179">"文件夾：<xliff:g id="NAME">%1$s</xliff:g>"</string>
-    <string name="widget_button_text" msgid="2880537293434387943">"小部件"</string>
-    <string name="wallpaper_button_text" msgid="8404103075899945851">"壁紙"</string>
-    <string name="settings_button_text" msgid="8119458837558863227">"設置"</string>
-    <string name="chooser_wallpaper">"選擇壁紙來源"</string>
-    <string name="msg_edit_mode">編輯模式</string>
-    <string name="msg_unavailable_on_screen">"此主屏幕不適合放該類圖標。"</string>
-    <string name="recovery_button_text">恢復桌面</string>
-    <string name="cwWidgetOilUp">瞬時IFC</string>
-    <string name="unknow_song">未知歌曲</string>
-    <string name="unknow_artist">未知藝術家</string>
-    <string name="unknow_radio">未知電台</string>
-    <string name="unknow_radio_anchor">未知主播</string>
-    <string name="no_music">暫無歌曲</string>
-    <string name="since_time">自 <xliff:g id="time">%1$s</xliff:g> 後</string>
-    <string name="total_mile">總里程(公里)</string>
-    <string name="no_obd">沒有檢測到obd</string>
-    <string name="eco">ECON</string>
-    <string name="test_video_fm">106.20</string>
-    <string name="test_video_mhz">MHZ</string>
-    <string name="test_temp">16℃</string>
-    <string name="test_section_temp">15℃~30℃</string>
-    <string name="test_area">深圳</string>
-    <string name="test_week">星期一</string>
-    <string name="test_date">2017/01/01</string>
-    <string name="test_weather_desc">多雲</string>
-    <string name="morning">上午</string>
-    <string name="afternoon">下午</string>
-    <string name="sunday">星期天</string>
-    <string name="monday">星期一</string>
-    <string name="tuesday">星期二</string>
-    <string name="wednesday">星期三</string>
-    <string name="thursday">星期四</string>
-    <string name="friday">星期五</string>
-    <string name="saturday">星期六</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">车辆信息</string>
+    <string name="app_name_settings">原车设置</string>
+    <string name="app_name_ipod">原车iPod</string>
+    <string name="app_name_usb">原车播放器</string>
+    <string name="app_name_compass">指南针</string>
+	<string name="app_name_amp">"原车功放"</string>
+    <string name="app_original_vehicle_info">"原车信息"</string>
+    <string name="app_vehicle_radio">"原车收音"</string>
+    <string name="app_tires_info">"胎压监测"</string>
+
+    <!--vw -->
+    <string name="waring_1">后备箱已打开!</string>
+    <string name="waring_2">清晰液余量过低，请加注！</string>
+    <string name="waring_3">驾驶员安全带未系</string>
+    <string name="waring_4">前排乘客安全带未系</string>
+    <string name="waring_5">前排安全带未系</string>
+    <string name="waring_6">请加注燃油，注意里程！</string>
+    <string name="washwater">清洗液</string>
+    <string name="safebelt">安全带</string>
+    <string name="remain_oid">剩余油量</string>
+    <string name="battery_voltage">电池电压</string>
+    <string name="safebelt_off">未系</string>
+    <string name="safebelt_on">正常</string>
+    <string name="wash_water_low">过低</string>
+    <string name="wash_water_normal">正常</string>
+
+
+    <!-- vw mqb -->
+    <string name="vehicle_settings">车辆设置</string>
+    <string name="vehicle_info">车辆信息</string>
+
+    <string name="language">语言</string>
+    <string name="esc_system">ESC 系统</string>
+    <string name="tyres">轮胎设置</string>
+    <string name="tpms">轮胎压力监控显示</string>
+    <string name="winter_tyres">冬季轮胎</string>
+    <string name="speed_warning">车速报警</string>
+    <string name="waring_at">车速报警</string>
+    <string name="speed_unit">车速单位</string>
+
+    <string name="driver_assist">驾驶员辅助系统</string>
+    <string name="lane_assist">车道保持辅助系统</string>
+    <string name="driver_alert_system">疲劳驾驶室别系统</string>
+    <string name="last_distance_selected">上次选择的车距</string>
+    <string name="front_assist">前部辅助系统</string>
+    <string name="active">激活</string>
+    <string name="advance">预警</string>
+    <string name="display_distance_waring">显示距离报警</string>
+    <string name="acc_drive_program">行驶程序</string>
+    <string name="acc_distance">车距</string>
+
+    <string name="parking_and_manoeuvring">驻车和停车</string>
+    <string name="activate_automatically">自动激活</string>
+    <string name="front_volume">前部音量</string>
+    <string name="front_tone">前部音调</string>
+    <string name="rear_volume">后部音量</string>
+    <string name="rear_tone">后部音调</string>
+    <string name="parking_assistance">使出车位辅助(激活)</string>
+
+    <string name="lights">灯光设置</string>
+    <string name="light_assist">灯光辅助</string>
+    <string name="switch_on_time">接通时间</string>
+    <string name="automatic_headlight_contol_in_rain">自动行车灯（雨天）</string>
+    <string name="lane_change_flash">变道转向灯</string>
+    <string name="daytime_runing_lights">日间行车灯</string>
+    <string name="instrument_switch_lighting">仪表/开关照明</string>
+    <string name="coming_home_function">回家功能</string>
+    <string name="leaving_home_function">离家功能</string>
+    <string name="coming_leaving_function">回家/离家功能</string>
+
+    <string name="interior_lighting">车内照明灯</string>
+    <string name="travel_mode">旅行模式</string>
+    <string name="door_ambient_light">车内环境照明灯</string>
+    <string name="footwel_light">脚部空间照明灯</string>
+    <string name="all_area">所有区域</string>
+
+    <string name="mirrors_and_wipers">后视镜和雨刮</string>
+    <string name="mirrors">后视镜</string>
+    <string name="wipers">车窗玻璃刮水器</string>
+    <string name="synchronous_adjustment">同步调节</string>
+    <string name="lower_while_reversing">倒车档时降低</string>
+    <string name="automatic_wiping_in_rain">雨天自动刮水</string>
+    <string name="rear_window_wiping_in_reverse_gear">倒车档时后窗玻璃刮水</string>
+    <string name="fold_sway_after_parking">驻车时内折</string>
+
+    <string name="opening_and_closing">开/关设置</string>
+    <string name="window_opration">车窗操作</string>
+    <string name="central_locking">中央门锁</string>
+    <string name="conv_opening">便捷开启</string>
+    <string name="door_unlocking">车门解锁</string>
+    <string name="automatic_locking">自动锁止</string>
+    <string name="acoustic_confirmation">声确认</string>
+
+    <string name="multifunction_display">多功能显示器</string>
+    <string name="current_consumption">当前油耗</string>
+    <string name="average_consumption">平均油耗</string>
+    <string name="convenience_consumers">舒适性用电器</string>
+    <string name="eco_tips">经济运行提示</string>
+    <string name="travelling_time">行驶时间</string>
+    <string name="distance_travelled">行驶里程</string>
+    <string name="average_speed">平均速度</string>
+    <string name="digital_speed_display">数字式车速显示</string>
+    <string name="oil_temperature">机油温度</string>
+
+    <string name="units">单位</string>
+    <string name="distance">距离</string>
+    <string name="speed">速度</string>
+    <string name="temperature">温度</string>
+    <string name="volume">容积</string>
+    <string name="consumption">油耗</string>
+    <string name="pressure">胎压</string>
+
+    <string name="service">Service</string>
+    <string name="factory_settings">工厂设置</string>
+    <string name="all_settings">所有设置</string>
+    <string name="seat_drive_profile">Seat drive profile</string>
+    <string name="profile_infomation">Profile information</string>
+    <string name="individual_engine">Engine</string>
+    <string name="individual_steering">Steering</string>
+    <string name="individual_climate">Climate</string>
+
+    <string name="tire_pressure_monitoring_display">轮胎压力监控显示</string>
+    <string name="driving_distance">续航局路</string>
+    <string name="distance_since_start">自启动后行驶里程</string>
+    <string name="distance_since_refueling">自加油后行驶里程</string>
+    <string name="distance_long_term">长时间行驶里程</string>
+    <string name="avg_consumption_since_start">自启动后平均油耗</string>
+    <string name="avg_consumption_since_refueling">自加油后平均油耗</string>
+    <string name="avg_consumption_long_term">长时间平均油耗</string>
+    <string name="avg_speed_since_refueling">自加油起平均速度</string>
+    <string name="avg_speed_long_term">长时间平局速度</string>
+    <string name="travelling_time_since_refueling">自加油后行驶时间</string>
+    <string name="travelling_time_long_term">长时间行驶时间</string>
+    <string name="conv_consumers">舒适性用电器</string>
+    <string name="dynamical_fuel">瞬时油耗</string>
+    <string name="vehicle_no">汽车编号：</string>
+    <string name="volkswagen_inspection">车况检查：</string>
+    <string name="oil_change_service">更换机油保养：</string>
+    <string name="volkswagen_inspection_days">车况检查天数</string>
+    <string name="volkswagen_inspection_distance">车况检查里程</string>
+    <string name="oil_change_service_days">更换机油保养天数</string>
+    <string name="oil_change_service_distance">更换机油保养里程</string>
+    <string name="seat_settings">座椅</string>
+    <string name="reset_since_start_driving_data">恢复 \"自起动以后\" 的行驶数据</string>
+    <string name="reset_long_term_driving_data">恢复 \"长时间\" 的行驶数据</string>
+    <string name="reset_since_start_driving_data_message">是否确定恢复\n\"自起动以后\" 的行驶数据?</string>
+    <string name="reset_long_term_driving_data_message">是否确定恢复\n\"长时间\" 的行驶数据?</string>
+    <string name="air_conditioning">空调工作中</string>
+    <string name="rear_window_heating">后窗加热</string>
+    <string name="seating_heat"><xliff:g id="value">%1$s</xliff:g>座椅加热</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="driving_data">行驶数据</string>
+    <string name="vehicle_status">车辆状态</string>
+    <string name="since_refuelling">自加油</string>
+    <string name="since_start">自启动</string>
+    <string name="long_term">长时间</string>
+    <string name="report_default">没有可用的信息。</string>
+    <string name="more_reoport"><xliff:g id="value">%1$s</xliff:g> 信息</string>
+    <string name="start_stop">自动起停</string>
+    <string name="tpms_content">当所有4个轮胎压力都经过检查并正确设置，请按\"SET\"</string>
+    <string name="tpms_confirm">四个轮胎的充气压力是否都与要求的数值相符?</string>
+    <string name="vehicle_reports">车辆报告</string>
+    <string name="start_stop_status">自动起停系统状态</string>
+    <string name="view">视图</string>
+    <string name="setting">设置</string>
+    <string name="air_setup">空调设置</string>
+    <string name="auto_air_profile">Air con. profile</string>
+    <string name="auto_air_recirculation">自动内外循环状态</string>
+
+
+    <string name="german">德语</string>
+    <string name="english_uk">英语(UK)</string>
+    <string name="english_us">英语(US)</string>
+    <string name="french">法语</string>
+    <string name="italian">意大利语</string>
+    <string name="spanish">西班牙文</string>
+    <string name="portuguese">葡萄牙语</string>
+    <string name="polish">波兰语</string>
+    <string name="czech">捷克语</string>
+    <string name="swedish">瑞典语</string>
+    <string name="dutch">荷兰语</string>
+    <string name="russian">俄语</string>
+    <string name="turkish">土耳其语</string>
+    <string name="chinese">中文(普通话)</string>
+    <string name="norwegian">挪威语</string>
+    <string name="normal">标准</string>
+    <string name="eco">经济</string>
+    <string name="sport">运动</string>
+    <string name="individual">Individual</string>
+    <string name="celsius">摄氏</string>
+    <string name="fahrenheit">华氏</string>
+    <string name="vehicle_side">车辆侧</string>
+    <string name="single_door">单个车门</string>
+    <string name="all_doors">所有车门</string>
+    <string name="driver_window">驾驶员侧车窗</string>
+    <string name="all_windows">全部车窗</string>
+    <string name="right_traffic">靠右行驶</string>
+    <string name="left_traffic">靠左行驶</string>
+    <string name="early">提前</string>
+    <string name="medium_time">适时</string>
+    <string name="late">延后</string>
+    <string name="very_close">极小</string>
+    <string name="close">小</string>
+
+    <string name="medium">中等</string>
+    <string name="far">大</string>
+    <string name="very_far">极大</string>
+    <string name="light">轻风</string>
+    <string name="strong">强风</string>
+    <string name="esc_off">ASR 关闭</string>
+    <string name="activated">已激活</string>
+    <string name="on">开</string>
+    <string name="inspection_days">离车况检查 <xliff:g id="value">%1$s</xliff:g> 天</string>
+    <string name="inspection_days_overdue">车况检查过期 <xliff:g id="value">%1$s</xliff:g> 天</string>
+    <string name="inspection_distance"><xliff:g id="value">%1$s</xliff:g> 后需要车况检查</string>
+    <string name="inspection_distance_overdue">车况检查过期 <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="oil_inspection_days">离更换机油保养 <xliff:g id="value">%1$s</xliff:g> 天</string>
+    <string name="oil_inspection_days_overdue">更换机油保养过期 <xliff:g id="value">%1$s</xliff:g> 天</string>
+    <string name="oil_inspection_distance"><xliff:g id="value">%1$s</xliff:g> 后需更换机油保养</string>
+    <string name="oil_inspection_distance_overdue">更换机油保养过期 <xliff:g id="value">%1$s</xliff:g></string>
+
+    <string name="tips_0">拖车模式</string>
+    <string name="tips_1">小心挡风玻璃起雾</string>
+    <string name="tips_2">不能维持工作温暖度</string>
+    <string name="tips_3">未发现驾驶员</string>
+    <string name="tips_4">操作变速箱需要发动机运行</string>
+    <string name="tips_5">功耗高</string>
+    <string name="tips_6">启用启-停系统</string>
+    <string name="tips_7">引擎必须运行</string>
+    <string name="tips_8">坡度太陡</string>
+    <string name="tips_9">启-停系统当前不可用</string>
+    <string name="tips_10">紧急制动功能干预</string>
+    <string name="tips_11">制动器需发动机运行</string>
+    <string name="tips_12">功耗高</string>
+    <string name="tips_13">空调开启需要发动机运行</string>
+    <string name="tips_14">转向角太大</string>
+    <string name="tips_15">操纵模式</string>
+    <string name="tips_16">除霜功能开启</string>
+    <string name="tips_17">驾驶员未系安全带</string>
+    <string name="tips_18">驾驶室门打开</string>
+    <string name="tips_19">加速踏板被踩下</string>
+    <string name="tips_20">前窗加热开启</string>
+    <string name="tips_21">空调最大制冷需要发动机运行</string>
+    <string name="tips_22">引擎盖未关好</string>
+    <string name="tips_23">发动机当前无法停止</string>
+    <string name="tips_24">越野模式已经启用</string>
+    <string name="tips_25">手刹按钮/杆使用太频繁</string>
+    <string name="tips_26">齿轮啮合</string>
+    <string name="tips_27">启-停按钮已按下</string>
+    <string name="tips_28">空调开启需要发动机运行</string>
+    <string name="tips_29">ACC 状态</string>
+    <string name="tips_30">驻车辅助已启动</string>
+    <string name="tips_31">ESC 已关闭</string>
+    <string name="tips_32">功耗高</string>
+    <string name="tips_33">启-停系统需要发动机运行</string>
+    <string name="tips_34">启-停系统已激活</string>
+    <string name="tips_35">启-停系统未激活</string>
+
+    <string name="reports_19">错误：轮胎压力检测系统</string>
+    <string name="reports_32">电池电量低</string>
+    <string name="reports_34">请加注燃油，注意里程!</string>
+    <string name="reports_120">错误：稳定控制</string>
+    <string name="reports_123">牵引力控制系统(ASR)关闭.</string>
+    <string name="reports_126">错误：自动驻车</string>
+    <string name="reports_154">门/引擎盖/行李箱盖打开。具体消息看MFD的车辆状态显示</string>
+
+    <string name="conv_tips_0">空调系统</string>
+    <string name="conv_tips_1">辅助加热器</string>
+    <string name="conv_tips_2">后车窗加热</string>
+    <string name="conv_tips_3">左边座椅加热</string>
+    <string name="conv_tips_4">右边座椅加热</string>
+    <string name="conv_tips_5">左座椅通风</string>
+    <string name="conv_tips_6">右前区域加热</string>
+    <string name="conv_tips_7">左前区域加热</string>
+    <string name="conv_tips_8">右前区域加热</string>
+    <string name="conv_tips_9">前雾灯</string>
+    <string name="conv_tips_10">后雾灯</string>
+    <string name="conv_tips_11">前窗加热</string>
+    <string name="conv_tips_12">方向盘加热</string>
+    <string name="conv_tips_13">后视镜加热</string>
+    <string name="conv_tips_14">后座椅加热</string>
+    <string name="conv_tips_15">后座椅通风</string>
+    <string name="conv_tips_16">插座</string>
+    <string name="conv_tips_17">饮料架</string>
+
+    <string name="activited">激活</string>
+    <string name="dynamic_light_assistant">动态灯光辅助</string>
+    <string name="motorway_light">动态大灯辅助</string>
+    <string name="adaptive_lane_orientation">自适应车道导向</string>
+    <string name="car_key_activated">汽车钥匙已激活</string>
+    <string name="individual_front_light">前灯</string>
+    <string name="esc_movement_pattern">ESC 运动模式</string>
+    <string name="ambient_lighting_color">环境照明颜色</string>
+    <string name="atmosphere_lighting_car">车内氛围照明</string>
+    <string name="right_front_adjustable_lighting">右前室调照明</string>
+    <string name="remote_control_key_memory_matching">座椅遥控钥匙记忆匹配</string>
+    <string name="inductive_trunk_lid">感应式行李箱盖</string>
+    <string name="white">白色</string>
+    <string name="automatic_internal_and_external_loop_setting">自动内外循环设定</string>
+    <string name="direct_tire_pressure_test">直接式胎压检测</string>
+    <string name="comfortable">舒适</string>
+    <string name="full_load">满载</string>
+    <string name="reference_tire_pressure">参考胎压</string>
+    <string name="actual_tire_pressure">实际胎压</string>
+    <string name="economic">经济</string>
+    <string name="economic_model">经济模式</string>
+    <string name="standard">标准</string>
+    <string name="motion">运动</string>
+    <string name="individualization">个性化</string>
+    <string name="steering">转向</string>
+    <string name="engine">驱动装置</string>
+    <string name="climate">空调</string>
+    <string name="mode_reset">模式复位</string>
+    <string name="drv_driving">驾驶</string>
+    <string name="driving_mode">驾驶模式</string>
+    <string name="the_snow">雪地</string>
+    <string name="cross_country">越野</string>
+    <string name="cross_country_personalization">越野个性化</string>
+    <string name="four_wheel_drive">四轮驱动</string>
+    <string name="downhill_assist_system">下坡辅助系统</string>
+    <string name="ramp_start_system">坡道起步系统</string>
+    <string name="parking_assist_system">驻车辅助系统</string>
+    <string name="front_light">前大灯</string>
+    <string name="hill_decent_control">陡坡缓降系统</string>
+
+    <!--camry-->
+    <string name="trip_info">里程信息</string>
+    <string name="history">历史油耗</string>
+    <string name="tire">轮胎气压</string>
+    <string name="air_light">空调&amp;灯光</string>
+    <string name="lock">车锁设置</string>
+    <string name="current">当前</string>
+    <string name="mpg">MPG</string>
+    <string name="sixty">60</string>
+    <string name="fifty">50</string>
+    <string name="forty">40</string>
+    <string name="thirty">30</string>
+    <string name="twenty">20</string>
+    <string name="ten">10</string>
+    <string name="zero">0</string>
+    <string name="fifteen_m">15分</string>
+    <string name="ten_m">10分</string>
+    <string name="five_m">5分</string>
+    <string name="one_m">1分</string>
+    <string name="avg_speed">"平均车速 : "</string>
+    <string name="driving_time">"行车时间 : "</string>
+    <string name="camry_distance">"续航里程 : "</string>
+    <string name="clear">清空</string>
+    <string name="trip1">Trip1</string>
+    <string name="trip2">Trip2</string>
+    <string name="trip3">Trip3</string>
+    <string name="trip4">Trip4</string>
+    <string name="trip5">Trip5</string>
+    <string name="update">更新</string>
+    <string name="no_tmps">没有TMPS设备</string>
+    <string name="bar">BAR</string>
+    <string name="zero_double">0.0</string>
+    <string name="daytime_runing_light">日间行车灯</string>
+    <string name="auto_lock_by_speed">通过车速自动锁止</string>
+    <string name="lock_from_p">通过换出P挡自动锁止</string>
+    <string name="unlock_to_p">通过换入P挡自动解锁</string>
+    <string name="unlock_driver_door_open">通过驾驶员车门自动解锁</string>
+    <string name="unlock_double_operate">遥控按钮两步解锁</string>
+    <string name="auto_lock">智能车门解锁</string>
+    <string name="all_seat">所有座席</string>
+    <string name="driver_seat">驾驶席</string>
+    <string name="auto_adjust_head_light_sensity">大灯灵敏度</string>
+    <string name="inner_lights_close_time">车内照明熄灭定时器</string>
+     <string name="off">关</string>
+    <string name="senven_s">7.5秒</string>
+    <string name="fiften_s">15秒</string>
+    <string name="thirty_s">30秒</string>
+    <string name="oil_unit">油耗单位</string>
+    <string name="air_auto">自动A/C模式</string>
+    <string name="inner_outer_auto">有效通风模式</string>
+    <string name="lock_unlock_tone">锁门/开门提示音反馈</string>
+    <string name="air_status">air status</string>
+    <string name="waring_car_not_start">车辆未启动，没有数据！</string>
+    <string name="oil_energy">油电混合</string>
+    <string name="big_light_auto_close_delay">大灯延时自动关闭</string>
+    <string name="energy_flow">动力流向示意图</string>
+    <string name="sixty_s">60秒</string>
+    <string name="ninty_s">90秒</string>
+    <string name="lock_unlock_blink">上锁开锁时紧急闪烁灯响应</string>
+    <string name="auto_lock_and_one_key_start">智能车锁和一键启动</string>
+    <string name="unlock_double_key">操作钥匙两次时解锁</string>
+    <string name="driver_on_right">驾驶员在右侧</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="auto_relock_time">自动重新锁定时间</string>
+    <string name="hundred_tweenty_s">120秒</string>
+    <string name="waring_tire_low">"轮胎气压异常，
+是否显示胎压信息？"</string>
+    <string name="sure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="not_oil_electic_energy">非混合动力车型</string>
+    <string name="travelling_time_since_start">启动后行驶时间</string>
+    <string name="avg_speed_since_start">启动后平均速度</string>
+    <string name="total_trip">里程</string>
+    <string name="reset">复位</string>
+
+    <string name="lock_unlock_feedback_indicator_light">锁止/解锁反馈指示灯</string>
+    <string name="convenient_service">"便利服务"</string>
+    <string name="start_after_parking">"停车后启动"</string>
+    <string name="camry_locking_settings">门锁设置</string>
+    <string name="camry_lighting_settings">车灯设置</string>
+    <string name="camry_airconditioning_settings">空调设置</string>
+    <string name="historical_record">历史记录</string>
+    <string name="itinerary_information">行程信息</string>
+    <string name="last_best">上一最佳</string>
+    <string name="camry_clear">清除</string>
+    <string name="camry_unit_settings">单位设置</string>
+    <string name="camry_service_settings">服务设置</string>
+
+    <string name="rear_door_lock">后排门锁 : <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="front_right_door_lock">右前门锁 : <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="front_left_door_lock">左前门锁 : <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="exterior_temp">车外温度</string>
+    <string name="speed_instance">"瞬时 : <xliff:g id="value">%1$s</xliff:g>"</string>
+    <string name="speed_avg">"平均 : <xliff:g id="value">%1$s</xliff:g>"</string>
+    <string name="brake_state">手刹状态</string>
+    <string name="brake_up">拉起</string>
+    <string name="brake_down">放下</string>
+    <string name="curent_gear">当前档位</string>
+    <string name="engine_speed">发动机转速</string>
+    <string name="state_lock">上锁</string>
+    <string name="state_unlock">解锁</string>
+    <string name="vehicle_identification_settings">车型识别设置(如非异常情况,请务必不要设置此项!!!)</string>
+    <string name="paragraph_12_camry">12款凯美瑞</string>
+    <string name="paragraph_15_camry">15款凯美瑞</string>
+
+	<!-- korea -->
+	<string name="korea_amp_treble">"高音"</string>
+	<string name="korea_amp_middle">"中音"</string>
+	<string name="korea_amp_bass">"低音"</string>
+	<string name="korea_amp_volume">"音量"</string>
+ <!--honda-->
+    <string name="media_name">原车播放器</string>
+    <string name="compass_name">指南针</string>
+    <string name="door_name">"车门信息"</string>
+    <string name="calibrate">"校准"</string>
+    <string name="compass_calibration">"指南针校准"</string>
+    <string name="compass_status">"状态 :"</string>
+    <string name="compass_zone">"区域 :"</string>
+    <string name="calibrating">"校准中"</string>
+    <string name="calibration_done">"校准完成"</string>
+    <string name="stop">"停止"</string>
+    <string name="loading">"加载中"</string>
+    <string name="not_connected">"未检测到设备"</string>
+    <string name="connected">"设备已连接"</string>
+    <string name="playing">"播放"</string>
+    <string name="pause">"暂停"</string>
+    <string name="others">"其他"</string>
+
+    <string name="current_drive">"本次驾驶状况"</string>
+    <string name="instant_fuel">"瞬间油耗"</string>
+    <string name="average_fuel">"平均油耗"</string>
+    <string name="current_fuel">"本次"</string>
+    <string name="history_fuel">"上次"</string>
+    <string name="driving_range">"可行驶里程:"</string>
+    <string name="history_drive">"驾驶状况履历"</string>
+    <string name="history_1">"第1次"</string>
+    <string name="history_2">"第2次"</string>
+    <string name="history_3">"第3次"</string>
+    <string name="delete_record">"删除记录"</string>
+
+    <string name="scan">"扫描"</string>
+    <string name="stations">"电台列表"</string>
+    <string name="preset">"预存台"</string>
+    <string name="not_preset">"非预存台"</string>
+    <string name="preset_promot">"预存台:"</string>
+    <string name="idle">"空闲"</string>
+    <string name="scaning">"扫描中"</string>
+    <string name="refreshing">"刷新中"</string>
+    <string name="freshen">" 刷新"</string>
+    <string name="refresh">"刷新列表"</string>
+
+    <!-- Accord -->
+    <string name="adjust_outside_temp">"调节车外温度显示"</string>
+    <string name="fuel_efficiency_bl">"燃油消耗量显示时的背景照明"</string>
+    <string name="with_refuel">"与加油联动"</string>
+    <string name="ign_off">"关闭点火开关时联动"</string>
+    <string name="manually_reset">"手动"</string>
+    <string name="tripa_reset_time">"里程 A 重设条件的切换"</string>
+    <string name="tripb_reset_time">"里程 B 重设条件的切换"</string>
+    <string name="il_dimming_time">"车内灯光减光时间"</string>
+    <string name="hl_auto_off_time">"前大灯自动熄灭时间"</string>
+    <string name="auto_light_sensitivity">"自动点灯敏感度"</string>
+    <string name="auto_door_lock_with">"自动落锁方式"</string>
+    <string name="vehicle_speed">"车速"</string>
+    <string name="shift_from_p">"移出P档"</string>
+    <string name="auto_door_unlock_with">"自动解锁方式"</string>
+    <string name="all_doors_drivers_door">"驾驶座车门打开"</string>
+    <string name="all_doors_shifted_to_park">"移到P档"</string>
+    <string name="all_doors_ign_off">"熄火后"</string>
+    <string name="key_and_remote_unlock_mode">"车门解锁"</string>
+    <string name="driver_door">"驾驶座门"</string>
+    <string name="keyless_unlock_answer_back">"遥控落锁提示"</string>
+    <string name="security_relock_timer">"自动重锁时间"</string>
+    <string name="keyless_access_beep_vol">"遥控门锁蜂鸣声提示音量"</string>
+    <string name="keyless_access_beep">"遥控门锁蜂鸣声提示"</string>
+    <string name="reset_main_info">"复位保养信息"</string>
+    <string name="confirm_reset_main_info">"确认复位保养信息?"</string>
+    <string name="default_all">"恢复原厂设定"</string>
+    <string name="deflation_warning_system">"胎压监测系统校准"</string>
+    <string name="confirm_deflation_warning_system">"胎压监测系统校准?"</string>
+    <string name="door_unlock_mode">"门锁模式"</string>
+    <string name="remote_start_system">遥控启动系统</string>
+    <string name="keyless_access_light_flash">遥控门锁车边灯提示</string>
+    <string name="display_settings">"MDF屏设置"</string>
+    <string name="mfd_screen_brightness_mode">亮度模式</string>
+    <string name="brightness_mode_off">关屏</string>
+    <string name="brightness_mode_daytime">白天</string>
+    <string name="brightness_mode_night">晚上</string>
+    <string name="mfd_screen_brightness">亮度</string>
+    <string name="mfd_screen_saturation">饱和度</string>
+    <string name="mfd_screen_contract">对比度</string>
+    <string name="mfd_screen_bg_color">背景色</string>
+    <string name="bg_color_blue">蓝色</string>
+    <string name="bg_color_amber">琥珀色</string>
+    <string name="bg_color_red">红色</string>
+    <string name="bg_color_green">绿色</string>
+    <string name="bg_color_violet">紫罗兰</string>
+
+    <string name="internal_temperature">车内温度</string>
+    <string name="outside_temperature">车外温度</string>
+    <string name="irradiance">日照强度</string>
+    <string name="evaporator_temperature">蒸发器温度</string>
+    <string name="driving_side_air_mixing_control_machine">驾驶侧空气混合控制机</string>
+    <string name="Passenger_side_air_mixing_control_machine">乘客侧空气混合控制机</string>
+    <string name="mode_control_motor">模式控制电机</string>
+    <string name="blower_motor_circuit">鼓风机电机电路</string>
+    <string name="driving_side_air_mixture">驾驶侧空气混合开度</string>
+    <string name="passenger_side_air_mixing">乘客侧空气混合开度</string>
+    <string name="engine_coolant_temperature">发动机冷却液温度</string>
+    <string name="open_circuit">开路</string>
+    <string name="short_circuit">短路</string>
+    <string name="fault">故障</string>
+
+    <!-- civic -->
+    <string name="auto_interior_illumination_sensitivity">自动车内照明灵敏度</string>
+    <string name="adjust_alarm_volume">调整报警音量</string>
+    <string name="fuel_efficiency_backlight">节能模式的背景照明</string>
+    <string name="new_message_notifications">新消息提醒</string>
+    <string name="speed_distance_units">速度单位</string>
+    <string name="tachometer">转速计显示</string>
+    <string name="walk_away_auto_lock">离开锁止个性化设定</string>
+    <string name="auto_headlight_on_with_wiper">雨刷和自动大灯联动个性化设定</string>
+    <string name="voice_alarm_system_volume">语音报警系统音量</string>
+    <string name="small">小</string>
+    <string name="big">大</string>
+    <string name="engine_automatic_start_stop_tips">发动机节能自动起停提示</string>
+    <string name="acc_detection_prompt_tone">ACC前车探知提示音</string>
+    <string name="away">远</string>
+    <string name="near">近</string>
+    <string name="tone_of_pause_lkas">暂停LKAS提示音</string>
+    <string name="set_risk_distance_head_of_car">设定前方危险警告距离</string>
+    <string name="minor_lane_departure_system_set">车道偏离辅修系统设定</string>
+    <string name="tachometer_settings">转速表设置</string>
+    <string name="wide">宽阔</string>
+    <string name="only_warning">仅警告</string>
+    <string name="trip_settings">里程设置</string>
+    <string name="wireless_lock_settings">无线锁设置</string>
+    <string name="car_settings">车身设置</string>
+    <string name="driving_assistant_system_settings">驾驶辅助系统设置</string>
+    <string name="system_settings">系统设置</string>
+
+    <string name="three_s">3秒</string>
+    <string name="ten_s">10秒</string>
+    <string name="twenty_s">20秒</string>
+    <string name="two_m">2分</string>
+    <string name="three_m">3分</string>
+
+    <string name="twenty_m">20分</string>
+    <string name="thirty_m">30分</string>
+    <string name="top_light_delayed_time">"顶灯延时时间"</string>
+    <string name="go_home_delayed_time">"跟随回家延时时间"</string>
+    <string name="economize_on_electricity">"节电设置"</string>
+
+    <string name="the_original_car_can_range_from_the_instrument_icon">"原车可续航距离仪表图标"</string>
+    <string name="vehicle_average_vehicle_speed_time_meter_icon">"原车平均车速时间仪表图标"</string>
+    <string name="the_original_car_shows_off_the_instrument_icon">"原车显示关闭仪表图标"</string>
+    <string name="original_car_turbine_meter_icon">"原车涡轮仪表图标"</string>
+    <string name="original_car_audio_instrument_icon">"原车音响仪表图标"</string>
+    <string name="original_car_phone_icon">"原车电话图标"</string>
+    <string name="Original_car_icon_all_deleted">"原车图标全部删除"</string>
+    <string name="logo_settings">"图标设置"</string>
+    <string name="are_you_sure_you_remove_all_the_icons">确认删除全部图标吗?</string>
+    <string name="delete">删除</string>
+    <string name="add">添加</string>
+    <string name="maintenance_information_oil_life">保养信息油品使用寿命</string>
+    <string name="smart_key_boot_guide_display">智能钥匙启动指南显示</string>
+    <string name="traffic_sign_recognition_system">交通标识识别系统</string>
+
+    <!-- avancier  -->
+    <string name="electric_tail_door_remote_opening_condition_setting">电动尾门遥控开启条件设定</string>
+    <string name="electric_rear_door_outer_handle_for_electric_open">电动尾门适用外手柄电动打开</string>
+    <string name="driving_posture_set_personalized_memory_location_linkage">驾驶姿势个性化设定记忆位置联动</string>
+    <string name="move_in_out_of_seat_position">进入/退出座椅位置运动</string>
+    <string name="reverse_tone">倒挡提示音</string>
+    <string name="anytime">任何时候</string>
+    <string name="after_unlocking">解锁后</string>
+    <string name="turn_off_with_the_steering_light">与转向灯联动</string>
+    <string name="the_duration_is_displayed_after_the_turn_off">转向灯关闭后显示持续时间</string>
+    <string name="rear_view_dynamic_reminder_system_settings">后视动态提醒系统设置</string>
+    <string name="automatic_door_unlock">车门自动开锁</string>
+    <string name="automatic_door_latch">车门自动落锁</string>
+    <string name="linkage_when_you_hang_in_the_P_file">挂入P档时联动</string>
+    <string name="switch_off_when_ignition_is_switched_on">关闭点火开关时联动</string>
+    <string name="linkage_with_speed">与车速联动</string>
+    <string name="remove_P_file_linkage">移除P档联动</string>
+    <string name="head_up_warning">抬头警告</string>
+    <string name="switch_lock">SWITCH LOCK</string>
+    <string name="electronic_preload_belt_set">电子预紧式安全带设定</string>
+    <string name="two_s">2秒</string>
+    <string name="restoration_of_initial_value_of_panoramic_image_system">全景影象系统恢复初始值</string>
+
+    <!-- 17CRV -->
+    <string name="driver_attention_monitor">驾驶员注意力监测器</string>
+    <string name="visual_warning">视觉警告</string>
+    <string name="tactile_and_visual_warnings">触觉和视觉警告</string>
+    <string name="rear_seat_entertainment_operating_system_lockout">后座娱乐操作系统锁定</string>
+    <string name="locking">锁定</string>
+    <string name="static_boot_line">静态引导线</string>
+    <string name="dynamic_boot_line">动态引导线</string>
+    <string name="rear_camera">倒车后摄像头</string>
+    <string name="parking_space_width">倒车入库车位宽度</string>
+    <string name="narrow">窄</string>
+    <string name="crv_wide">宽</string>
+
+    <!-- Mazda -->
+    <string name="car_mode_config">"车型高低配设置"</string>
+    <string name="walk_away_lock">"离开锁门开关设置"</string>
+    <string name="lock_volume_setting">"上锁声音大小设置"</string>
+    <string name="auto_lock_time">"自动上锁时间设置"</string>
+    <string name="turn_light_on_off">"转向灯闪烁开关设置"</string>
+    <string name="headlamp_off_after_door_close">"关门后大灯亮的时间设置"</string>
+    <string name="headlamp_on_after_door_open">"开门后大灯亮的时间设置"</string>
+    <string name="headlamp_on_off_setting">"远光灯开关设置"</string>
+    <string name="windshield_wiper_on_off_setting">"雨刷开关设置"</string>
+    <string name="headlamp_brightness_setting">"前灯自动亮度设置"</string>
+    <string name="nothing">"无"</string>
+    <string name="config_middle_low">"中低配"</string>
+    <string name="config_high">"高配"</string>
+    <string name="lock_sound_low">"低"</string>
+    <string name="lock_sound_middle">"中"</string>
+    <string name="lock_sound_high">"高"</string>
+    <string name="zero_s">"0秒"</string>
+    <string name="brightness_black">"黑"</string>
+    <string name="brightness_mid_black">"中黑"</string>
+    <string name="brightness_mid">"中"</string>
+    <string name="brightness_mid_bright">"中亮"</string>
+    <string name="brightness_bright">"亮"</string>
+
+    <string name="auto_lock_mode">"自动上锁模式"</string>
+    <string name="lock_when_driving">"锁定:行驶时"</string>
+    <string name="nlock_when_running_to_unlock_the_stalled">"锁定:行驶时 解锁:熄火"</string>
+    <string name="Lock_out_of_the_parking_block_to_unlock_the_parking_block">"锁定:退出停车挡 解锁:进入停车挡"</string>
+    <string name="exit_parking_block">"退出驻车挡"</string>
+    <string name="auto_unlock_mode">"解锁模式"</string>
+    <string name="one_door">"一次 所有车门"</string>
+    <string name="two_door">"一次 驾驶员侧车门 两次 所有车门"</string>
+    <string name="off_car_lock">"离车车锁"</string>
+    <string name="steering_signal_volume">"转向信号音量"</string>
+    <string name="when_the_door_is_open_the_car_lights_go_out_auto">"车门开门时:车内灯自动熄灭"</string>
+    <string name="sixty_m">60分</string>
+    <string name="when_the_door_is_close_the_car_lights_go_out_auto">"车门关闭时:车内灯自动熄灭"</string>
+    <string name="adaptive_front_lightion_system">"自适应转向前照灯系统"</string>
+    <string name="hendlight_light_off_time">"大灯关闭定时器"</string>
+    <string name="hendlight_not_warning_device">"车灯未关提醒器"</string>
+    <string name="automatic_headlight_opening">"自动大灯开启"</string>
+    <string name="driving_display_height">"驾驶显示 高度"</string>
+    <string name="driving_display_brightness_control">"驾驶显示 亮度控制"</string>
+    <string name="driving_display_brightness">"驾驶显示 亮度"</string>
+    <string name="driving_dispaly_active_driving_dispaly">"驾驶显示 主动驾驶显示"</string>
+    <string name="driving_display_navigation">"驾驶显示 导航"</string>
+    <string name="driving_display_calibration">"驾驶显示 校准"</string>
+    <string name="smart_city_arake_system">"智能城市刹车系统"</string>
+    <string name="blindSpot_monitor_volume">"盲点监控音量"</string>
+    <string name="fuel_economy_synchronization">"燃油经济性 同步平均和里程A"</string>
+    <string name="fuel_economy_reset">"燃油经济性 复位平均"</string>
+    <string name="str_sure_reset">"确定复位吗？"</string>
+    <string name="fuel_consumption_per_minute">"每分钟油耗"</string>
+
+    <string name="current_average_fuel_history">"当前平均燃油历史"</string>
+    <string name="second_average_fuel_history">"第二次平均燃油历史"</string>
+    <string name="third_average_fuel_history">"第三次平均燃油历史"</string>
+    <string name="fourth_average_fuel_history">"第四次平均燃油历史"</string>
+    <string name="fifth_average_fuel_history">"第五次平均燃油历史"</string>
+    <string name="sixth_average_fuel_history">"第六次平均燃油历史"</string>
+    <string name="i_eloop">"i-ELOOP"</string>
+    <string name="driving_average_fuel_consumption">"本次驾驶平均油耗"</string>
+
+    <string name="first_minute_fuel_consumption">第一分钟油耗</string>
+    <string name="second_minute_fuel_consumption">第二分钟油耗</string>
+    <string name="third_minute_fuel_consumption">第三分钟油耗</string>
+    <string name="fourth_minute_fuel_consumption">第四分钟油耗</string>
+    <string name="fifth_minute_fuel_consumption">第五分钟油耗</string>
+    <string name="sixth_minute_fuel_consumption">第六分钟油耗</string>
+    <string name="seventh_minute_fuel_consumption">第七分钟油耗</string>
+    <string name="eighth_minute_fuel_consumption">第八分钟油耗</string>
+    <string name="ninth_minute_fuel_consumption">第九分钟油耗</string>
+    <string name="tenth_minute_fuel_consumption">第十分钟油耗</string>
+    <string name="fuel_consumption_of_the_first_11_20_minutes">第11-20分钟油耗</string>
+    <string name="fuel_consumption_of_the_first_21_30_minutes">第21-30分钟油耗</string>
+    <string name="fuel_consumption_of_the_first_31_40_minutes">第31-40分钟油耗</string>
+    <string name="fuel_consumption_of_the_first_41_50_minutes">第41-50分钟油耗</string>
+    <string name="fuel_consumption_of_the_first_51_60_minutes">第51-60分钟油耗</string>
+    <string name="have_a_dish_but_not_play">有碟但未播放</string>
+    <string name="fast_forward">快进</string>
+    <string name="fast_rewind">快退</string>
+
+    <!-- Tires Info-->
+    <string name="tire_info">"胎压"</string>
+    <string name="str_prompt_temp">"温度: "</string>
+    <string name="str_prompt_tire">"胎压: "</string>
+    <string name="str_temp_warning">"高温报警"</string>
+    <string name="str_warning_pressure">"胎压报警"</string>
+    <string name="str_high_pressure">高压报警</string>
+    <string name="str_low_pressure">低压报警</string>
+    <string name="str_tire_error">"异常报警"</string>
+    <string name="str_warning_lost_sensor">"传感器断开"</string>
+    <string name="str_warning_system_failure">"系统失效"</string>
+    <string name="abnormal_temperature">温度异常</string>
+
+    <!-- Trumpche-->
+    <string name="str_reset_factory">"恢复出厂设置"</string>
+    <string name="str_language">"语言"</string>
+    <string name="str_airconditioning_setting">"空调设置"</string>
+    <string name="str_auto_compressor_status">"AUTO时压缩机状态"</string>
+    <string name="str_auto_cycle_mode">"AUTO时内外循环控制方式"</string>
+    <string name="str_ac_comfort_setting">"空调舒适曲线设置"</string>
+    <string name="str_anion_mode">"负离子模式"</string>
+    <string name="str_seat_setting">"座椅设置"</string>
+    <string name="str_driver_seat_heater">"驾驶座椅自动加热设置"</string>
+    <string name="str_passenger_seat_heater">"副驾驶座椅自动加热设置"</string>
+    <string name="str_driver_seat_heater_level">"驾驶座椅加热等级"</string>
+    <string name="str_passenger_seat_heater_level">"副驾驶座椅加热等级"</string>
+    <string name="str_seat_welcome">"座椅迎宾功能设置"</string>
+    <string name="str_auto_seat_recog">"智能钥匙自动识别座椅位置"</string>
+    <string name="str_drive_assit">"驾驶辅助"</string>
+    <string name="str_over_speed_alert">"超速报警（km/h）"</string>
+    <string name="str_alart_volume">"组合仪表报警音量"</string>
+    <string name="str_power_on_time">"远程上电时间（分）"</string>
+    <string name="str_start_time">"远程启动时间（分）"</string>
+    <string name="str_turn_mode">"转向模式"</string>
+    <string name="str_accessory">"车身附件"</string>
+    <string name="str_remote_unlock">"遥控解锁"</string>
+    <string name="str_speed_lock">"车速上锁"</string>
+    <string name="str_auto_unlock">"自动解锁"</string>
+    <string name="str_remote_control_left_skylight">"遥控左前窗和天窗"</string>
+    <string name="str_front_wiper_maintain">"前雨刮维护功能"</string>
+    <string name="str_rear_wiper_auto">"后雨刮自动挂刷功能"</string>
+    <string name="str_outside_rearview">"外后视镜自动折叠"</string>
+    <string name="str_unlock_the_lock_tone">解锁闭锁提示音</string>
+    <string name="str_intelligent_active_locking">智能主动闭锁</string>
+    <string name="str_intelligent_active_unlocking">智能主动解锁</string>
+    <string name="str_light_control">"灯光控制"</string>
+    <string name="str_go_home">"伴我回家"</string>
+    <string name="str_foglamp_turn">"雾灯转向辅助"</string>
+    <string name="str_daytime_running_lamp">"日间行车灯"</string>
+    <string name="str_auto_light_sensitivity">"自动灯光灵敏度"</string>
+    <string name="str_avm">"全景影像开关"</string>
+    <string name="str_avm_setting">"全景影像设置"</string>
+    <string name="str_front_avm">"前景+全景"</string>
+    <string name="str_front_right">"前景+右侧景"</string>
+    <string name="str_rear_avm">"后景+全景"</string>
+    <string name="str_horizontal_avm">"水平停车+全景"</string>
+    <string name="str_vertical_avm">"垂直停车+全景"</string>
+
+    <string name="str_auto">"自动"</string>
+    <string name="str_manual">"手动"</string>
+    <string name="str_slow">"缓慢"</string>
+    <string name="str_normal">"正常"</string>
+    <string name="str_fast">"快速"</string>
+    <string name="str_min">"最小"</string>
+    <string name="str_low">"低"</string>
+    <string name="str_mid">"中"</string>
+    <string name="str_high">"高"</string>
+    <string name="str_max">"最大"</string>
+    <string name="str_sport">"运动"</string>
+    <string name="str_standard">"标准"</string>
+    <string name="str_comfort">"舒适"</string>
+    <string name="str_all_doors">"所有车门"</string>
+    <string name="str_driver_door_only">"仅左前门"</string>
+    <string name="str_close">"关闭"</string>
+    <string name="str_beam_lamp_only">"仅近光灯"</string>
+    <string name="str_beam_fog_lamp">"近光后雾"</string>
+    <string name="str_confirm_factory_data_reset">"确认恢复出厂设置？"</string>
+
+    <string name="air_settings">"空调系统设置"</string>
+    <string name="car_normal_settings">"车辆舒适与便利设置"</string>
+    <string name="collision_detection_settings">"碰撞/检测系统"</string>
+    <string name="light_settings">"灯光设置"</string>
+    <string name="center_locking_settings">"中控门锁设置"</string>
+    <string name="smart_remote_settings">"智能遥控钥匙设置"</string>
+    <string name="factory_reset_settings">"恢复出厂设置"</string>
+
+    <string name="estimate_range">"续航里程"</string>
+    <string name="wheel_speed">"车轮转速"</string>
+
+    <string name="traction_control_system">"牵引力控制系统"</string>
+    <string name="turn_light">"转向灯设置"</string>
+    <string name="light_flash_one_time">"闪烁一次"</string>
+    <string name="light_flash_three_times">"闪烁三次"</string>
+    <string name="message_tone">"消息提示音"</string>
+    <string name="waring_tone">"警告提示音"</string>
+    <string name="current_sound_pattern">"当前发声模式"</string>
+    <string name="mile_unit">"里程单位"</string>
+    <string name="save_oil_drvie_plan">"行驶节油模式"</string>
+    <string name="save_oil_speed">"车速节油模式"</string>
+    <string name="brightness">"亮度"</string>
+    <string name="brightness_auto">"自动"</string>
+    <string name="brightness_manual">"手动"</string>
+    <string name="engine_not_hot_percent">"引擎未热温度"</string>
+    <string name="engine_not_hot_display">"引擎未热提示"</string>
+    <string name="rain_sensor">"雨水感应器"</string>
+    <string name="light_in_car">"车内照明"</string>
+    <string name="park_lock_ctrl">"驻车锁控制"</string>
+    <string name="hill_start_assist">"陡坡起步辅助"</string>
+    <string name="enhanced_parking_assist">"增强型泊车辅助"</string>
+    <string name="reverse_video_zoom_status">"倒车视频缩放状态"</string>
+    <string name="reverse_video_zoom_status_no_zoom">"无放大"</string>
+    <string name="reverse_video_zoom_status_zoom">"放大"</string>
+    <string name="sound_mode_close">"关"</string>
+    <string name="sound_mode_slow">"慢速"</string>
+    <string name="sound_mode_mid">"中速"</string>
+    <string name="sound_mode_fast">"快速"</string>
+    <string name="sound_mode_auto">"自动"</string>
+    <string name="save_oil">"节油模式"</string>
+    <string name="display">"显示"</string>
+    <string name="not_display">"不显示"</string>
+    <string name="invalid">"(无效)"</string>
+    <string name="key_speech">"语音"</string>
+    <string name="key_phone">"电话"</string>
+    <string name="key_pre">"上一曲"</string>
+    <string name="key_next">"下一曲"</string>
+    <string name="key_switch">"切换"</string>
+    <string name="key_hangup">"挂断"</string>
+    <string name="my_temp">"我的温度"</string>
+    <string name="warning_tone_volume_status">警示音音量状态</string>
+    <string name="ambient_light_brightness">氛围灯亮度</string>
+    <string name="atmosphere_light_color">氛围灯颜色</string>
+    <string name="blue">青色</string>
+    <string name="light_blue">浅蓝色</string>
+    <string name="multi_function_advanced_seating_status">多功能高级座椅状态</string>
+
+    <string name="main_seat_back_adjustment">主驾座椅背部调节</string>
+    <string name="waist_adjustment_of_main_driving_seat">主驾座椅腰部调节</string>
+    <string name="the_main_driving_seat_hip_adjustment">主驾座椅臀部调节</string>
+    <string name="the_main_drivers_seat_is_adjusted_on_both_sides_of_the_waist">主驾座椅腰部两侧调节</string>
+    <string name="the_main_driver_seat_is_adjusted_on_both_sides_of_the_hip">主驾座椅臀部两侧调节</string>
+
+    <string name="side_seat_adjustment">副驾座椅背部调节</string>
+    <string name="the_copilot_seat_lumbar_adjustment">副驾座椅腰部调节</string>
+    <string name="seat_vice_adjustment">副驾座椅臀部调节</string>
+    <string name="the_side_of_the_side_seat_is_adjusted_on_both_sides_of_the_waist">副驾座椅腰部两侧调节</string>
+    <string name="the_side_seats_are_adjusted_on_both_sides_of_the_hips">副驾座椅臀部两侧调节</string>
+    <string name="driving_waist_massage">主驾腰部按摩</string>
+    <string name="driving_buttocks_massage">主驾臀部按摩</string>
+    <string name="side_drive_massage">副驾腰部按摩</string>
+    <string name="copilot_buttocks_massage">副驾臀部按摩</string>
+    <string name="plus">加</string>
+    <string name="minus">减</string>
+
+    <string name="ford_warning_1">"变速箱过热请安全停车"</string>
+    <string name="ford_warning_2">"变速箱故障请立即检修"</string>
+    <string name="ford_warning_3">"引擎故障请立即检修"</string>
+    <string name="ford_warning_4">"柴油滤清器阻塞请参考用户手册"</string>
+    <string name="ford_warning_5">"引擎机油需要更换请检修"</string>
+    <string name="ford_warning_6">"引擎机油油量低请安全停车"</string>
+    <string name="ford_warning_7">"坡道起步辅助不可用"</string>
+    <string name="ford_warning_8">"安全气囊故障请立即检修"</string>
+    <string name="ford_warning_9">"刹车系统故障请安全停车"</string>
+    <string name="ford_warning_10">"刹车油油量低请立即检修"</string>
+    <string name="ford_warning_11">"ABS故障请立即检修"</string>
+    <string name="ford_warning_12">"OFF(ESP 关闭)"</string>
+    <string name="ford_warning_13">"ESP故障请检修"</string>
+    <string name="ford_warning_14">"助力转向故障请立即检修"</string>
+    <string name="ford_warning_16">"后备箱未关好"</string>
+    <string name="ford_warning_17">"引擎盖未关好"</string>
+    <string name="ford_warning_18">"后排右侧车门未关好"</string>
+    <string name="ford_warning_19">"后排左侧车门未关好"</string>
+    <string name="ford_warning_20">"副驾驶座车门未关好"</string>
+    <string name="ford_warning_21">"驾驶座车门未关好"</string>
+    <string name="ford_warning_23">"自动起-停 启动引擎"</string>
+    <string name="ford_warning_24">"左转提示灯故障更换灯泡"</string>
+    <string name="ford_warning_25">"右转提示灯故障更换灯泡"</string>
+    <string name="ford_warning_26">"引擎盖未关好"</string>
+    <string name="ford_warning_27">"后备箱未关好"</string>
+    <string name="ford_warning_28">"后排右侧车门未关好"</string>
+    <string name="ford_warning_29">"后排左侧车门未关好"</string>
+    <string name="ford_warning_30">"副驾驶座车门未关好"</string>
+    <string name="ford_warning_31">"驾驶座车门未关好"</string>
+    <string name="ford_warning_32">"踩离合器启动"</string>
+    <string name="ford_warning_33">"踩刹车启动"</string>
+    <string name="ford_warning_34">"钥匙电池电量低请更换电池"</string>
+    <string name="ford_warning_35">"自动起-停 请踩踏板启动引擎"</string>
+    <string name="ford_warning_36">"防盗系统故障请检修"</string>
+    <string name="ford_warning_37">"防盗系统故障请检修"</string>
+    <string name="ford_warning_38">"内部扫描已取消"</string>
+    <string name="ford_warning_39">"自动雨刷灯故障请检修"</string>
+    <string name="ford_warning_40">"自动起-停 请手动启动引擎"</string>
+    <string name="ford_warning_41">"关闭后备箱或使用备用钥匙"</string>
+    <string name="ford_warning_42">"转向锁已启用请转动方向盘"</string>
+    <string name="ford_warning_43">"转向锁故障请安全停车"</string>
+    <string name="ford_warning_44">"转向锁故障请立即检修"</string>
+    <string name="ford_warning_45">"钥匙不在车内"</string>
+    <string name="ford_warning_46">"未发现钥匙"</string>
+    <string name="ford_warning_47">"按POWER键关闭引擎"</string>
+    <string name="ford_warning_48">"车门未管好请踩刹车减速"</string>
+    <string name="ford_warning_49">"选择空档启动"</string>
+    <string name="ford_warning_50">"踩刹车启动"</string>
+    <string name="ford_warning_51">"自动起-停 选择空档"</string>
+    <string name="ford_warning_52">"选择空档或P档启动"</string>
+    <string name="ford_warning_53">"变速箱不在P档请选择P档"</string>
+    <string name="ford_warning_54">"自动起-停 关闭点火开关"</string>
+    <string name="ford_warning_55">"引擎防盗锁故障请立即检修"</string>
+    <string name="ford_warning_56">"防盗系统已启动检查车辆"</string>
+    <string name="ford_warning_57">"防盗系统已启动检查车辆"</string>
+    <string name="ford_warning_58">"防盗系统已启动检查车辆"</string>
+    <string name="ford_warning_59">"防盗系统已启动检查车辆"</string>
+    <string name="ford_warning_60">"变速箱温度高请停车或加速"</string>
+    <string name="ford_warning_61">"变速箱温度高请停车或加速"</string>
+    <string name="ford_warning_62">"变速箱准备就绪"</string>
+    <string name="ford_warning_63">"变速箱温度高请等候4分钟"</string>
+    <string name="ford_warning_64">"踩刹车和离合器起动"</string>
+    <string name="ford_warning_65">"踩刹车启动"</string>
+    <string name="ford_warning_66">"踩离合器启动"</string>
+    <string name="ford_warning_67">"城市安全系统 自动刹车"</string>
+    <string name="ford_warning_68">"城市安全系统不可用"</string>
+    <string name="ford_warning_69">"城市安全系统感应器阻塞请清理镜头"</string>
+    <string name="ford_warning_70">"请检车轮胎压力"</string>
+    <string name="ford_warning_71">"轮胎压力系统故障请检修"</string>
+    <string name="ford_warning_72">"引擎运转中"</string>
+    <string name="ford_warning_73">"MyKey已启用请安全驾驶"</string>
+    <string name="ford_warning_74">"MyKey限速至160km/h"</string>
+    <string name="ford_warning_75">"MyKey车速以达到最高车速"</string>
+    <string name="ford_warning_80">"MyKey注意车速请安全驾驶"</string>
+    <string name="ford_warning_88">"MyKey泊车辅助不能解除"</string>
+    <string name="ford_warning_89">"MyKey电子稳定控制不能解除"</string>
+    <string name="ford_warning_96">"踩刹车解锁变速杆"</string>
+    <string name="ford_warning_97">"启动时间超时"</string>
+    <string name="ford_warning_107">"请检查胎压"</string>
+    <string name="ford_warning_110">"变速箱不在P档"</string>
+    <string name="ford_warning_111">"变速杆己解锁"</string>
+    <string name="ford_warning_112">"手刹未松"</string>
+    <string name="ford_warning_125">"MyKey车速接近最高车速"</string>
+    <string name="ford_warning_127">"手刹未松"</string>
+    <string name="warning_info">"警告"</string>
+
+    <string name="padlock_headlight_delay">"落锁大灯延时"</string>
+    <string name="find_headlights">"寻车灯功能"</string>
+    <string name="closed">关闭</string>
+    <string name="thirtySeconds">30秒</string>
+    <string name="oneMin">1分钟</string>
+    <string name="twoMin">2分钟</string>
+    <string name="lockdoor_prompt">"遥控锁门反馈"</string>
+    <string name="gm_light">"灯光"</string>
+    <string name="gm_horn">"喇叭"</string>
+    <string name="gm_light_horn">"灯光和喇叭"</string>
+    <string name="unlocklight">"解锁灯光"</string>
+    <string name="smartunlock">"遥控解锁"</string>
+    <string name="gm_driverdoor">"驾驶员门"</string>
+    <string name="gm_alldoor">"所有门"</string>
+    <string name="smartlock_again">"遥控再锁门"</string>
+    <string name="opend">"打开"</string>
+    <string name="smartstart">"遥控启动车辆"</string>
+    <string name="nearly_unclock">"近车解锁设置"</string>
+    <string name="remindkey">"钥匙遗忘提醒"</string>
+    <string name="personalization">"个性化驾驶"</string>
+    <string name="autorelockdoors">"重新锁门"</string>
+    <string name="automatic_lock">"离车自动锁"</string>
+    <string name="horn_open">"鸣喇叭时启用"</string>
+    <string name="smartwindow">"遥控车窗控制"</string>
+    <string name="parking_unlock">"驻车自动解锁"</string>
+    <string name="start_locking">"起步自动落锁"</string>
+    <string name="prevent_locking">"防止开门时自动落锁"</string>
+    <string name="locking_delay">"延时落锁"</string>
+    <string name="volumeset">"自动模式风量控制"</string>
+    <string name="gm_low">"低"</string>
+    <string name="gm_medium">"中"</string>
+    <string name="gm_high">"高"</string>
+    <string name="air_temperature_settings">"空调分区温度设置"</string>
+    <string name="unified_setting">"统一设置"</string>
+    <string name="partition_setting">"分区设置"</string>
+    <string name="last_setting">"按上次设置"</string>
+    <string name="rearwindow">"后窗自动除雾"</string>
+    <string name="frontwindow">"前窗自动除雾"</string>
+    <string name="seat_heating">"遥控启动座椅自动加热"</string>
+    <string name="air_model">"空调启动模式设置"</string>
+    <string name="rear_air">"后区空调"</string>
+    <string name="rear_air_same_front">"后区同前区设定"</string>
+    <string name="rear_air_used_last_set">"后区记忆上次设定"</string>
+    <string name="air_quality_settings">"空气质量传感设置"</string>
+    <string name="lowsensitivity">"低灵敏度"</string>
+    <string name="highsensitivity">"高灵敏度"</string>
+    <string name="warning_sound">"警示音音量设置"</string>
+    <string name="common">"普通"</string>
+    <string name="astern_wiper">"倒车后雨刷自动启动"</string>
+    <string name="automatic_wiper">"自动雨刮"</string>
+    <string name="automatic_collision_avoidance">"自动防撞准备"</string>
+    <string name="warning">"报警"</string>
+    <string name="warning_brake">"报警和制动"</string>
+    <string name="car_status">"汽车状态通知"</string>
+    <string name="blind_area_warning">"车侧盲区报警"</string>
+    <string name="reversing_radar">"倒车辅助雷达"</string>
+    <string name="auto_heating_when_remote_start">"远程启动时座椅自动加热"</string>
+    <string name="auto_heating_driver_passenger">"驾驶员和乘客"</string>
+    <string name="auto_heating_driver">"打开-驾驶员"</string>
+    <string name="auto_wind_when_remote_start">"远程启动时座椅自动通风"</string>
+    <string name="lane_change_waring">"车道变换警示"</string>
+    <string name="rear_car_through_waring">"后方车辆通过警示"</string>
+    <string name="call_memory_location">"调用记忆位置"</string>
+    <string name="rearview_mirror_auto_tile">"倒车后视镜自动倾斜"</string>
+    <string name="rearview_auto_folding">"自动后视镜折叠"</string>
+    <string name="sport_steering_wheel">"运动模式自定义:运动型方向盘"</string>
+    <string name="sport_suspension">"运动模式自定义:运动型悬挂"</string>
+    <string name="sport_four_wheel_drive">"运动模式自定义:运动型四轮驱动"</string>
+    <string name="automatic_mode">"自动模式自定义"</string>
+    <string name="automatic_mode_closed">"自动调节关闭"</string>
+    <string name="automatic_mode_normal">"一般"</string>
+    <string name="automatic_mode_sport">"运动感"</string>
+    <string name="prompt_tone_type">"提示类型"</string>
+    <string name="prompt_tone_warning">"报警音"</string>
+    <string name="prompt_tone_safety_seat">"安全提示座椅"</string>
+    <string name="engine_temp">"发动机水温"</string>
+    <string name="driver_convenient_get_off">"驾驶员便利下车"</string>
+
+    <string name="one_m_thirty_s">1分 30秒</string>
+    <string name="two_m_thirty_s">2分 30秒</string>
+    <string name="three_m_thirty_s">3分 30秒</string>
+    <string name="four_m">4分</string>
+    <string name="four_m_thirty_s">4分 30秒</string>
+
+    <string name="driving_lock">行车落锁</string>
+    <string name="unlock">解锁</string>
+    <string name="unlock_mode">解锁模式</string>
+    <string name="unlock_near_car">智能近车门解锁</string>
+    <string name="flow_me_home">伴我回家</string>
+    <string name="flow_me_home_times">伴我回家时间</string>
+    <string name="search_car_indicator">寻车指示</string>
+    <string name="search_car_indicator_times">寻车指示时间</string>
+    <string name="light_reverse">倒车灯</string>
+    <string name="light_near">近光灯</string>
+    <string name="light_bg_fog">后雾灯</string>
+    <string name="only_driver_door">仅驾驶员侧</string>
+    <string name="flow_me_home_switch">伴我回家开关</string>
+    <string name="steering_handle">转向手感</string>
+    <string name="search_car_indicator_type">寻车指示类型</string>
+    <string name="only_light">仅灯光</string>
+    <string name="light_and_horn">灯光 + 喇叭</string>
+    <string name="lock_control">车锁控制</string>
+    <string name="light_control">灯光控制</string>
+    <string name="comfortable_and_convenient">舒适便捷</string>
+    <string name="driving_maintenance">驾驶维护</string>
+    <string name="reduction_of_fetal_pressure">胎压复位</string>
+    <string name="start">开始</string>
+    <string name="end">结束</string>
+    
+    <string name="camera_tracks">"摄像头轨迹"</string>
+    <string name="dynamic_track">"显示动态轨迹"</string>
+    <string name="static_track">"显示静态轨迹"</string>
+    <string name="display_warning">"显示警告线"</string>
+
+    <string name="electric_rear_grear">"电动后门开度档位调节"</string>
+    <string name="electric_rear_gear_0">1档</string>
+    <string name="electric_rear_gear_1">2档</string>
+    <string name="electric_rear_gear_2">3档</string>
+    <string name="electric_rear_gear_3">4档</string>
+    <string name="electric_rear_gear_4">5档</string>
+
+    <string name="radar_display">雷达显示</string>
+    <string name="radar_distance">雷达距离</string>
+    <string name="radar_distance_near">近</string>
+    <string name="radar_distance_far">远</string>
+    <string name="radar">雷达开关</string>
+    <string name="radar_volume">音量强度</string>
+
+    <string name="front_radar_distance">前雷达距离</string>
+    <string name="color_theme">颜色主题</string>
+    <string name="color_azure_blue">"湛蓝色"</string>
+    <string name="color_blue_green">"蓝绿色"</string>
+    <string name="color_dark_orange">"深橙色"</string>
+    <string name="color_bright_orange">"亮橙色"</string>
+
+    <string name="app_onstar">"安吉星"</string>
+    <string name="state_onstar_closed">"OnStar 系统关闭"</string>
+    <string name="state_onstar_opended">"OnStar 系统开启"</string>
+    <string name="state_onstar_incoming">"有电话输入"</string>
+    <string name="state_onstar_dialing">"正在拨号"</string>
+    <string name="state_onstar_offhook">"电话已接通"</string>
+
+    <string name="remote_start_cooling">遥控启动冷却倚</string>
+    <string name="remote_start_heating">遥控启动加热倚</string>
+    <string name="unlock_all_doors">所有门解锁</string>
+    <string name="remote_unlock_door_automatic_lock">远程解锁车门自动重锁</string>
+    <string name="to_prevent_the_lock">防止反锁</string>
+    <string name="engine_movement_mode">发动机运动模式</string>
+
+    <string name="app_name_air">空调</string>
+
+    <string name="air_mode_manual">手动</string>
+    <string name="air_manual_normal">常温</string>
+    <string name="air_manual_cryogen">制冷</string>
+    <string name="air_manual_heat">加热</string>
+    <string name="air_heat_off">关</string>
+    <string name="air_heat_low">低</string>
+    <string name="air_heat_high">高</string>
+    <string name="air_exterior_temp">室外温度 : <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="app_vehicle_cd">原车CD</string>
+    <string name="gac_cd_state_idle">无碟</string>
+    <string name="gac_cd_state_load">加载</string>
+    <string name="gac_cd_state_read">读取</string>
+    <string name="gac_cd_state_play">播放</string>
+    <string name="gac_cd_state_pause">暂停</string>
+    <string name="gac_cd_state_exit">出碟</string>
+    <string name="gac_cd_state_stop">停止</string>
+    <string name="gac_cd_state_track_changed">换曲</string>
+    <string name="gac_cd_state_error">错误</string>
+
+    <string name="gac_cat_display">"显示"</string>
+    <string name="gac_setting_unit">"单位"</string>
+    <string name="gac_unit_us">"美制"</string>
+    <string name="gac_unit_metric">"公制"</string>
+    <string name="gac_cat_lights">"车灯"</string>
+    <string name="gac_settings_headlight_off_delay">大灯关闭延时</string>
+    <string name="gac_settings_flash_lights_w_lock">锁车时转向灯闪烁</string>
+    <string name="gac_settings_illuminated_approach">靠近大灯亮起</string>
+    <string name="gac_settings_daytime_lights">日间行车灯</string>
+    <string name="gac_cat_door_lock">"车门和锁"</string>
+    <string name="gac_settings_auto_door_locks">"自动车门锁"</string>
+    <string name="gac_settings_auto_unlock_on_exit">"下车时自动解锁"</string>
+    <string name="gac_settings_remote_door_unlock">"遥控车门锁"</string>
+    <string name="gac_door_all">"所有"</string>
+    <string name="gac_door_driver">"驾驶室"</string>
+    <string name="gac_settings_passive_enter">"无钥匙进入"</string>
+    <string name="gac_cat_engine_off_option">"发动机关闭选项"</string>
+    <string name="gac_settings_engine_off_power_delay">"发动机关闭电源延时"</string>
+    <string name="gac_cat_auto_open_comfortable_system_and_remote_start">"自动开启舒适系统和远程启动"</string>
+    <string name="gac_settings_car_start">"车辆启动时"</string>
+    <string name="gac_cat_safety_assistance">"安全和驾驶辅助"</string>
+    <string name="gac_settings_parksense">"ParkSense 泊车雷达"</string>
+    <string name="gac_settings_parksense_sound">"声音"</string>
+    <string name="gac_settings_parksense_sound_display">"声音和显示"</string>
+    <string name="gac_settings_rear_parksense">"后ParkSense雷达泊车制动辅助"</string>
+    <string name="gac_settings_park_view_dynamic_guide_line">"ParkView影像泊车动态引导线"</string>
+    <string name="gac_settings_park_view_static_guide_line">"ParkView影像泊车固定引导线"</string>
+    <string name="gac_settings_ramp_start_auxiliary">"坡道起步辅助"</string>
+    <string name="gac_settings_front_parksense_volume">"前ParkSense声音"</string>
+    <string name="gac_settings_rear_parksense_volume">"后ParkSense声音"</string>
+    <string name="gac_parksense_volume_low">"低"</string>
+    <string name="gac_parksense_volume_middle">"中"</string>
+    <string name="gac_parksense_volume_high">"高"</string>
+    <string name="forty_five_s">45秒</string>
+    <string name="gac_cat_brake">制动</string>
+    <string name="gac_brake_service_mode">服务模式</string>
+    <string name="gac_brake_service_mode_disable">服务模式不可用</string>
+    <string name="gac_brake_service_mode_enable">已启动制动服务</string>
+    <string name="gac_brake_auto_brake">自动驻车制动</string>
+    <string name="gac_compass_setting">"罗盘设置"</string>
+    <string name="gac_compass_direction">"指向："</string>
+    <string name="gac_compass_calibrate">"校准："</string>
+    <string name="gac_compass_deviation">"偏差："</string>
+    <string name="gac_compass_calibrate_stop">"停止"</string>
+    <string name="direction_north">北</string>
+    <string name="direction_northeast">东北</string>
+    <string name="direction_east">东</string>
+    <string name="direction_southeast">东南</string>
+    <string name="direction_south">南</string>
+    <string name="direction_southwest">西南</string>
+    <string name="direction_west">西</string>
+    <string name="direction_Northwest">西北</string>
+    <string name="direction_no_signal">无信号</string>
+    
+    <string name="gac_distance">距离</string>
+    <string name="gac_unit_mi">mi</string>
+    <string name="gac_unit_km">km</string>
+    <string name="gac_oil_consumption">油耗单位</string>
+    <string name="gac_unit_mpg_us">MPG(US)</string>
+    <string name="gac_unit_mpg_uk">MPG(UK)</string>
+    <string name="gac_unit_mpg_km">L/100Km</string>
+    <string name="gac_unit_mpg_L">KM/L</string>
+    <string name="gac_parkview_delayed">parkview影像泊车延时</string>
+    <string name="gac_corner_lamp">转角辅助灯</string>
+    <string name="gac_remote_boot_prompt">远程启动提示音</string>
+    <string name="gac_automatic_parking_brake">自动驻车制动</string>
+    <string name="gac_service_model">服务模式</string>
+    <string name="gac_open">打开</string>
+    <string name="gac_close">关闭</string>
+
+    <string name="app_vehicle_clock">时钟设置</string>
+
+    <string name="gac_settings_rearview_mirror_while_reverse">"倒车时倾斜后视镜"</string>
+    <string name="gac_settings_rain_sensor_wipper">"雨量感应式雨刷"</string>
+    <string name="gac_settings_auto_brake_service">"允许自动制动服务"</string>
+    <string name="gac_settings_auto_parking">"自动泊车制动"</string>
+    <string name="gac_settings_lane_departure_correction">"车道偏离校正力度"</string>
+    <string name="gac_settings_departure_waring">"车道偏离报警"</string>
+    <string name="gac_settings_busy_point_alarm">"盲点报警"</string>
+    <string name="gac_settings_front_collision_alarm_auto_brake">"前方碰撞警报自动制动"</string>
+    <string name="gac_settings_front_collision_alarm">"前方碰撞警告"</string>
+    <string name="car_light">"车灯"</string>
+    <string name="car_light_waring">"车灯+报警"</string>
+    <string name="gac_early">"早"</string>
+    <string name="gac_middle">"中"</string>
+    <string name="gac_late">"迟"</string>
+    <string name="gac_settings_light_when_wiper">"启动雨刮时自动启动大灯"</string>
+    <string name="gac_settings_anti_glare_auto_high_beam">"自动防炫远光灯"</string>
+    <string name="gac_settings_auto_lock_when_drive">"行车自动落锁"</string>
+    <string name="gac_settings_horn_when_lock">"锁定时发出声音"</string>
+    <string name="gac_settings_intelligent_key_personalized_settings">"智能钥匙个性化设置"</string>
+    <string name="gac_settings_electric_rear_door_alarm">"电动尾门报警"</string>
+    <string name="gac_settings_door_alarm">"车门报警"</string>
+    <string name="gac_settings_seat_pass_in_and_out_conveniently">"座椅便利进出"</string>
+    <string name="suspension">"悬架"</string>
+    <string name="auto_adjust_suspension_when_in_out_car">"上下车自动调节悬架"</string>
+    <string name="disply_suspension_info">"显示悬架信息"</string>
+    <string name="suspension_info_all">"所有"</string>
+    <string name="suspension_info_waring">"警告"</string>
+    <string name="tire_jack">"轮胎千斤顶模式"</string>
+    <string name="transportation_mode">"运输模式"</string>
+    <string name="wheel_alignment_mode">"车轮校准模式"</string>
+    <string name="other_settings">"其他设置"</string>
+    <string name="rearview_mirror_adjust_lens">"后视镜调光镜"</string>
+    <string name="auto_heat_driver_seat_when_car_start">"车辆启动时自动启动主驾驶座椅加热"</string>
+    <string name="seat_heat_close">"关闭"</string>
+    <string name="seat_heat_remote">"远程"</string>
+    <string name="seat_heat_all">"全部"</string>
+    <string name="reset_default_settings">"恢复默认设置"</string>
+    <string name="paring_sensors">"倒车雷达"</string>
+    <string name="bzs">"蜂鸣器开关"</string>
+    <string name="calibration_failed">"校准失败"</string>
+    <string name="cornering_lights">转角辅助灯</string>
+    <string name="headlight_sensitivity">大灯敏感度</string>
+    <string name="greeting_lights">迎宾灯</string>
+    <string name="first_press">第一次按(开)</string>
+    <string name="second_press">第二次按(开)</string>
+    <string name="first_press_of_key_unlocks">首次按车钥匙解锁</string>
+    <string name="horn_when_remote_start">遥控启动提示音</string>
+    <string name="retract_park_brake_to_allow_for_brake_system_service">缩回手刹允许制动系统服务</string>
+    <string name="retract_park_brake_to_not_allow_for_brake_system_service">缩回手刹不允许制动系统服务</string>
+    <string name="rear_radar_parking_auto_auxiliary">后雷达泊车自动辅助</string>
+    <string name="atmosphere_lamp_inside_car">车内氛围灯</string>
+    <string name="electronic_parking_brake">电子驻车制动</string>
+    <string name="unlock_open_lamp">解锁开启车灯</string>
+
+    <string name="service_mode_00">无弹窗</string>
+    <string name="service_mode_01">汽车行驶中,服务模式不可用</string>
+    <string name="service_mode_02">制动踏板踩下时,服务模式不可以用</string>
+    <string name="service_mode_03">服务模式不可用,请释放驻车制动</string>
+    <string name="service_mode_04">服务模式不可用,车辆必须处于P或N档</string>
+    <string name="service_mode_05">退出服务模式,请先停止行驶</string>
+    <string name="service_mode_06">请踩制动踏板,并打开制动开关来退出服务模式</string>
+    <string name="service_mode_07">已取消驻车制动,如需要重设,踩下刹车踏板并激活驻车制动开关</string>
+    <string name="service_mode_08">驻车制动重置,制动服务结束</string>
+    <string name="car_recognition_settings">车行识别设置(如非异常情况,请务必不要设置此项!)</string>
+    <string name="car_1">车型1</string>
+    <string name="car_2">车型2</string>
+
+    <!--psa-->
+    <string name="instant_info">"即时信息"</string>
+    <string name="history_A">"行程1"</string>
+    <string name="history_B">"行程2"</string>
+    <string name="str_parking_assist">"驾驶辅助"</string>
+    <string name="str_rear_wiper">"设置后雨刷器"</string>
+    <string name="str_rear_wipe_on">"倒车时雨刷器启用"</string>
+    <string name="str_rear_wipe_off">"倒车时雨刷器停用"</string>
+    <string name="str_lamp_shutting_down_delay">"大灯延时熄灭"</string>
+    <string name="str_atmosphere_lighting">"设置氛围照明"</string>
+    <string name="str_radar_inactive">"倒车雷达停用"</string>
+    <string name="str_welcome_lighting">"设置迎宾照明"</string>
+    <string name="str_sound_effect">"设置音效"</string>
+    <string name="str_classic">"经典音效"</string>
+    <string name="str_crystal">"水晶韵律"</string>
+    <string name="str_urban">"都市节奏"</string>
+    <string name="str_jungle">"丛林梦幻"</string>
+    <string name="str_consumption_unit">"设置油耗单位"</string>
+    <string name="str_auto_start_stop">"自动启停功能停用"</string>
+    <string name="str_welcome">"迎宾功能"</string>
+    <string name="str_yes">"是"</string>
+    <string name="str_no">"否"</string>
+    <string name="str_tire_pressure_calibration">"胎压标定"</string>
+    <string name="sure_tire_pressure_calibration">"确认发送胎压标定？"</string>
+    <string name="str_auto_hold">"自动驻车"</string>
+    <string name="str_auto_hold_on">"自动驻车制动打开"</string>
+    <string name="str_auto_hold_off">"自动驻车制动关闭"</string>
+    <string name="str_blind_space_detecting">"盲区探测"</string>
+    <string name="str_adaptive_front_lighting">"随动转向大灯"</string>
+    <string name="str_remote_unlock_style">"车门解锁方式"</string>
+    <string name="str_remote_unlock_style_trunk_open">"仅行李箱解锁（打开）"</string>
+    <string name="str_remote_unlock_style_trunk_close">"仅行李箱解锁（关闭）"</string>
+    <string name="str_exterior_temp">车外温度: <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="str_auto_lock">车门自动锁定</string>
+    <string name="str_the_door_locked">车门上锁</string>
+    <string name="str_lane_changing_assistant">变道辅助</string>
+
+    <string name="str_no_diag">"诊断正常"</string>
+    <string name="str_no_func">"无功能状态信息"</string>
+    <string name="str_no_alert">"无报警记录"</string>
+    <string name="str_req_diag">"诊断信息"</string>
+    <string name="str_req_func">"功能状态信息"</string>
+    <string name="str_req_alert">"报警记录"</string>
+    <string name="str_info_01">"驻车辅助启用"</string>
+    <string name="str_info_02">"驻车辅助停止"</string>
+    <string name="str_info_03">"乘客正面气囊启用"</string>
+    <string name="str_info_04">"乘客正面气囊停用"</string>
+    <string name="str_info_05">"车门自锁启用"</string>
+    <string name="str_info_06">"车门自锁停用"</string>
+    <string name="str_info_07">"车门已锁"</string>
+    <string name="str_info_08">"车门已解锁"</string>
+    <string name="str_info_09">"倒车时后雨刮器启用"</string>
+    <string name="str_info_0a">"倒车时后雨刮器停用"</string>
+    <string name="str_info_0b">"引擎温度故障，请停车"</string>
+    <string name="str_info_0c">"请加注冷却液"</string>
+    <string name="str_info_0d">"请加引擎机油"</string>
+    <string name="str_info_0e">"引擎机油压力故障，请停车"</string>
+    <string name="str_info_0f">"制动系统故障"</string>
+    <string name="str_info_10">"不可操作"</string>
+    <string name="str_info_11">"车门、行李箱、引擎盖、后风窗或油箱未关"</string>
+    <string name="str_info_12">"多个轮胎爆裂"</string>
+    <string name="str_info_13">"微粒过滤器有堵塞风险：请参考说明书"</string>
+    <string name="str_info_14">"悬驾故障 限速 90km/h"</string>
+    <string name="str_info_15">"悬驾系统故障"</string>
+    <string name="str_info_16">"助力转向故障"</string>
+    <string name="str_info_17">"10km/h"</string>
+    <string name="str_info_18">"驻车制动启用"</string>
+    <string name="str_info_19">"驻车制动停止"</string>
+    <string name="str_info_1a">"制动操控故障驻车制动自动激活"</string>
+    <string name="str_info_1b">"制动片磨碎"</string>
+    <string name="str_info_1c">"驻车制动故障"</string>
+    <string name="str_info_1d">"可变尾翼功能确实限速，请参考说明书"</string>
+    <string name="str_info_1e">"ABS故障"</string>
+    <string name="str_info_1f">"ESP/ASR系统故障"</string>
+    <string name="str_info_20">"变速箱系统故障"</string>
+    <string name="str_info_21">"变速箱故障，请维修车辆"</string>
+    <string name="str_info_22">"巡航系统故障"</string>
+    <string name="str_info_23">"微粒过滤器添加剂不足:请维修车辆"</string>
+    <string name="str_info_24">"电子防盗系统故障"</string>
+    <string name="str_info_25">"驻车辅助系统故障"</string>
+    <string name="str_info_26">"车位测量系统故障"</string>
+    <string name="str_info_27">"蓄电池充电或供电系统故障"</string>
+    <string name="str_info_28">"轮胎气压不足"</string>
+    <string name="str_info_29">"近光灯泡坏"</string>
+    <string name="str_info_2a">"远光灯泡坏"</string>
+    <string name="str_info_2b">"制动灯泡坏"</string>
+    <string name="str_info_2c">"雾灯灯泡坏"</string>
+    <string name="str_info_2d">"转向灯灯泡坏"</string>
+    <string name="str_info_2e">"倒车灯炮坏"</string>
+    <string name="str_info_2f">"位置灯灯泡坏"</string>
+    <string name="str_info_30">"换挡杠换到‘P‘档"</string>
+    <string name="str_info_31">"当心路面结冰"</string>
+    <string name="str_info_32">"当心手刹"</string>
+    <string name="str_info_33">"风窗洗涤液不足"</string>
+    <string name="str_info_34">"燃油不足"</string>
+    <string name="str_info_35">"供油切断"</string>
+    <string name="str_info_36">"遥控器电量不足"</string>
+    <string name="str_info_37">"轮胎气压未监控"</string>
+    <string name="str_info_38">"高速、检测胎压是否合适"</string>
+    <string name="str_info_3a">"诊断中"</string>
+    <string name="str_info_3b">"诊断完成"</string>
+    <string name="str_info_3c">"左右安全带未系"</string>
+    <string name="str_info_3d">"后座中间安全带未系"</string>
+    <string name="str_info_3e">"左后安全带未系"</string>
+    <string name="str_info_3f">"右后安全带未系"</string>
+    <string name="str_info_40">"自动雨刮器启用"</string>
+    <string name="str_info_41">"自动雨刮器停用"</string>
+    <string name="str_info_42">"大灯自动点亮启用"</string>
+    <string name="str_info_43">"大灯自动点亮停用"</string>
+    <string name="str_info_44">"无法开启硬顶:隔板未放"</string>
+    <string name="str_info_45">"硬顶操作完成"</string>
+    <string name="str_info_46">"立即结束硬顶操作"</string>
+    <string name="str_info_47">"操作失败:硬顶已锁"</string>
+    <string name="str_info_48">"硬顶折叠机械故障"</string>
+    <string name="str_info_49">"操作失败:后风窗未关"</string>
+    <string name="str_info_4a">"防倒滑系统故障"</string>
+    <string name="str_info_4b">"驾驶模式:正常模式"</string>
+    <string name="str_info_4c">"驾驶模式:泥地模式"</string>
+    <string name="str_info_4d">"驾驶模式:雪地模式"</string>
+    <string name="str_info_4e">"驾驶模式:沙地模式"</string>
+    <string name="str_info_4f">"ESP 系统停用"</string>
+    <string name="str_info_50">"行车间距不可测量:能见度过低"</string>
+    <string name="str_info_51">"行车间距不可测量:正在初始化"</string>
+    <string name="str_info_52">"活动顶棚操作失败:棚体未到位"</string>
+    <string name="str_info_53">"行李箱盖未关"</string>
+    <string name="str_info_54">"油箱口盖未锁好"</string>
+    <string name="str_info_55">"右后车门未关"</string>
+    <string name="str_info_56">"左后车门未关"</string>
+    <string name="str_info_57">"右前车门未关"</string>
+    <string name="str_info_58">"左前车门未关"</string>
+    <string name="str_info_5a">"安全气囊或安全带预张紧故障"</string>
+    <string name="str_info_5b">"柴油滤清器进水:请维修车辆"</string>
+    <string name="str_info_5c">"胎压监测系统故障"</string>
+    <string name="str_info_5d">"无法开启硬顶:系统温度过高"</string>
+    <string name="str_info_5f">"电子防起动故障"</string>
+    <string name="str_info_60">"方向盘锁故障:请维修车辆"</string>
+    <string name="str_info_61">"检测中间制动灯"</string>
+    <string name="str_info_62">"预热/预通风停用:油量不足"</string>
+    <string name="str_info_63">"预热/预通风停用:电量不足"</string>
+    <string name="str_info_64">"混合动力系统故障:请限速,维修车辆"</string>
+    <string name="str_info_65">"混合动力系统故障:请维修车辆"</string>
+    <string name="str_info_66">"大灯自动调节系统故障"</string>
+    <string name="str_info_67">"混合动力系统故障:请停车并参考说明书"</string>
+    <string name="str_info_6a">"胎压检测系统故障"</string>
+    <string name="str_info_6b">"拖车连接故障:请维修车辆"</string>
+    <string name="str_info_6b_2">"光敏传感器故障"</string>
+    <string name="str_info_6c">"预热/预通风停用:调节时钟"</string>
+    <string name="str_info_6d">"碰撞风险探测故障"</string>
+    <string name="str_info_6d_2">"发动机罩未关"</string>
+    <string name="str_info_6e">"随动转向前大灯故障"</string>
+    <string name="str_info_6f">"自动手刹系统故障"</string>
+    <string name="str_info_70">"车道偏离报警故障"</string>
+    <string name="str_info_71">"传感器故障:左后轮胎气压未监控"</string>
+    <string name="str_info_72">"传感器故障:右后轮胎气压未监控"</string>
+    <string name="str_info_73">"传感器故障:右前轮胎气压未监控"</string>
+    <string name="str_info_74">"传感器故障:左前轮胎气压未监控"</string>
+    <string name="str_info_76">"发动机(引擎)故障:请停车"</string>
+    <string name="str_info_77">"发动机(引擎)故障:请维修车辆"</string>
+    <string name="str_info_78">"行车间距测量故障"</string>
+    <string name="str_info_79">"填充防污染添加剂:禁止启动"</string>
+    <string name="str_info_7a">"填充防污染添加剂"</string>
+    <string name="str_info_7b">"左前轮胎气压不足:请充气,然后重新初始化"</string>
+    <string name="str_info_7c">"右前轮胎气压不足:请充气,然后重新初始化"</string>
+    <string name="str_info_7d">"左后轮胎气压不足:请充气,然后重新初始化"</string>
+    <string name="str_info_7e">"右后轮胎气压不足:请充气,然后重新初始化"</string>
+    <string name="str_info_7f">"左后轮胎破裂:更换或修理轮胎"</string>
+    <string name="str_info_80">"右后轮胎破裂:更换或修理轮胎"</string>
+    <string name="str_info_81">"右前轮胎破裂:更换或修理轮胎"</string>
+    <string name="str_info_82">"左前轮胎破裂:更换或修理轮胎"</string>
+    <string name="str_info_83">"右后制动灯灯泡坏"</string>
+    <string name="str_info_84">"左后制动灯灯泡坏"</string>
+    <string name="str_info_85">"防污染系统故障"</string>
+    <string name="str_info_86">"防污染系统故障:禁止启动"</string>
+    <string name="str_info_87">"关闭大灯"</string>
+    <string name="str_info_f0">"无信息"</string>
+    <string name="str_info_ff">"未知信息"</string>
+
+    <string name="truck">后备箱</string>
+    <string name="vw_speed_instance">瞬时速度</string>
+    <string name="vw_truck_normal">正常</string>
+    <string name="vw_truck_opend">未关闭</string>
+    <string name="vw_front_left_door_opend">左前门未关</string>
+    <string name="vw_front_right_door_opend">右前门未关</string>
+    <string name="vw_rear_left_door_opend">左后门未关</string>
+    <string name="vw_rear_right_door_opend">右后门未关</string>
+    <string name="vw_trunk_door_opend">后备箱未关</string>
+    <string name="vw_front_hood_opend">车前盖未关</string>
+    <string name="vw_sky_light_opend">天窗未关</string>
+
+    <string name="safebelt_driver">主驾驶席安全带</string>
+    <string name="safebelt_passenger">副驾驶席安全带</string>
+    <string name="consumption_hundredkilometer">百公里油耗</string>
+    <string name="only_set_the_trunk">仅设置后背箱</string>
+    <string name="fatigue_detection_system">疲劳检测系统</string>
+    <string name="personalized_instrument">个性化仪表</string>
+    <string name="confirm_setting_personalized_meter">确认设置个性化仪表吗?</string>
+    <string name="empty">空</string>
+    <string name="the_tachometer">转速表</string>
+    <string name="driving_computer">行车电脑</string>
+    <string name="theme_color">主题颜色</string>
+    <string name="sapphire_blue">宝石蓝</string>
+    <string name="brown_deerskin">鹿皮棕</string>
+
+    <!-- chery -->
+    <string name="cherry_setting_notification">"紧急制动报警方式"</string>
+    <string name="cherry_setting_warning_switch">"紧急制动报警开关"</string>
+    <string name="headlight_delay">前照灯延迟</string>
+    <string name="steering_start_AVM">转向启动AVM</string>
+    <string name="turn_to_start_animation">转向启动动画</string>
+    <string name="select_vehicle_auxiliary_line">选择车辆辅助线</string>
+    <string name="speed_alarm">超速报警</string>
+    <string name="instrument_backlight">仪表背光</string>
+    <string name="static_state">静态</string>
+    <string name="static_and_dynamic">静态和动态</string>
+    <string name="steering_auxiliary_lighting">转向辅助照明</string>
+    <string name="auto_unlock">自动解锁</string>
+    <string name="only_the_remote_control_on_the_trunk">仅遥控开后背箱</string>
+    <string name="power_flow_display">开机显示动能流</string>
+
+    <!-- renault -->
+     <string name="parking_assist_detection">泊车辅助检测</string>
+     <string name="front_parking_assist">"前方停车辅助"</string>
+     <string name="rear_parking_assist">"后方停车辅助"</string>
+     <string name ="fresh_air_qualit_cycle">"空气质量清新循环"</string>
+     <string name ="auto_start">"汽车启动时自动开"</string>
+     <string name ="ion_generator">"粒子发生器"</string>
+     <string name ="ion_generator_off">关</string>
+     <string name ="positive_ion">正离子</string>
+     <string name ="anion">负离子</string>
+     <string name = "autolock_period">车门自动上锁</string>
+     <string name ="air_conversion">"空气转换"</string>
+     <string name ="user_setting">"用户设置"</string>
+     <string name ="environmetal_indicator">"环保指示器"</string>
+     <string name ="automatic_cabin_lamp">"自动座舱灯"</string>
+     <string name ="external_welcome_light">"外部欢迎灯"</string>
+     <string name ="prompt_volume">"提示音音量"</string>
+     <string name ="one_level">"一等级"</string>
+     <string name ="two_level">"二等级"</string>
+     <string name ="three_level">"三等级"</string>
+     <string name ="intelligent_parking_assist">"智能泊车系统"</string>
+     <string name ="lateral_parking">"侧方停车"</string>
+     <string name ="right_angle_parking">直角停车</string>
+     <string name ="inclined_parking">"斜向停车"</string>
+     <string name ="driving_assistance">"驾驶辅助"</string>
+     <string name ="lateral_parking_assist">"侧方辅助"</string>
+     <string name ="system_instrument_display">"系统仪表显示"</string>
+     <string name ="display_styles">"显示样式"</string>
+     <string name ="one_style">样式一</string>
+     <string name ="two_style">样式二</string>
+     <string name ="three_style">样式三</string>
+     <string name ="four_style">样式四</string>
+     <string name ="instrument_brightness">仪表亮度</string>
+
+    <string name="str_unlock_rear_door_only">仅行李箱解锁</string>
+    <string name="str_unlock_all_doors">所有门都不能解锁</string>
+
+    <string name="str_door_auto_lock">车门自锁状态</string>
+    <string name="str_start">启用</string>
+    <string name="str_stop">停用</string>
+    <string name="str_door_lock">中控门锁状态</string>
+    <string name="str_unlocked">未锁</string>
+    <string name="str_locked">上锁</string>
+    <string name="str_temperature_unit">设置温度单位</string>
+    <string name="str_celsius">摄氏度</string>
+    <string name="str_fahrenheit">华氏度</string>
+    <string name="str_remote_model">遥控方式</string>
+    <string name="str_driver_door">驾驶侧员车门</string>
+    <string name="str_economy_model">设置经济模式</string>
+    <string name="str_usual">正常</string>
+    <string name="str_economic_model">经济模式</string>
+
+    <string name="str_info_88">"发动机怠速停机功能启用"</string>
+    <string name="str_info_89">"发动机怠速停机功能停用"</string>
+    <string name="str_info_8a">"请完全踩下离合器"</string>
+    <string name="str_info_8b">"测算中"</string>
+    <string name="str_info_8c">"通过转向开关选择方向"</string>
+    <string name="str_info_8d">"请将手刹拉至最大位置"</string>
+    <string name="str_info_8e">"电路故障：请维修车辆"</string>
+    <string name="str_info_8f">"拉紧手刹"</string>
+    <string name="str_info_90">"后座安全带未系"</string>
+    <string name="str_info_91">"无法开启敞蓬，启动发动机"</string>
+    <string name="str_info_92">"无法开启敞蓬，拉紧手刹"</string>
+    <string name="str_info_93">"请将档位置于‘N’位置，并断开钥匙连接"</string>
+    <string name="str_info_94">"混合动力系统激活"</string>
+    <string name="str_info_95">"电动模式暂时不可用"</string>
+    <string name="str_info_96">"请手动重新启动"</string>
+    <string name="str_info_97">"踩下制动踏板"</string>
+    <string name="str_info_98">"ESP 系统启用"</string>
+    <string name="str_info_99">"儿童安全装置启用"</string>
+    <string name="str_info_9a">"儿童安全装置停用"</string>
+    <string name="str_info_9b">"按下驻车按钮时，请踩住制动踏板"</string>
+    <string name="str_info_9c">"将换档杆置于‘N’位置"</string>
+    <string name="str_info_9d">"驻车，可以"</string>
+    <string name="str_info_9e">"驻车，困难"</string>
+    <string name="str_info_9f">"驻车，不能"</string>
+    <string name="str_info_a0">"无法开启敞蓬，室外气温过低"</string>
+    <string name="str_info_a1">"无法开启敞蓬，车速过高"</string>
+    <string name="str_info_a2">"无法开启敞蓬，行李箱未关"</string>
+    <string name="str_info_a3">"请拔钥匙"</string>
+    <string name="str_info_a4">"定速巡航系统不可用：速度过低"</string>
+    <string name="str_info_a5">"松开手刹"</string>
+    <string name="str_info_a6">"更换遥控电池"</string>
+    <string name="str_info_a7">"启动发动机请踩住刹车踏板并将档位置于‘N’位置"</string>
+    <string name="str_info_a8">"主动发动机罩盖系统故障"</string>
+    <string name="str_info_a9">"请更换制动片"</string>
+    <string name="str_info_aa">"ECO关闭：温度不合适"</string>
+    <string name="str_info_ab">"行驶时无法初始化"</string>
+    <string name="str_info_ac">"40 KM/H"</string>
+    <string name="str_info_ad">"检测左后制动灯"</string>
+    <string name="str_info_ae">"检测右后制动灯"</string>
+    <string name="str_info_af">"检测制动灯"</string>
+    <string name="str_info_b0">"检测近光灯"</string>
+    <string name="str_info_b1">"检测远光灯"</string>
+    <string name="str_info_b2">"检测后雾灯"</string>
+    <string name="str_info_b3">"检测前雾灯"</string>
+    <string name="str_info_b4">"检测转向灯"</string>
+    <string name="str_info_b5">"检测倒车灯"</string>
+    <string name="str_info_b6">"检测位置灯"</string>
+    <string name="str_info_b7">"驾驶员安全带未系"</string>
+    <string name="str_info_b8">"前排客座安全带未系"</string>
+    <string name="str_info_b9">"前排安全带未系"</string>
+    <string name="str_info_ba">"左后安全带已系"</string>
+    <string name="str_info_bb">"后座中间安全带已系"</string>
+    <string name="str_info_bc">"右后安全带已系"</string>
+    <string name="str_info_bd">"后排安全带已系"</string>
+    <string name="str_info_be">"右后和中间乘客安全带已系"</string>
+    <string name="str_info_c1">"后右制动灯灯泡坏"</string>
+    <string name="str_info_c2">"后左制动灯灯泡坏"</string>
+    <string name="str_info_c3">"左倒车灯灯泡坏"</string>
+    <string name="str_info_c4">"右倒车灯灯泡坏"</string>
+    <string name="travel_distance">已行驶距离</string>
+    <string name="left_right_hand_traffic">"靠左或靠右行驶"</string>
+    <string name="adaptive_forward_lighting">"自适应前照明灯"</string>
+    <string name="corner_and_bend_lighting">"转角和弯道照明"</string>
+    <string name="intelligent_distribution">"智能配电"</string>
+    <string name="auto_memory_recall">"自动记忆调用"</string>
+    <string name="str_passenger">"乘客"</string>
+    <string name="str_driver">"驾驶员"</string>
+    <string name="advanced_ramp_start_auxiliary">"高级坡道起步辅助"</string>
+    <string name="advanced_brake">"高级制动"</string>
+    <string name="standard_brake">"标准制动"</string>
+
+    <string name="driver_seat_heat">"左座椅加热"</string>
+    <string name="passenger_seat_heat">"右座椅加热"</string>
+
+    <string name="car_window_infos">"车窗信息"</string>
+    <string name="foot_brake_infos">"脚刹信息"</string>
+    <string name="turn_light_infos">"转向灯信息"</string>
+
+    <string name="right_front_window">右前窗 ： <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="left_front_window">左前窗 ： <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="right_rear_window">右后窗 ： <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="left_rear_window">"左后窗 ： <xliff:g id="value">%1$s</xliff:g></string>
+
+    <string name="turn_light_left">左转向灯 ： <xliff:g id="value">%1$s</xliff:g></string>
+    <string name="turn_light_right">"右转向灯 ： <xliff:g id="value">%1$s</xliff:g></string>
+
+     <string name="cruise_speed_settings">"巡航速度设置"</string>
+     <string name="limit_speed_settings">"速度限值设置"</string>
+
+     <string name="speed1">速度1 : <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="speed2">速度2 : <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="speed3">速度3 : <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="speed4">速度4 : <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="speed5">速度5 : <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="speed6">速度6 : <xliff:g id="value">%1$s</xliff:g></string>
+
+     <string name="str_hour">" 时   "</string>
+     <string name="str_minute">" 分   "</string>
+     <string name="str_second">" 秒"</string>
+
+     <!-- infiniti -->
+     <string name="car_light_auto">门锁解锁，车内灯自动打开</string>
+     <string name="setting_auto_light_sensitivity">自动灯的灵敏度调节</string>
+     <string name="automatic_lighting_time_setting">自动灯光时间设置</string>
+     <string name="select_unlock">选择解锁</string>
+     <string name="smart_key_lock_fuction">智能钥匙开锁功能</string>
+     <string name="levelone">等级1</string>
+     <string name="leveltwo">等级2</string>
+     <string name="levelthree">等级3</string>
+     <string name="levelfour">等级4</string>
+
+     <string name="bluetooth_prompt">"原车蓝牙使用中,请勿操作机器"</string>
+     
+     <string name="low_fuel_alert">"燃油低告警"</string>
+     <string name="fuel_normal">"正常"</string>
+     <string name="low_fuel">"燃油低"</string>
+     
+     <string name="onstar_wireless_port">无线连接接入点 ： <xliff:g id="value">%1$s</xliff:g></string>
+     <string name="onstar_wireless_psd">无线连接密码 ： <xliff:g id="value">%1$s</xliff:g></string>
+     
+     <string name="air_quality_sensor_1">"空气质量传感器1"</string>
+     <string name="air_quality_sensor_2">"空气质量传感器2"</string>
+     <string name="seat_auto_wind">"座椅自动通风"</string>
+     <string name="seat_auto_heat">"座椅自动加热"</string>
+     <string name="remote_control_start_seat_auto_wind">"遥控启动座椅自动通风"</string>
+     <string name="remote_control_start_air_condition_setting">"遥控启动空调设定"</string>
+     <string name="single_partition">"单区"</string>
+     <string name="double_partition">"双区"</string>
+     <string name="final_setting">"最后设置"</string>
+     <string name="parking_assist_system_setting">"泊车辅助系统设定"</string>
+     <string name="parking_assist_system_setting_with_trailer_compensation">"泊车辅助系统设定（带拖车补偿）"</string>
+     <string name="ramp_assist_system">"坡道辅助系统"</string>
+     <string name="standard_parking">"标准泊车"</string>
+     <string name="enhance_parking">"增强泊车"</string>
+     <string name="trailer_compensation">"拖车补偿"</string>
+     <string name="driver_seat_offset_setting_when_stop">"驾驶员座椅停车移位设定"</string>
+     <string name="turnning_cylinder_away_vehicle_offset_setting">"转向管柱离车移位设定"</string>
+     <string name="driver_personality_setting">"驾驶员个性设置设定"</string>
+     <string name="turnning_cylinder_away_vehicle_tilt_setting">"转向管柱离车倾斜设定"</string>
+     <string name="turnning_cylinder_shrinkage">"转向柱收缩"</string>
+     <string name="turnning_cylinder_raise">"转向柱提升"</string>
+     <string name="turnning_cylinder_shrinkage_and_raise">"转向柱收缩和提升"</string>
+     <string name="auto_unlocking_setting_with_automatic">"自动解锁设定（自动档）"</string>
+     <string name="auto_unlocking_setting_with_manually">"自动解锁设定（手动档）"</string>
+     <string name="only_driver_door_unlocking_when_turn_to_parking">"切入驻车档仅驾驶员车门解锁"</string>
+     <string name="all_doors_unlocking_when_turn_to_parking">"切入驻车档所有车门解锁"</string>
+     <string name="only_driver_door_unlocking_when_ignition_off">"拔出点火开关钥匙仅驾驶员车门解锁"</string>
+     <string name="all_doors_unlocking_when_ignition_off">"拔出点火开关钥匙所有车门解锁"</string>
+     <string name="driver_key_auto_recognize_setting">"驾驶员钥匙自动识别设定"</string>
+     <string name="remote_control_sliding_door_setting">"遥控滑移门设置"</string>
+     <string name="unlock_sliding_door_and_open_it">"解锁滑移门并打开滑移门"</string>
+     <string name="unlock_all_doors_and_open_sliding_door">"解锁所有门并打开滑移门"</string>
+     <string name="left_turnning_light">"左转向灯"</string>
+     <string name="right_turnning_light">"右转向灯"</string>
+     <string name="dashboard_display_settings">"仪表显示设置"</string>
+     <string name="sport_model_settings">"运动模式设置"</string>
+     <string name="hybrid_power_eco_indicate_setting">"混合动力ECO指示设置"</string>
+     <string name="dashboard_navigation_info_indicate_setting">"仪表导航信息显示设置"</string>
+     <string name="speed_range_prompt_model_setting">"速度范围提示模式设置"</string>
+     <string name="all">"全部"</string>
+     <string name="partition">"局部"</string>
+     <string name="sport_model_engine_status_setting">"运动模式发动机状态设置"</string>
+     <string name="sport_model_backlight_setting">"运动模式背光设定"</string>
+     <string name="sport_model">"运动模式"</string>
+     <string name="nomal_model">"正常模式"</string>
+     
+     <string name ="display_color">"显示颜色"</string>
+     <string name="instrum_show_color_green">"绿色"</string>
+     <string name="instrum_show_color_red">"红色"</string>
+     <string name="instrum_show_color_blue">"蓝色"</string>
+     <string name="instrum_show_color_purple">"紫色"</string>
+     <string name="instrum_show_color_orange">"橙色"</string>
+     <string name ="internal_welcome_voice">"内部欢迎音"</string>
+     <string name="vehicle_computer_infos_reset">"车载电脑信息重置"</string>
+     <string name="confirm_vehicle_computer_infos_reset">"确认重置车载电脑信息？"</string>
+     <string name="user_settings_reset">"用户设置项重置"</string>
+     <string name="confirm_user_settings_reset">"确认重置用户设置项？"</string>
+
+     <!-- Viaggo -->
+     <string name="tripA_average_fuel_consumption">Trip A 平均油耗</string>
+     <string name="tripA_average_speed">Trip A 平均速度</string>
+     <string name="tripA_travel_distance">Trip A 行驶距离</string>
+     <string name="tripA_travel_time">Trip A 行驶时间</string>
+     <string name="tripB_average_fuel_consumption">Trip B 平均油耗</string>
+     <string name="tripB_average_speed">Trip B 平均速度</string>
+     <string name="tripB_travel_distance">Trip B 行驶距离</string>
+     <string name="tripB_travel_time">Trip B 行驶时间</string>
+
+     <!-- baic S6  -->
+     <string name="leave_home_lighting_delay">离家照明时间</string>
+     <string name="go_home_lighting_delay">回家照明时间</string>
+     <string name="the_15KMH_automatic_latch">15KM/H自动落锁</string>
+     <string name="two_unlock">二次解锁</string>
+     <string name="open_the_door_to_stop_the_wiper">开门停止雨刷</string>
+     <string name="the_headlights_flashing_when_disarming">解除防盗时远光灯闪烁</string>
+     <string name="remote_drop_window">遥控降窗</string>
+     <string name="remote_lift_window">遥控升窗</string>
+     <string name="automatic_dome_lamp_lighting_time">自动顶灯延迟照明时间</string>
+     <string name="outside_the_Logo_lamp_of_the_rear_view_mirror_is_lit">外后视镜Logo灯点亮</string>
+     <string name="automatic_folding_outside_the_lock_car">锁车外后视镜自动折叠</string>
+     <string name="magnetic_relay_condition">磁保继电器状态</string>
+     <string name="driver_seat_auto_return">驾驶员座椅自动回位</string>
+     <string name="to_automatically_open_the_haze_lamp">转向自动开启前霾灯</string>
+     <string name="LDW_warning_tone_opens">LDW警示音开启</string>
+     <string name="BSD_warning_tone_opens">BSD警示音开启</string>
+     <string name="speed_limit_in_winter">冬季限速提醒</string>
+     <string name="high_speed_reminder">高速车速提醒</string>
+     <string name="tire_pressure_unit">胎压单位</string>
+     <string name="remote_open_air_conditioning">远程开启空调</string>
+     <string name="automatic_drop_wind_speed">蓝牙通话自动降风速</string>
+     <string name="air_conditioning_high_temperature_inner_loop">空调高温内循环</string>
+     <string name="automatic_air_volume">自动风量</string>
+     <string name="AC_automatic_mode">A/C自动模式</string>
+     <string name="auto_inner_loop">驻车自动内循环</string>
+     <string name="instrument_settings">仪表设置</string>
+     <string name="forty_s">40秒</string>
+     <string name="fifty_s">50秒</string>
+     <string name="eight_s">8秒</string>
+     <string name="factory_mode">工厂模式</string>
+     <string name="user_mode">用户模式</string>
+
+     <string name="environmental_contribution">环保贡献</string>
+     <string name="flow_of_energy">能量流</string>
+     <string name="energy_statistics">能耗统计</string>
+     <string name="degree_100_km">度/百公里</string>
+
+     <string name="untitled">无称号</string>
+     <string name="blue_guardian_recruits">新兵</string>
+     <string name="blue_guardian_pvt">列兵</string>
+     <string name="blue_guardian_good_soldier">上等兵</string>
+     <string name="blue_guardian_corporal">下士</string>
+     <string name="blue_guardian_sergeant">中士</string>
+     <string name="blue_guardian_sergeant_s">上士</string>
+     <string name="blue_guardian_ensign">少尉</string>
+     <string name="blue_guardian_lieutenant">中尉</string>
+     <string name="blue_guardian_captain">上尉</string>
+     <string name="blue_guardian_major">少校</string>
+     <string name="blue_guardian_colonel">中校</string>
+     <string name="blue_guardian_colonel_m">上校</string>
+     <string name="blue_guardian_colonel_s">大校</string>
+     <string name="blue_guardian_general">少将</string>
+     <string name="blue_guardian_will">中将</string>
+     <string name="blue_guardian_admiral">上将</string>
+     <string name="blue_guardian_generals">大将</string>
+     <string name="blue_guardian_marshal">元帅</string>
+     <string name="blue_guardian_grand_marshal">大元帅</string>
+     <string name="blue_guardian_commander">统帅</string>
+
+     <string name="shutdown">停机</string>
+     <string name="be_ready">就绪</string>
+     <string name="driving">驱动</string>
+     <string name="energy_recovery">能量回收</string>
+
+     <string name="already_driving">已行驶</string>
+     <string name="km">KM</string>
+     <string name="reduce_CO2_emissions">减少CO2排放</string>
+     <string name="kg">Kg</string>
+     <string name="environmental_grade">环保等级</string>
+     <string name="equivalent_to_planting">相当于种植</string>
+     <string name="tree">颗树</string>
+     <string name="please_overhaul">您的爱车出现故障请联系授权服务商检修</string>
+     <string name="please_check">您的爱车出现异常请尽快联系授权服务商检查</string>
+
+     <string name="str_current_dish">当前碟 : </string>
+     <string name="str_current_song">当前曲 : </string>
+     <string name="str_play_time">当前时间 : </string>
+     <string name="str_insert_disc">入碟</string>
+     <string name="str_cd_busy">CD忙</string>
+     <string name="str_select_disc_to_load">选择要加载的碟片</string>
+     <string name="str_select_disc_to_eject">选择要弹出的碟片</string>
+     <string name="str_please_wait">请等待</string>
+     <string name="str_no_audio_track">无歌曲</string>
+     <string name="str_no_disc_loaded">无加载的碟片</string>
+     <string name="str_push_eject">对不起!,已经卡碟</string>
+     <string name="str_all_disc_eject">弹出所有碟</string>
+     <string name="original_car_sound">原车音量 :  </string>
+
+     <string name="str_car_mode">"车型选择"</string>
+     <string name="title_manufacturer">"厂商"</string>
+     <string name="title_category">"车系"</string>
+     <string name="title_model">"车型"</string>
+     <string name="title_configuration">"配置"</string>
+     <string name="title_protocol">"协议"</string>
+     <string name="title_baudrate">"波特率"</string>
+     <string name="str_apply">"应用"</string>
+     <string name="str_no_this_type">"无此车型!"</string>
+     <string name="vehicle_recog_successful">设置成功,请点击\'应用\'重启!</string>
+     <string name="vehicle_recog_failed">设置失败,请手动选择车型!</string>
+     <string name="vehicle_set_success">"车型设置成功，请重新启动！"</string>
+
+	  <!-- 2016GL8 -->
+     <string name="adaptive_cruise_start_alert">自适应巡航启动提醒</string>
+     <string name="remote_boot_seat_heating">远程启动座椅加热</string>
+     <string name="remote_boot_seat_blowing">远程启动座椅吹风</string>
+     <string name="air_conditioning_remote_start">空调远程启动</string>
+     <string name="after_the_start_of_air_conditioning">后区空调启动</string>
+     <string name="back_off">后区关闭</string>
+     <string name="back_and_front_area_of_the_same">后区和前区相同</string>
+     <string name="back_and_previous_settings">后区和前次设置</string>
+     <string name="front_seat_air_conditioning_control">前座空调控制</string>
+     <string name="rear_seat_air_conditioning_control">后座空调控制</string>
+     <string name="recoil_reminder">后坐提醒</string>
+
+    <!-- nissan T70 -->
+    <string name="avm_settings">AVM设置</string>
+    <string name="intelligent_access">智能进入</string>
+    <string name="first_forward_automatic_start">首次前进档自动启动</string>
+    <string name="avm_boot_animation">AVM开机动画</string>
+    <string name="restore_default_settings">恢复默认设置</string>
+    <string name="left_turn_signal_trigger">左转向灯触发</string>
+    <string name="right_turn_signal_trigger">右转向灯触发</string>
+    <string name="steering_wheel_trigger">方向盘触发</string>
+    <string name="forward_file_trigger">前进档触发</string>
+
+    <!-- dongfeng joyear X5 -->
+    <string name="lighting_setting">车灯设置</string>
+    <string name="dome_delay">顶灯延时</string>
+    <string name="saving_time">节电时间</string>
+    <string name="speed_lock">车速上锁</string>
+    <string name="the_automatic_lock">自动重上锁</string>
+
+    <!-- Geely boyue -->
+    <string name="automatic_closing_window_for_closed_door">闭锁车门自动关窗</string>
+    <string name="automatic_off_position_lamp_status_after_locking">闭锁后自动熄灭位置灯状态</string>
+    <string name="flameout_unlock">熄火解锁</string>
+    <string name="remote_lock_feedback">遥控落锁反馈</string>
+    <string name="the_trumpet_does_not_ring">喇叭不响</string>
+    <string name="horn_ring">喇叭响</string>
+    <string name="electronic_power_mode_selection">电子助力模式选择</string>
+    <string name="static_trajectory">静态轨迹线</string>
+    <string name="dynamic_trajectory">动态轨迹线</string>
+    <string name="fisheye_correction">鱼眼校正</string>
+    <string name="r_exit_5_seconds_delay">R档退出5秒延迟</string>
+    <string name="single_reversing_image">单路倒车影像</string>
+    <string name="auxiliary_follow_up_rotation">辅助随动转动</string>
+    <string name="set_full">设置全</string>
+    <string name="active_safety">主动安全</string>
+
+    <string name="vehicle_can_box_update">SimpleCan盒升级</string>
+    <string name="switch_to_iap">切换到IAP</string>
+    <string name="match_code">匹配代码</string>
+    <string name="download_code">下载代码</string>
+    <string name="download_last_frame">下载最后一帧代码</string>
+    <string name="the_host_requires_access_to_the_decoder_board_information_area">主机要求获取解码板信息区</string>
+    <string name="the_host_request_to_retrieve_the_next_packet_of_information">主机请求获取解码板下一包信息</string>
+
+    <string name="get_ready">准备(盒子准备就绪)</string>
+    <string name="code_beyond_decoding_board_capacity">代码超出解码板容量</string>
+    <string name="stop_burning_burning_error">烧录出错 终止烧录！</string>
+    <string name="nothing_spi_flash">无SPI-FLASH</string>
+    <string name="download_complete">下载完成</string>
+    <string name="fixed_code_incorrect">固定码不正确</string>
+    <string name="crc_error">CRC 错误</string>
+    <string name="password_error">口令出错</string>
+    <string name="th_decoder_board_is_in_standby_state_of_IAP">解码板处于IAP待机状态</string>
+    <string name="private_key_error">私钥错误</string>
+    <string name="request_data_issued">请求数据下发（请求主机下发下一帧数据）</string>
+    <!-- nissan -->
+    <string name="avm_image">AVM影像</string>
+    <!-- 17CS75 -->
+    <string name="automatic_folding_of_rearview_mirror">后视镜自动折叠</string>
+
+    <!-- zhonghua -->
+    <string name="door_lock">门锁设置</string>
+    <string name="zhonghua_automatic_locking">自动落锁</string>
+    <string name="zhonghua_auto_lock">自动重锁</string>
+    <string name="unlock_the_door">单门解锁</string>
+    <string name="latch_flashing">落锁闪烁</string>
+    <string name="unlock_flicker">解锁闪烁</string>
+    <string name="reversing_camera">倒车摄像头</string>
+    <string name="reverse_mute_suppression">倒车静音抑制</string>
+
+    <!-- gwm -->
+    <string name="coolant_temperature">冷却液温度</string>
+    <string name="transmission_oil_temperature">变速器油温</string>
+    <string name="rain_light_sensor_settings">雨量光线传感器设置</string>
+    <string name="trailer_settings">拖车设置</string>
+    <string name="europe">欧洲</string>
+    <string name="asia">亚洲</string>
+
+    <string name="remote_control_window">遥控车窗</string>
+
+    <string name="steering_assist_photography">转向辅助摄影</string>
+    <string name="blind_spot_warning">盲点警示</string>
+    <string name="show_when_reversing">倒车时显示</string>
+    <string name="panorama">全景</string>
+    <string name="reversing">倒车</string>
+
+    <string name="acc_adaptive_cruise">ACC自适应巡航</string>
+    <string name="dynamic_headlight_follow">动态大灯随动</string>
+    <string name="comfort">舒适</string>
+
+    <string name="radar_valid_signal">雷达信号</string>
+    <string name="average_speed_cleared">平均时速清零</string>
+    <string name="average_fuel_consumption_cleared">平均油耗清零</string>
+    <string name="hour">小时 :</string>
+    <string name="min">分钟 :</string>
+    <string name="effective">有效</string>
+    <string name="bwm_invalid">无效</string>
 </resources>

@@ -293,7 +293,7 @@ public class FileOperator {
 //                    System.out.print(tempchars);
                     String string2Translate = new String(tempchars);
                     System.out.print(string2Translate);//log
-                    String stringOut= translateUtil.translate(string2Translate, "zh-TW", targetString);
+                    String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);
                     stringOut = stringFilter( stringOut);
                     appendMethodB(OutFileDir, stringOut);
                     tempchars = new char[4000];//clear
@@ -301,7 +301,7 @@ public class FileOperator {
                 	String string2Translate = new String(tempchars);
                 	string2Translate = string2Translate.trim();
                     System.out.print(string2Translate);//log
-                	String stringOut= translateUtil.translate(string2Translate, "zh-TW", targetString);
+                	String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);
                 	stringOut = stringFilter( stringOut);
                     appendMethodB(OutFileDir, stringOut);                  
                 }
