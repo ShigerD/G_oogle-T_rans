@@ -16,7 +16,9 @@ import java.util.regex.Matcher;
 
 public class FileOperator {
 
+	
 	String sourceFileString = System.getProperty("user.dir") + "/source.txt";
+	String OutFileDir = "";
 	/**
      * 
      */
@@ -261,19 +263,34 @@ public class FileOperator {
     }
     /*
      * 
+     * 
+     */
+    private void transAndSave(char[] tempchars ,String targetString) {
+    	TranslateUtil translateUtil = new TranslateUtil();
+        String string2Translate = new String(tempchars);
+        string2Translate = string2Translate.trim();
+        System.out.print(string2Translate);//log
+        string2Translate = replace0AwithFF(string2Translate);  
+        String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);                 
+//        stringOut = formatC2A0( stringOut);
+        stringOut = replaceFFwith0A(stringOut);
+        System.out.print("\routput: \r"+stringOut+"\r");//log
+        appendMethodB(OutFileDir, stringOut);  
+    	
+	}
+    /*
+     * 
      */
     public  void readFileAndTranslate(String targetString) {
-    	
-    	
+    	    	
     	File sourcefile = new File(sourceFileString);
     	if(!sourcefile.exists()){
     		System.out.println("sourcefile do not exist ! file path:" + sourceFileString);
     		System.out.println("\rplease put your sourcefile the path above!" );
     		return;
     	}     	
-    	String OutFileDir = System.getProperty("user.dir") + "/values-" + targetString + "/strings.xml";
-    	
-//        String strPath = "E:\\a\\aa\\aaa.txt";  
+    	OutFileDir = System.getProperty("user.dir") + "/values-" + targetString + "/strings.xml";
+
         File file = new File(OutFileDir);  
         if(!file.getParentFile().exists()){  
             file.getParentFile().mkdirs();             
@@ -283,8 +300,7 @@ public class FileOperator {
         	outfile.delete();
         }    
 
-  	
-//    	String stringOutFileName =  System.getProperty("user.dir") + "/strings.xml";   	
+  	//    	String stringOutFileName =  System.getProperty("user.dir") + "/strings.xml";   	
         Reader reader = null;
         TranslateUtil translateUtil = new TranslateUtil();
         RegexUtils regexUtils = new RegexUtils();
@@ -303,28 +319,32 @@ public class FileOperator {
                         ) {
 //                  System.out.print("tempchars.length--" + tempchars.length);//4000
 //                    System.out.print(tempchars);
-                    String string2Translate = new String(tempchars);
-                    string2Translate = string2Translate.trim();
-                    System.out.print(string2Translate);//log
-                    string2Translate = replace0AwithFF(string2Translate);  
-                    String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);                 
-//                    stringOut = formatC2A0( stringOut);
-                    stringOut = replaceFFwith0A(stringOut);
-                    System.out.print("\routput: \r"+stringOut+"\r");//log
-                    appendMethodB(OutFileDir, stringOut);           
-                    tempchars = new char[2000];//clear
+                	
+//                    String string2Translate = new String(tempchars);
+//                    string2Translate = string2Translate.trim();
+//                    System.out.print(string2Translate);//log
+//                    string2Translate = replace0AwithFF(string2Translate);  
+//                    String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);                 
+//
+//                    stringOut = replaceFFwith0A(stringOut);
+//                    System.out.print("\r output: \r"+stringOut+"\r");//log
+//                    appendMethodB(OutFileDir, stringOut);    
+                    
+                    transAndSave(tempchars,targetString);
+                    
+                    tempchars = new char[3000];//clear
                 } else {
-                	String string2Translate = new String(tempchars);
-                	string2Translate = string2Translate.trim();
-                    System.out.print(string2Translate);//log                  
-                    string2Translate = replace0AwithFF(string2Translate);  	                  
-                	String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);             	
-//                	stringOut = formatC2A0(stringOut);
-                	stringOut = replaceFFwith0A(stringOut);
-                	System.out.print("\routput: \r\r"+stringOut+"\r");//log
-                    appendMethodB(OutFileDir, stringOut);                  
+//                	String string2Translate = new String(tempchars);
+//                	string2Translate = string2Translate.trim();
+//                    System.out.print(string2Translate);//log                  
+//                    string2Translate = replace0AwithFF(string2Translate);  	                  
+//                	String stringOut= translateUtil.translate(string2Translate, "zh-CN", targetString);             	
+//                	stringOut = replaceFFwith0A(stringOut);
+//                	System.out.print("\routput: \r\r"+stringOut+"\r");//log
+//                    appendMethodB(OutFileDir, stringOut);     
+                	transAndSave(tempchars,targetString);
                 }
-                Thread.sleep(1000);
+//                Thread.sleep(500);
             }
             System.out.print(" \rTranslate success!\r");//log
             

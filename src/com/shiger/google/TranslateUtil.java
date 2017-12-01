@@ -77,7 +77,8 @@ public class TranslateUtil {
 
         }catch(Exception ex){
         	ex.printStackTrace();
-        	return "\n ------------missing------------------\n";
+        	return "\n <<<<<<<<<<<<<<<<----------missing------ \n"+text+
+        			"\n >>>>>>>>>>>>>>>>>>\n";
         }finally {
             IOUtils.closeQuietly(is);
             is = null;
