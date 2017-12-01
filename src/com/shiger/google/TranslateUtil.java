@@ -56,7 +56,7 @@ public class TranslateUtil {
      * @throws Exception
      */
     public String translate(final String text, final String src_lang, final String target_lang)
-            throws Exception {
+             {
         InputStream is = null;
         Document doc = null;
         Element ele = null;
@@ -75,7 +75,10 @@ public class TranslateUtil {
             String result = ele.text();
             return result;
 
-        } finally {
+        }catch(Exception ex){
+        	ex.printStackTrace();
+        	return "\n ------------missing------------------\n";
+        }finally {
             IOUtils.closeQuietly(is);
             is = null;
             doc = null;

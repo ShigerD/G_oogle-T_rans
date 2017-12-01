@@ -23,6 +23,8 @@ public class GoogleTrans {
 		}
 	}
 	
+
+    
 	/**
 	 * @param args
 	 */
@@ -73,6 +75,7 @@ public class GoogleTrans {
 		    }else {
 		    	System.out.println("Sorry ,don not support lauguage : "+targetString); 
 			}
+		    
 	        fileOperator.readFileAndTranslate(targetString);
 	        
 	        System.out.println("\rDo you want to continue? y/n");
@@ -82,8 +85,7 @@ public class GoogleTrans {
 		    	isContinue = false;
 		    }
 	    }
-	    
-	
+	   
 
 	}
 }
